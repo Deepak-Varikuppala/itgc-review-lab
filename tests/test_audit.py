@@ -124,3 +124,10 @@ def test_no_dashes_in_any_text():
         ):
             text = path.read_text()
             assert "\u2014" not in text and "\u2013" not in text, path
+
+
+def test_every_test_is_mapped_to_both_frameworks(results):
+    _, tests = results
+    for t in tests.values():
+        assert t.iso27001.startswith("A."), t.test_id
+        assert t.cis_controls[0].isdigit(), t.test_id

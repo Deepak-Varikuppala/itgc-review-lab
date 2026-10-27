@@ -115,6 +115,10 @@ def report(results: dict) -> str:
         "[docs/testing-programme.md](../docs/testing-programme.md), and every item tested "
         "is in [the workpaper](../workpapers/logical-access-workpaper.xlsx).",
         "",
+        "Each test is also mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1, so "
+        "the results can be read against either framework. The mapping is in the testing "
+        "programme.",
+        "",
         "## 3. Results by control",
         "",
         "| Test | Control | Policy | Tested | Exceptions | Conclusion |",
@@ -218,13 +222,16 @@ def programme(results: dict) -> str:
         "",
         "Generated from the test definitions in `audit/run_tests.py`. Each test was designed "
         "before testing began, against the clause of the Northwind Access Control Policy it "
-        "covers.",
+        "covers. Each test is also mapped to ISO/IEC 27001:2022 Annex A and to CIS Controls "
+        "v8.1 safeguards. The policy remains the criteria; the mapping shows where each test "
+        "sits in those frameworks.",
         "",
-        "| Test | Control | Policy | Type |",
-        "|---|---|---|---|",
+        "| Test | Control | Policy | Type | ISO/IEC 27001:2022 | CIS Controls v8.1 |",
+        "|---|---|---|---|---|---|",
     ]
     out += [
-        f"| {t['test_id']} | {t['title']} | {t['policy_ref']} | {t['test_type']} |"
+        f"| {t['test_id']} | {t['title']} | {t['policy_ref']} | {t['test_type']} | "
+        f"{t['iso27001']} | {t['cis_controls']} |"
         for t in results["tests"]
     ]
     for t in results["tests"]:
@@ -233,6 +240,8 @@ def programme(results: dict) -> str:
             f"## {t['test_id']}: {t['title']}",
             "",
             f"**Policy clause:** {t['policy_ref']}  ",
+            f"**ISO/IEC 27001:2022:** {t['iso27001']}  ",
+            f"**CIS Controls v8.1:** {t['cis_controls']}  ",
             f"**Test type:** {t['test_type']}",
             "",
             f"**Control objective.** {t['objective']}",

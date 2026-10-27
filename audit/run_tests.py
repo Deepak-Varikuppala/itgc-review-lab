@@ -102,6 +102,8 @@ class Test:
     items: list[Item] = field(default_factory=list)
     conclusion: str = ""
     findings: list[str] = field(default_factory=list)
+    iso27001: str = ""
+    cis_controls: str = ""
 
     def exceptions(self) -> list[Item]:
         return [i for i in self.items if i.result == "Exception"]
@@ -750,9 +752,48 @@ ALL_TESTS = [
 ]
 
 
+# Each test mapped to ISO/IEC 27001:2022 Annex A controls and CIS Controls v8.1 safeguards.
+# The company policy is the criteria the tests are judged against; this mapping shows how
+# each test relates to the two frameworks most often used to structure IT controls.
+FRAMEWORKS = {
+    "AC-01": ("A.5.18 Access rights", "6.2 Access revoking process"),
+    "AC-02": ("A.5.18 Access rights", "6.2 Access revoking process; 6.8 Role based access"),
+    "AC-03": ("A.5.18 Access rights", "6.1 Access granting process"),
+    "AC-04": (
+        "A.5.16 Identity management; A.5.18 Access rights",
+        "5.1 Inventory of accounts; 6.2 Access revoking process",
+    ),
+    "AC-05": ("A.5.18 Access rights", "6.2 Access revoking process"),
+    "AC-06": ("A.5.18 Access rights", "5.3 Disable dormant accounts"),
+    "AC-07": (
+        "A.5.17 Authentication information; A.8.5 Secure authentication",
+        "5.2 Use unique passwords",
+    ),
+    "AC-08": (
+        "A.5.17 Authentication information",
+        "5.2 Use unique passwords; 5.5 Inventory of service accounts",
+    ),
+    "AC-09": ("A.5.16 Identity management", "5.1 Inventory of accounts"),
+    "AC-10": (
+        "A.8.2 Privileged access rights",
+        "5.4 Dedicated administrator accounts; 5.5 Inventory of service accounts",
+    ),
+    "AC-11": ("A.5.3 Segregation of duties", "6.8 Role based access"),
+    "AC-12": ("A.5.3 Segregation of duties; A.5.18 Access rights", "6.1 Access granting process"),
+    "AC-13": (
+        "A.5.18 Access rights; A.8.2 Privileged access rights",
+        "6.1 Access granting process; 6.8 Role based access",
+    ),
+    "AC-14": ("A.5.18 Access rights", "6.8 Role based access (recurring access reviews)"),
+}
+
+
 def run_all(evidence_dir: Path, scenario_dir: Path) -> tuple[Evidence, list[Test]]:
     ev = Evidence(evidence_dir, scenario_dir)
-    return ev, [fn(ev) for fn in ALL_TESTS]
+    tests = [fn(ev) for fn in ALL_TESTS]
+    for t in tests:
+        t.iso27001, t.cis_controls = FRAMEWORKS[t.test_id]
+    return ev, tests
 
 
 def main() -> int:

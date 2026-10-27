@@ -140,6 +140,8 @@ def build_workpaper(ev, tests, out: Path) -> Path:
                 len(t.exceptions()),
                 t.conclusion,
                 ", ".join(t.findings),
+                t.iso27001,
+                t.cis_controls,
             ]
         )
     _table(
@@ -154,9 +156,11 @@ def build_workpaper(ev, tests, out: Path) -> Path:
             "Exceptions",
             "Conclusion",
             "Findings",
+            "ISO/IEC 27001:2022",
+            "CIS Controls v8.1",
         ],
         rows,
-        [8, 52, 10, 20, 9, 10, 40, 10],
+        [8, 46, 10, 18, 9, 10, 36, 9, 30, 32],
         fill_cols=(7,),
     )
 
@@ -206,6 +210,8 @@ def build_workpaper(ev, tests, out: Path) -> Path:
             ws,
             [
                 ("Policy clause", t.policy_ref),
+                ("ISO/IEC 27001:2022", t.iso27001),
+                ("CIS Controls v8.1", t.cis_controls),
                 ("Test type", t.test_type),
                 ("Control objective", t.objective),
                 ("Test procedure", t.procedure),

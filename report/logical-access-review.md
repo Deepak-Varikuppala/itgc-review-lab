@@ -34,6 +34,8 @@ Directory data was extracted read only by the system administrator using a scrip
 
 Each control was tested against the clause of the policy it implements. Tests examined the **whole population** rather than a sample, so there is no sampling risk. Two tests assess **design** (whether the configuration can achieve the policy at all) and twelve assess **operating effectiveness** (whether the control worked in practice). The full procedures are in [docs/testing-programme.md](../docs/testing-programme.md), and every item tested is in [the workpaper](../workpapers/logical-access-workpaper.xlsx).
 
+Each test is also mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1, so the results can be read against either framework. The mapping is in the testing programme.
+
 ## 3. Results by control
 
 | Test | Control | Policy | Tested | Exceptions | Conclusion |

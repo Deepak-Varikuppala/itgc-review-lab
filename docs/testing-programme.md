@@ -1,27 +1,29 @@
 # Testing programme: logical access
 
-Generated from the test definitions in `audit/run_tests.py`. Each test was designed before testing began, against the clause of the Northwind Access Control Policy it covers.
+Generated from the test definitions in `audit/run_tests.py`. Each test was designed before testing began, against the clause of the Northwind Access Control Policy it covers. Each test is also mapped to ISO/IEC 27001:2022 Annex A and to CIS Controls v8.1 safeguards. The policy remains the criteria; the mapping shows where each test sits in those frameworks.
 
-| Test | Control | Policy | Type |
-|---|---|---|---|
-| AC-01 | Leavers' accounts are disabled promptly | 3.3 | Operating effectiveness |
-| AC-02 | Access is updated when staff change role | 3.2 | Operating effectiveness |
-| AC-03 | New starters' access is approved by their line manager | 3.1 | Operating effectiveness |
-| AC-04 | Every enabled personal account belongs to a current employee or contractor | 3.3, 3.4 | Operating effectiveness |
-| AC-05 | Contractor accounts expire at the end of the contract | 3.4 | Design |
-| AC-06 | Unused accounts are disabled | 3.5 | Operating effectiveness |
-| AC-07 | Domain password and lockout settings meet policy | 4.1, 4.2 | Design |
-| AC-08 | Only approved service accounts have non-expiring passwords | 4.3 | Operating effectiveness |
-| AC-09 | There are no shared accounts | 4.4 | Operating effectiveness |
-| AC-10 | Domain Admins is limited to approved, named administrator accounts | 5.1, 5.2, 5.3 | Operating effectiveness |
-| AC-11 | No one can both create and approve supplier payments | 6.1 | Operating effectiveness |
-| AC-12 | Nobody approves their own access | 6.2 | Operating effectiveness |
-| AC-13 | Every member of a sensitive group has approved access | 3.1, 5.1 | Operating effectiveness |
-| AC-14 | Quarterly access reviews are performed | 7.1 | Operating effectiveness |
+| Test | Control | Policy | Type | ISO/IEC 27001:2022 | CIS Controls v8.1 |
+|---|---|---|---|---|---|
+| AC-01 | Leavers' accounts are disabled promptly | 3.3 | Operating effectiveness | A.5.18 Access rights | 6.2 Access revoking process |
+| AC-02 | Access is updated when staff change role | 3.2 | Operating effectiveness | A.5.18 Access rights | 6.2 Access revoking process; 6.8 Role based access |
+| AC-03 | New starters' access is approved by their line manager | 3.1 | Operating effectiveness | A.5.18 Access rights | 6.1 Access granting process |
+| AC-04 | Every enabled personal account belongs to a current employee or contractor | 3.3, 3.4 | Operating effectiveness | A.5.16 Identity management; A.5.18 Access rights | 5.1 Inventory of accounts; 6.2 Access revoking process |
+| AC-05 | Contractor accounts expire at the end of the contract | 3.4 | Design | A.5.18 Access rights | 6.2 Access revoking process |
+| AC-06 | Unused accounts are disabled | 3.5 | Operating effectiveness | A.5.18 Access rights | 5.3 Disable dormant accounts |
+| AC-07 | Domain password and lockout settings meet policy | 4.1, 4.2 | Design | A.5.17 Authentication information; A.8.5 Secure authentication | 5.2 Use unique passwords |
+| AC-08 | Only approved service accounts have non-expiring passwords | 4.3 | Operating effectiveness | A.5.17 Authentication information | 5.2 Use unique passwords; 5.5 Inventory of service accounts |
+| AC-09 | There are no shared accounts | 4.4 | Operating effectiveness | A.5.16 Identity management | 5.1 Inventory of accounts |
+| AC-10 | Domain Admins is limited to approved, named administrator accounts | 5.1, 5.2, 5.3 | Operating effectiveness | A.8.2 Privileged access rights | 5.4 Dedicated administrator accounts; 5.5 Inventory of service accounts |
+| AC-11 | No one can both create and approve supplier payments | 6.1 | Operating effectiveness | A.5.3 Segregation of duties | 6.8 Role based access |
+| AC-12 | Nobody approves their own access | 6.2 | Operating effectiveness | A.5.3 Segregation of duties; A.5.18 Access rights | 6.1 Access granting process |
+| AC-13 | Every member of a sensitive group has approved access | 3.1, 5.1 | Operating effectiveness | A.5.18 Access rights; A.8.2 Privileged access rights | 6.1 Access granting process; 6.8 Role based access |
+| AC-14 | Quarterly access reviews are performed | 7.1 | Operating effectiveness | A.5.18 Access rights | 6.8 Role based access (recurring access reviews) |
 
 ## AC-01: Leavers' accounts are disabled promptly
 
 **Policy clause:** 3.3  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 6.2 Access revoking process  
 **Test type:** Operating effectiveness
 
 **Control objective.** Former employees cannot use their access after they leave.
@@ -35,6 +37,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-02: Access is updated when staff change role
 
 **Policy clause:** 3.2  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 6.2 Access revoking process; 6.8 Role based access  
 **Test type:** Operating effectiveness
 
 **Control objective.** People do not keep access from a previous role that they no longer need.
@@ -48,6 +52,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-03: New starters' access is approved by their line manager
 
 **Policy clause:** 3.1  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 6.1 Access granting process  
 **Test type:** Operating effectiveness
 
 **Control objective.** Access is only given when the business has asked for it.
@@ -61,6 +67,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-04: Every enabled personal account belongs to a current employee or contractor
 
 **Policy clause:** 3.3, 3.4  
+**ISO/IEC 27001:2022:** A.5.16 Identity management; A.5.18 Access rights  
+**CIS Controls v8.1:** 5.1 Inventory of accounts; 6.2 Access revoking process  
 **Test type:** Operating effectiveness
 
 **Control objective.** No active account exists for someone who no longer works for the company.
@@ -74,6 +82,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-05: Contractor accounts expire at the end of the contract
 
 **Policy clause:** 3.4  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 6.2 Access revoking process  
 **Test type:** Design
 
 **Control objective.** A contractor's access stops automatically when their contract ends, even if nobody remembers to remove it.
@@ -87,6 +97,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-06: Unused accounts are disabled
 
 **Policy clause:** 3.5  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 5.3 Disable dormant accounts  
 **Test type:** Operating effectiveness
 
 **Control objective.** Accounts nobody uses are removed before they can be misused unnoticed.
@@ -100,6 +112,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-07: Domain password and lockout settings meet policy
 
 **Policy clause:** 4.1, 4.2  
+**ISO/IEC 27001:2022:** A.5.17 Authentication information; A.8.5 Secure authentication  
+**CIS Controls v8.1:** 5.2 Use unique passwords  
 **Test type:** Design
 
 **Control objective.** Passwords are hard to guess and accounts cannot be attacked by repeated guessing.
@@ -113,6 +127,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-08: Only approved service accounts have non-expiring passwords
 
 **Policy clause:** 4.3  
+**ISO/IEC 27001:2022:** A.5.17 Authentication information  
+**CIS Controls v8.1:** 5.2 Use unique passwords; 5.5 Inventory of service accounts  
 **Test type:** Operating effectiveness
 
 **Control objective.** Every person's password is changed regularly.
@@ -126,6 +142,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-09: There are no shared accounts
 
 **Policy clause:** 4.4  
+**ISO/IEC 27001:2022:** A.5.16 Identity management  
+**CIS Controls v8.1:** 5.1 Inventory of accounts  
 **Test type:** Operating effectiveness
 
 **Control objective.** Every action can be traced to one person.
@@ -139,6 +157,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-10: Domain Admins is limited to approved, named administrator accounts
 
 **Policy clause:** 5.1, 5.2, 5.3  
+**ISO/IEC 27001:2022:** A.8.2 Privileged access rights  
+**CIS Controls v8.1:** 5.4 Dedicated administrator accounts; 5.5 Inventory of service accounts  
 **Test type:** Operating effectiveness
 
 **Control objective.** Full control of the domain is held only by people who need it, through separate accounts that are not used for everyday work.
@@ -152,6 +172,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-11: No one can both create and approve supplier payments
 
 **Policy clause:** 6.1  
+**ISO/IEC 27001:2022:** A.5.3 Segregation of duties  
+**CIS Controls v8.1:** 6.8 Role based access  
 **Test type:** Operating effectiveness
 
 **Control objective.** A single person cannot make and approve a fraudulent payment.
@@ -165,6 +187,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-12: Nobody approves their own access
 
 **Policy clause:** 6.2  
+**ISO/IEC 27001:2022:** A.5.3 Segregation of duties; A.5.18 Access rights  
+**CIS Controls v8.1:** 6.1 Access granting process  
 **Test type:** Operating effectiveness
 
 **Control objective.** Access is always checked by someone other than the person receiving it.
@@ -178,6 +202,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-13: Every member of a sensitive group has approved access
 
 **Policy clause:** 3.1, 5.1  
+**ISO/IEC 27001:2022:** A.5.18 Access rights; A.8.2 Privileged access rights  
+**CIS Controls v8.1:** 6.1 Access granting process; 6.8 Role based access  
 **Test type:** Operating effectiveness
 
 **Control objective.** Nobody holds powerful access that the business did not approve.
@@ -191,6 +217,8 @@ Generated from the test definitions in `audit/run_tests.py`. Each test was desig
 ## AC-14: Quarterly access reviews are performed
 
 **Policy clause:** 7.1  
+**ISO/IEC 27001:2022:** A.5.18 Access rights  
+**CIS Controls v8.1:** 6.8 Role based access (recurring access reviews)  
 **Test type:** Operating effectiveness
 
 **Control objective.** Access that is no longer needed is found and removed even when other controls miss it.
