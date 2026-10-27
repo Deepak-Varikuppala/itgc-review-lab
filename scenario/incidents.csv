@@ -1,0 +1,4 @@
+incident_id,raised_at,raised_by,system,summary,resolved_at,status
+INC-2026-0158,2026-07-08T09:12:00+00:00,sophie.turner,Email,Cannot open attachment from supplier,2026-07-08T10:02:00+00:00,Closed
+INC-2026-0171,2026-08-20T08:05:00+00:00,daniel.hughes,Finance app,Bank rejected last night's payment file,2026-08-20T09:40:00+00:00,Closed
+INC-2026-0193,2026-09-21T08:30:00+00:00,aisha.khan,Backups,Nightly finance backup failed: database is locked,2026-09-21T11:15:00+00:00,Closed
