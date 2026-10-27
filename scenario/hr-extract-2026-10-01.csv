@@ -1,0 +1,24 @@
+employee_id,first_name,last_name,department,job_title,line_manager_id,start_date,end_date,employment_status,last_change_date,last_change
+NW1001,Olivia,Bennett,Finance,Finance Director,,2019-03-04,,Active,,
+NW1002,James,Carter,IT,Head of IT,,2019-05-13,,Active,,
+NW1003,Grace,Thompson,HR,HR Manager,,2019-07-01,,Active,,
+NW1004,Mark,Taylor,Finance,Financial Controller,NW1001,2020-02-03,2026-08-29,Leaver,2026-08-29,Resigned
+NW1005,Ben,Foster,Sales,Sales Director,,2020-04-06,,Active,,
+NW1006,Noah,Green,Operations,Operations Manager,,2020-09-01,,Active,,
+NW1007,Priya,Shah,Finance,Senior Accountant,NW1001,2021-06-14,,Active,2025-11-01,Promoted from Accountant
+NW1009,Aisha,Khan,IT,Systems Administrator,NW1002,2022-02-07,,Active,,
+NW1010,Sarah,Mitchell,Operations,Customer Service Lead,NW1006,2022-04-25,,Active,,
+NW1011,Emma,Wilson,Sales,Account Manager,NW1005,2022-06-06,,Active,2026-09-14,Transferred from Finance (Accounts Payable Clerk)
+NW1012,Ryan,Patel,IT,Software Developer,NW1002,2022-09-12,,Active,,
+NW1013,Lucy,Hall,Operations,Warehouse Supervisor,NW1006,2022-10-03,,Active,,
+NW1014,Oliver,Scott,Sales,Sales Executive,NW1005,2023-02-20,2026-07-31,Leaver,2026-07-31,Resigned
+NW1015,Daniel,Hughes,Finance,Accounts Payable Clerk,NW1007,2023-01-09,,Active,,
+NW1016,Sophie,Turner,HR,HR Advisor,NW1003,2023-03-13,,Active,,
+NW1018,Liam,Brooks,IT,IT Support Analyst,NW1002,2023-09-04,,Active,,
+NW1019,Harry,Walker,Sales,Sales Executive,NW1005,2023-10-02,,Active,,
+NW1020,Ethan,Young,Operations,Logistics Coordinator,NW1006,2024-02-19,,Active,,
+NW1021,Isla,Wright,Operations,Stock Controller,NW1006,2024-03-04,2026-09-19,Leaver,2026-09-19,Resigned
+NW1022,Chloe,Evans,Finance,Accounts Payable Clerk,NW1007,2024-05-20,,Active,,
+NW1024,Mia,Roberts,Sales,Sales Executive,NW1005,2025-01-13,,Active,,
+NW1026,Jack,Lewis,Sales,Sales Executive,NW1005,2026-07-20,,Active,2026-07-20,New starter
+NW1027,Ava,King,Operations,Operations Analyst,NW1006,2026-08-03,,Active,2026-08-03,New starter

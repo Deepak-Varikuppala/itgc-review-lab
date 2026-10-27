@@ -1,0 +1,923 @@
+{
+  "evidence": "evidence/directory-20261027T030229Z",
+  "as_at": "2026-10-27",
+  "period": [
+    "2026-07-01",
+    "2026-09-30"
+  ],
+  "tests": [
+    {
+      "test_id": "AC-01",
+      "title": "Leavers' accounts are disabled promptly",
+      "policy_ref": "3.3",
+      "test_type": "Operating effectiveness",
+      "objective": "Former employees cannot use their access after they leave.",
+      "procedure": "From the HR extract, select every employee with a leaving date in the audit period. Find each one's account by employee ID. Check the account is disabled, removed from all groups and moved to the Leavers area, and compare any last logon date with the leaving date. Deadline: 1 working day after the leaving date.",
+      "population": "All employees who left between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "mark.taylor: Mark Taylor (NW1004)",
+          "detail": "Left 2026-08-29; deadline 2026-09-01",
+          "result": "Exception",
+          "comment": "Account still enabled at 2026-10-27, 56 days after the 2026-09-01 deadline; still a member of Finance-Payments-Approvers, GG-Finance; not moved to Leavers (located in Finance/Staff/Northwind); account signed in on 2026-10-27, after the leaving date."
+        },
+        {
+          "item": "oliver.scott: Oliver Scott (NW1014)",
+          "detail": "Left 2026-07-31; deadline 2026-08-03",
+          "result": "Pass",
+          "comment": "Disabled, no group memberships, in Leavers."
+        },
+        {
+          "item": "isla.wright: Isla Wright (NW1021)",
+          "detail": "Left 2026-09-19; deadline 2026-09-21",
+          "result": "Pass",
+          "comment": "Disabled, no group memberships, in Leavers."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 3 tested)",
+      "findings": [
+        "F1"
+      ]
+    },
+    {
+      "test_id": "AC-02",
+      "title": "Access is updated when staff change role",
+      "policy_ref": "3.2",
+      "test_type": "Operating effectiveness",
+      "objective": "People do not keep access from a previous role that they no longer need.",
+      "procedure": "From the HR extract, select every employee who transferred department in the audit period. Compare their current group memberships with their new department. Any group belonging to the previous department still held 5 working days after the transfer is an exception.",
+      "population": "All transfers between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "emma.wilson",
+          "detail": "Finance to Sales on 2026-09-14; deadline 2026-09-21",
+          "result": "Exception",
+          "comment": "Still holds Finance-Payments-Initiators, GG-Finance at 2026-10-27, 36 days after the deadline."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 1 tested)",
+      "findings": [
+        "F4"
+      ]
+    },
+    {
+      "test_id": "AC-03",
+      "title": "New starters' access is approved by their line manager",
+      "policy_ref": "3.1",
+      "test_type": "Operating effectiveness",
+      "objective": "Access is only given when the business has asked for it.",
+      "procedure": "From the HR extract, select every employee who started in the audit period. For each, find the access request, and check it was approved by the line manager recorded in HR, on or before the start date, and that the groups granted match the request.",
+      "population": "All starters between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "jack.lewis",
+          "detail": "Started 2026-07-20; line manager ben.foster",
+          "result": "Pass",
+          "comment": "GG-Sales: REQ-2026-061 approved by ben.foster on 2026-07-15"
+        },
+        {
+          "item": "ava.king",
+          "detail": "Started 2026-08-03; line manager noah.green",
+          "result": "Pass",
+          "comment": "GG-Operations: REQ-2026-072 approved by noah.green on 2026-07-30"
+        }
+      ],
+      "conclusion": "Effective (no exceptions)",
+      "findings": []
+    },
+    {
+      "test_id": "AC-04",
+      "title": "Every enabled personal account belongs to a current employee or contractor",
+      "policy_ref": "3.3, 3.4",
+      "test_type": "Operating effectiveness",
+      "objective": "No active account exists for someone who no longer works for the company.",
+      "procedure": "List every enabled personal account in the directory. Match each one by employee or contractor ID to the HR extract and contractor list. An account with no match, or whose match has left or whose contract has ended, is an exception. Generic, administrator, service and built in accounts are tested in AC-08 to AC-10.",
+      "population": "All enabled personal accounts at the extraction date",
+      "items": [
+        {
+          "item": "aisha.khan",
+          "detail": "NW1009",
+          "result": "Pass",
+          "comment": "Matches active employee Aisha Khan."
+        },
+        {
+          "item": "ava.king",
+          "detail": "NW1027",
+          "result": "Pass",
+          "comment": "Matches active employee Ava King."
+        },
+        {
+          "item": "ben.foster",
+          "detail": "NW1005",
+          "result": "Pass",
+          "comment": "Matches active employee Ben Foster."
+        },
+        {
+          "item": "chloe.evans",
+          "detail": "NW1022",
+          "result": "Pass",
+          "comment": "Matches active employee Chloe Evans."
+        },
+        {
+          "item": "daniel.hughes",
+          "detail": "NW1015",
+          "result": "Pass",
+          "comment": "Matches active employee Daniel Hughes."
+        },
+        {
+          "item": "emma.wilson",
+          "detail": "NW1011",
+          "result": "Pass",
+          "comment": "Matches active employee Emma Wilson."
+        },
+        {
+          "item": "ethan.young",
+          "detail": "NW1020",
+          "result": "Pass",
+          "comment": "Matches active employee Ethan Young."
+        },
+        {
+          "item": "grace.thompson",
+          "detail": "NW1003",
+          "result": "Pass",
+          "comment": "Matches active employee Grace Thompson."
+        },
+        {
+          "item": "harry.walker",
+          "detail": "NW1019",
+          "result": "Pass",
+          "comment": "Matches active employee Harry Walker."
+        },
+        {
+          "item": "jack.lewis",
+          "detail": "NW1026",
+          "result": "Pass",
+          "comment": "Matches active employee Jack Lewis."
+        },
+        {
+          "item": "james.carter",
+          "detail": "NW1002",
+          "result": "Pass",
+          "comment": "Matches active employee James Carter."
+        },
+        {
+          "item": "leo.martin",
+          "detail": "C-0042",
+          "result": "Exception",
+          "comment": "Contract with DevPartners Ltd ended on 2026-06-30 but the account is enabled."
+        },
+        {
+          "item": "liam.brooks",
+          "detail": "NW1018",
+          "result": "Pass",
+          "comment": "Matches active employee Liam Brooks."
+        },
+        {
+          "item": "lucy.hall",
+          "detail": "NW1013",
+          "result": "Pass",
+          "comment": "Matches active employee Lucy Hall."
+        },
+        {
+          "item": "mark.taylor",
+          "detail": "NW1004",
+          "result": "Exception",
+          "comment": "Employee left on 2026-08-29 but the account is enabled."
+        },
+        {
+          "item": "mia.roberts",
+          "detail": "NW1024",
+          "result": "Pass",
+          "comment": "Matches active employee Mia Roberts."
+        },
+        {
+          "item": "noah.green",
+          "detail": "NW1006",
+          "result": "Pass",
+          "comment": "Matches active employee Noah Green."
+        },
+        {
+          "item": "olivia.bennett",
+          "detail": "NW1001",
+          "result": "Pass",
+          "comment": "Matches active employee Olivia Bennett."
+        },
+        {
+          "item": "priya.shah",
+          "detail": "NW1007",
+          "result": "Pass",
+          "comment": "Matches active employee Priya Shah."
+        },
+        {
+          "item": "ryan.patel",
+          "detail": "NW1012",
+          "result": "Pass",
+          "comment": "Matches active employee Ryan Patel."
+        },
+        {
+          "item": "sarah.mitchell",
+          "detail": "NW1010",
+          "result": "Pass",
+          "comment": "Matches active employee Sarah Mitchell."
+        },
+        {
+          "item": "sophie.turner",
+          "detail": "NW1016",
+          "result": "Pass",
+          "comment": "Matches active employee Sophie Turner."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 22 tested)",
+      "findings": [
+        "F1",
+        "F5"
+      ]
+    },
+    {
+      "test_id": "AC-05",
+      "title": "Contractor accounts expire at the end of the contract",
+      "policy_ref": "3.4",
+      "test_type": "Design",
+      "objective": "A contractor's access stops automatically when their contract ends, even if nobody remembers to remove it.",
+      "procedure": "For every contractor on the contractor list, find their account and check its expiry date is set to the contract end date.",
+      "population": "All contractors on the contractor list",
+      "items": [
+        {
+          "item": "leo.martin",
+          "detail": "Contract ended 2026-06-30",
+          "result": "Exception",
+          "comment": "Account expiry: Never. No expiry was set, so the account stayed usable after the contract ended."
+        }
+      ],
+      "conclusion": "Design deficiency (1 exception in 1 tested)",
+      "findings": [
+        "F5"
+      ]
+    },
+    {
+      "test_id": "AC-06",
+      "title": "Unused accounts are disabled",
+      "policy_ref": "3.5",
+      "test_type": "Operating effectiveness",
+      "objective": "Accounts nobody uses are removed before they can be misused unnoticed.",
+      "procedure": "List every enabled account. Flag any account that has never signed in, or whose last sign in was 45 days or more before the extraction date, unless an approved exception exists.",
+      "population": "All enabled accounts at the extraction date",
+      "items": [
+        {
+          "item": "Administrator",
+          "detail": "Built in",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "adm.akhan",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "adm.jcarter",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "aisha.khan",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "ava.king",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "ben.foster",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "chloe.evans",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "daniel.hughes",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "emma.wilson",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "ethan.young",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "finance.shared",
+          "detail": "Generic",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "grace.thompson",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "harry.walker",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "jack.lewis",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "james.carter",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "leo.martin",
+          "detail": "Personal",
+          "result": "Exception",
+          "comment": "Never signed in."
+        },
+        {
+          "item": "liam.brooks",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "lucy.hall",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "mark.taylor",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "mia.roberts",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "noah.green",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "olivia.bennett",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "priya.shah",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "ryan.patel",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "sarah.mitchell",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "sophie.turner",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "svc-backup",
+          "detail": "Service",
+          "result": "Pass",
+          "comment": "Last signed in 2026-10-27."
+        },
+        {
+          "item": "svc-financeapp",
+          "detail": "Service",
+          "result": "Exception",
+          "comment": "Never signed in."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 28 tested)",
+      "findings": [
+        "F5",
+        "F9"
+      ]
+    },
+    {
+      "test_id": "AC-07",
+      "title": "Domain password and lockout settings meet policy",
+      "policy_ref": "4.1, 4.2",
+      "test_type": "Design",
+      "objective": "Passwords are hard to guess and accounts cannot be attacked by repeated guessing.",
+      "procedure": "Read the live domain password settings and compare each with the policy.",
+      "population": "The domain password policy (one configuration)",
+      "items": [
+        {
+          "item": "Minimum password length",
+          "detail": "8",
+          "result": "Exception",
+          "comment": "Configured 8; policy requires >= 12."
+        },
+        {
+          "item": "Password complexity",
+          "detail": "on",
+          "result": "Pass",
+          "comment": "Configured on; policy requires on."
+        },
+        {
+          "item": "Password history length",
+          "detail": "24",
+          "result": "Pass",
+          "comment": "Configured 24; policy requires >= 24."
+        },
+        {
+          "item": "Maximum password age (days)",
+          "detail": "42",
+          "result": "Pass",
+          "comment": "Configured 42; policy requires 1 to 90."
+        },
+        {
+          "item": "Account lockout threshold (attempts)",
+          "detail": "0",
+          "result": "Exception",
+          "comment": "Configured 0; policy requires 1 to 5. A threshold of 0 means accounts never lock."
+        },
+        {
+          "item": "Account lockout duration (mins)",
+          "detail": "30",
+          "result": "Pass",
+          "comment": "Configured 30; policy requires >= 15. Has no effect while lockout is disabled."
+        }
+      ],
+      "conclusion": "Design deficiency (2 exceptions in 6 tested)",
+      "findings": [
+        "F6"
+      ]
+    },
+    {
+      "test_id": "AC-08",
+      "title": "Only approved service accounts have non-expiring passwords",
+      "policy_ref": "4.3",
+      "test_type": "Operating effectiveness",
+      "objective": "Every person's password is changed regularly.",
+      "procedure": "List every enabled account whose password is set never to expire. Each must be a service account with an approved, in date entry in the exception register.",
+      "population": "All enabled accounts with non-expiring passwords",
+      "items": [
+        {
+          "item": "finance.shared",
+          "detail": "Generic",
+          "result": "Exception",
+          "comment": "Generic account; no approved exception."
+        },
+        {
+          "item": "sarah.mitchell",
+          "detail": "Personal",
+          "result": "Exception",
+          "comment": "Personal account; no approved exception."
+        },
+        {
+          "item": "svc-backup",
+          "detail": "Service",
+          "result": "Pass",
+          "comment": "Approved exception EX-2024-02 by james.carter, review due 2027-01-15."
+        },
+        {
+          "item": "svc-financeapp",
+          "detail": "Service",
+          "result": "Pass",
+          "comment": "Approved exception EX-2024-01 by james.carter, review due 2027-01-15."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 4 tested)",
+      "findings": [
+        "F7"
+      ]
+    },
+    {
+      "test_id": "AC-09",
+      "title": "There are no shared accounts",
+      "policy_ref": "4.4",
+      "test_type": "Operating effectiveness",
+      "objective": "Every action can be traced to one person.",
+      "procedure": "List every enabled account that is not personal, administrator, service or built in, and confirm its purpose from its description.",
+      "population": "All enabled generic accounts",
+      "items": [
+        {
+          "item": "finance.shared",
+          "detail": "Shared finance team login",
+          "result": "Exception",
+          "comment": "Shared login used by more than one person. Member of Finance-Payments-Initiators, GG-Finance."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 1 tested)",
+      "findings": [
+        "F3"
+      ]
+    },
+    {
+      "test_id": "AC-10",
+      "title": "Domain Admins is limited to approved, named administrator accounts",
+      "policy_ref": "5.1, 5.2, 5.3",
+      "test_type": "Operating effectiveness",
+      "objective": "Full control of the domain is held only by people who need it, through separate accounts that are not used for everyday work.",
+      "procedure": "List every member of Domain Admins. Each must be a separate adm. account with an approved request, or the built in Administrator account. Day to day accounts and service accounts are exceptions unless an approved exception exists.",
+      "population": "All members of Domain Admins",
+      "items": [
+        {
+          "item": "Administrator",
+          "detail": "Built in",
+          "result": "Pass",
+          "comment": "Built in break glass account. Its use should be monitored; see observation O1."
+        },
+        {
+          "item": "adm.akhan",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "Separate admin account; REQ-2022-011 approved by james.carter."
+        },
+        {
+          "item": "adm.jcarter",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "Separate admin account; REQ-2019-024 approved by Chief Executive."
+        },
+        {
+          "item": "liam.brooks",
+          "detail": "Personal",
+          "result": "Exception",
+          "comment": "Everyday personal account with full domain admin rights and no approved request. Approved access: REQ-2023-047 Helpdesk."
+        },
+        {
+          "item": "svc-backup",
+          "detail": "Service",
+          "result": "Exception",
+          "comment": "Service account in Domain Admins with no exception recorded under clause 5.3 (its exception covers only clause 4.3)."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 5 tested)",
+      "findings": [
+        "F2"
+      ]
+    },
+    {
+      "test_id": "AC-11",
+      "title": "No one can both create and approve supplier payments",
+      "policy_ref": "6.1",
+      "test_type": "Operating effectiveness",
+      "objective": "A single person cannot make and approve a fraudulent payment.",
+      "procedure": "Compare the members of Finance-Payments-Initiators with the members of Finance-Payments-Approvers. Anyone in both is an exception.",
+      "population": "All members of either payments group",
+      "items": [
+        {
+          "item": "chloe.evans",
+          "detail": "Initiator",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "daniel.hughes",
+          "detail": "Initiator",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "emma.wilson",
+          "detail": "Initiator",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "finance.shared",
+          "detail": "Initiator",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "mark.taylor",
+          "detail": "Approver",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "olivia.bennett",
+          "detail": "Approver",
+          "result": "Pass",
+          "comment": "One role only."
+        },
+        {
+          "item": "priya.shah",
+          "detail": "Initiator and Approver",
+          "result": "Exception",
+          "comment": "Holds both conflicting roles."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 7 tested)",
+      "findings": [
+        "F8"
+      ]
+    },
+    {
+      "test_id": "AC-12",
+      "title": "Nobody approves their own access",
+      "policy_ref": "6.2",
+      "test_type": "Operating effectiveness",
+      "objective": "Access is always checked by someone other than the person receiving it.",
+      "procedure": "Inspect every access request. Any request approved by the person it gives access to is an exception.",
+      "population": "All 18 access requests in the access request log",
+      "items": [
+        {
+          "item": "REQ-2019-014",
+          "detail": "olivia.bennett: Finance-Payments-Approvers",
+          "result": "Pass",
+          "comment": "Approved by Chief Executive."
+        },
+        {
+          "item": "REQ-2019-022",
+          "detail": "james.carter: IT-Server-Admins",
+          "result": "Pass",
+          "comment": "Approved by Chief Executive."
+        },
+        {
+          "item": "REQ-2019-023",
+          "detail": "james.carter: Change-Approvers",
+          "result": "Pass",
+          "comment": "Approved by Chief Executive."
+        },
+        {
+          "item": "REQ-2019-024",
+          "detail": "adm.jcarter: Domain Admins",
+          "result": "Pass",
+          "comment": "Approved by Chief Executive."
+        },
+        {
+          "item": "REQ-2020-006",
+          "detail": "mark.taylor: Finance-Payments-Approvers",
+          "result": "Pass",
+          "comment": "Approved by olivia.bennett."
+        },
+        {
+          "item": "REQ-2021-031",
+          "detail": "priya.shah: Finance-Payments-Initiators",
+          "result": "Pass",
+          "comment": "Approved by olivia.bennett."
+        },
+        {
+          "item": "REQ-2022-009",
+          "detail": "aisha.khan: IT-Server-Admins",
+          "result": "Pass",
+          "comment": "Approved by james.carter."
+        },
+        {
+          "item": "REQ-2022-010",
+          "detail": "aisha.khan: Change-Deployers",
+          "result": "Pass",
+          "comment": "Approved by james.carter."
+        },
+        {
+          "item": "REQ-2022-011",
+          "detail": "adm.akhan: Domain Admins",
+          "result": "Pass",
+          "comment": "Approved by james.carter."
+        },
+        {
+          "item": "REQ-2022-035",
+          "detail": "emma.wilson: Finance-Payments-Initiators",
+          "result": "Pass",
+          "comment": "Approved by olivia.bennett."
+        },
+        {
+          "item": "REQ-2022-052",
+          "detail": "ryan.patel: Change-Deployers",
+          "result": "Pass",
+          "comment": "Approved by james.carter."
+        },
+        {
+          "item": "REQ-2023-002",
+          "detail": "daniel.hughes: Finance-Payments-Initiators",
+          "result": "Pass",
+          "comment": "Approved by olivia.bennett."
+        },
+        {
+          "item": "REQ-2023-047",
+          "detail": "liam.brooks: Helpdesk",
+          "result": "Pass",
+          "comment": "Approved by james.carter."
+        },
+        {
+          "item": "REQ-2024-019",
+          "detail": "chloe.evans: Finance-Payments-Initiators",
+          "result": "Pass",
+          "comment": "Approved by olivia.bennett."
+        },
+        {
+          "item": "REQ-2025-118",
+          "detail": "priya.shah: Finance-Payments-Approvers",
+          "result": "Exception",
+          "comment": "Requested and approved by priya.shah, for their own account."
+        },
+        {
+          "item": "REQ-2026-061",
+          "detail": "jack.lewis: GG-Sales",
+          "result": "Pass",
+          "comment": "Approved by ben.foster."
+        },
+        {
+          "item": "REQ-2026-072",
+          "detail": "ava.king: GG-Operations",
+          "result": "Pass",
+          "comment": "Approved by noah.green."
+        },
+        {
+          "item": "REQ-2026-084",
+          "detail": "emma.wilson: GG-Sales",
+          "result": "Pass",
+          "comment": "Approved by ben.foster."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 18 tested)",
+      "findings": [
+        "F8"
+      ]
+    },
+    {
+      "test_id": "AC-13",
+      "title": "Every member of a sensitive group has approved access",
+      "policy_ref": "3.1, 5.1",
+      "test_type": "Operating effectiveness",
+      "objective": "Nobody holds powerful access that the business did not approve.",
+      "procedure": "For every member of each sensitive group, find an approved access request for that group. Requests approved by the person themselves are dealt with in AC-12.",
+      "population": "All members of: Domain Admins, IT-Server-Admins, Finance-Payments-Initiators, Finance-Payments-Approvers, Change-Approvers, Change-Deployers",
+      "items": [
+        {
+          "item": "Domain Admins: Administrator",
+          "detail": "Built in",
+          "result": "Not applicable",
+          "comment": "Built in account, created with the domain."
+        },
+        {
+          "item": "Domain Admins: adm.akhan",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "REQ-2022-011 approved by james.carter on 2022-02-07."
+        },
+        {
+          "item": "Domain Admins: adm.jcarter",
+          "detail": "Administrator",
+          "result": "Pass",
+          "comment": "REQ-2019-024 approved by Chief Executive on 2019-05-13."
+        },
+        {
+          "item": "Domain Admins: liam.brooks",
+          "detail": "Personal",
+          "result": "Exception",
+          "comment": "No approved request."
+        },
+        {
+          "item": "Domain Admins: svc-backup",
+          "detail": "Service",
+          "result": "Exception",
+          "comment": "No approved request."
+        },
+        {
+          "item": "IT-Server-Admins: aisha.khan",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2022-009 approved by james.carter on 2022-02-04."
+        },
+        {
+          "item": "IT-Server-Admins: james.carter",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2019-022 approved by Chief Executive on 2019-05-10."
+        },
+        {
+          "item": "Finance-Payments-Initiators: chloe.evans",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2024-019 approved by olivia.bennett on 2024-05-16."
+        },
+        {
+          "item": "Finance-Payments-Initiators: daniel.hughes",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2023-002 approved by olivia.bennett on 2023-01-06."
+        },
+        {
+          "item": "Finance-Payments-Initiators: emma.wilson",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2022-035 approved by olivia.bennett on 2022-06-02."
+        },
+        {
+          "item": "Finance-Payments-Initiators: finance.shared",
+          "detail": "Generic",
+          "result": "Exception",
+          "comment": "No approved request."
+        },
+        {
+          "item": "Finance-Payments-Initiators: priya.shah",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2021-031 approved by olivia.bennett on 2021-06-11."
+        },
+        {
+          "item": "Finance-Payments-Approvers: mark.taylor",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2020-006 approved by olivia.bennett on 2020-01-31."
+        },
+        {
+          "item": "Finance-Payments-Approvers: olivia.bennett",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2019-014 approved by Chief Executive on 2019-03-01."
+        },
+        {
+          "item": "Finance-Payments-Approvers: priya.shah",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2025-118 approved by priya.shah on 2025-11-03."
+        },
+        {
+          "item": "Change-Approvers: james.carter",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2019-023 approved by Chief Executive on 2019-05-10."
+        },
+        {
+          "item": "Change-Deployers: aisha.khan",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2022-010 approved by james.carter on 2022-02-04."
+        },
+        {
+          "item": "Change-Deployers: ryan.patel",
+          "detail": "Personal",
+          "result": "Pass",
+          "comment": "REQ-2022-052 approved by james.carter on 2022-09-09."
+        }
+      ],
+      "conclusion": "Not operating effectively (3 exceptions in 17 tested)",
+      "findings": [
+        "F2",
+        "F3"
+      ]
+    },
+    {
+      "test_id": "AC-14",
+      "title": "Quarterly access reviews are performed",
+      "policy_ref": "7.1",
+      "test_type": "Operating effectiveness",
+      "objective": "Access that is no longer needed is found and removed even when other controls miss it.",
+      "procedure": "Request the signed off Q3 2026 review of Domain Admins, IT-Server-Admins and the two payments groups, and re-perform a sample of the review's conclusions.",
+      "population": "The Q3 2026 quarterly access review",
+      "items": [
+        {
+          "item": "Q3 2026 access review",
+          "detail": "Requested from the Head of IT",
+          "result": "Exception",
+          "comment": "No evidence of a review was provided. Several exceptions found in this testing (AC-01, AC-02, AC-10, AC-11) would have been caught by an effective review."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 1 tested)",
+      "findings": [
+        "F10"
+      ]
+    }
+  ]
+}

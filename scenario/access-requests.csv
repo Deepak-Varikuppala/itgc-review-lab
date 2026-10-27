@@ -1,0 +1,19 @@
+request_id,requested_date,account,access_requested,requested_by,approved_by,approved_date,status,notes
+REQ-2019-014,2019-03-01,olivia.bennett,Finance-Payments-Approvers,grace.thompson,Chief Executive,2019-03-01,Approved,New Finance Director
+REQ-2019-022,2019-05-10,james.carter,IT-Server-Admins,grace.thompson,Chief Executive,2019-05-10,Approved,New Head of IT
+REQ-2019-023,2019-05-10,james.carter,Change-Approvers,grace.thompson,Chief Executive,2019-05-10,Approved,New Head of IT
+REQ-2019-024,2019-05-10,adm.jcarter,Domain Admins,james.carter,Chief Executive,2019-05-13,Approved,Separate admin account for Head of IT
+REQ-2020-006,2020-01-30,mark.taylor,Finance-Payments-Approvers,olivia.bennett,olivia.bennett,2020-01-31,Approved,New Financial Controller
+REQ-2021-031,2021-06-10,priya.shah,Finance-Payments-Initiators,olivia.bennett,olivia.bennett,2021-06-11,Approved,New Accountant
+REQ-2022-009,2022-02-03,aisha.khan,IT-Server-Admins,james.carter,james.carter,2022-02-04,Approved,New Systems Administrator
+REQ-2022-010,2022-02-03,aisha.khan,Change-Deployers,james.carter,james.carter,2022-02-04,Approved,New Systems Administrator
+REQ-2022-011,2022-02-03,adm.akhan,Domain Admins,james.carter,james.carter,2022-02-07,Approved,Separate admin account for Systems Administrator
+REQ-2022-035,2022-06-01,emma.wilson,Finance-Payments-Initiators,olivia.bennett,olivia.bennett,2022-06-02,Approved,New Accounts Payable Clerk
+REQ-2022-052,2022-09-08,ryan.patel,Change-Deployers,james.carter,james.carter,2022-09-09,Approved,New Software Developer
+REQ-2023-002,2023-01-05,daniel.hughes,Finance-Payments-Initiators,priya.shah,olivia.bennett,2023-01-06,Approved,New Accounts Payable Clerk
+REQ-2023-047,2023-08-31,liam.brooks,Helpdesk,james.carter,james.carter,2023-09-01,Approved,New IT Support Analyst: password resets only
+REQ-2024-019,2024-05-15,chloe.evans,Finance-Payments-Initiators,priya.shah,olivia.bennett,2024-05-16,Approved,New Accounts Payable Clerk
+REQ-2025-118,2025-11-03,priya.shah,Finance-Payments-Approvers,priya.shah,priya.shah,2025-11-03,Approved,Cover for approvals during busy period
+REQ-2026-061,2026-07-14,jack.lewis,GG-Sales,ben.foster,ben.foster,2026-07-15,Approved,New starter
+REQ-2026-072,2026-07-29,ava.king,GG-Operations,noah.green,noah.green,2026-07-30,Approved,New starter
+REQ-2026-084,2026-09-14,emma.wilson,GG-Sales,ben.foster,ben.foster,2026-09-14,Approved,Transfer from Finance to Sales

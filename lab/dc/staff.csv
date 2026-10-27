@@ -1,0 +1,30 @@
+username,given_name,surname,employee_id,department,job_title,manager,ou,groups,flags
+olivia.bennett,Olivia,Bennett,NW1001,Finance,Finance Director,,Finance,GG-Finance;Finance-Payments-Approvers,
+mark.taylor,Mark,Taylor,NW1004,Finance,Financial Controller,olivia.bennett,Finance,GG-Finance;Finance-Payments-Approvers,
+priya.shah,Priya,Shah,NW1007,Finance,Senior Accountant,olivia.bennett,Finance,GG-Finance;Finance-Payments-Initiators;Finance-Payments-Approvers,
+daniel.hughes,Daniel,Hughes,NW1015,Finance,Accounts Payable Clerk,priya.shah,Finance,GG-Finance;Finance-Payments-Initiators,
+chloe.evans,Chloe,Evans,NW1022,Finance,Accounts Payable Clerk,priya.shah,Finance,GG-Finance;Finance-Payments-Initiators,
+james.carter,James,Carter,NW1002,IT,Head of IT,,IT,GG-IT;IT-Server-Admins;Change-Approvers,
+aisha.khan,Aisha,Khan,NW1009,IT,Systems Administrator,james.carter,IT,GG-IT;IT-Server-Admins;Change-Deployers,
+ryan.patel,Ryan,Patel,NW1012,IT,Software Developer,james.carter,IT,GG-IT;Developers;Change-Deployers,
+liam.brooks,Liam,Brooks,NW1018,IT,IT Support Analyst,james.carter,IT,GG-IT;Helpdesk;Domain Admins,
+grace.thompson,Grace,Thompson,NW1003,HR,HR Manager,,HR,GG-HR,
+sophie.turner,Sophie,Turner,NW1016,HR,HR Advisor,grace.thompson,HR,GG-HR,
+ben.foster,Ben,Foster,NW1005,Sales,Sales Director,,Sales,GG-Sales,
+emma.wilson,Emma,Wilson,NW1011,Sales,Account Manager,ben.foster,Sales,GG-Sales;GG-Finance;Finance-Payments-Initiators,
+harry.walker,Harry,Walker,NW1019,Sales,Sales Executive,ben.foster,Sales,GG-Sales,
+mia.roberts,Mia,Roberts,NW1024,Sales,Sales Executive,ben.foster,Sales,GG-Sales,
+jack.lewis,Jack,Lewis,NW1026,Sales,Sales Executive,ben.foster,Sales,GG-Sales,
+noah.green,Noah,Green,NW1006,Operations,Operations Manager,,Operations,GG-Operations,
+lucy.hall,Lucy,Hall,NW1013,Operations,Warehouse Supervisor,noah.green,Operations,GG-Operations,
+ethan.young,Ethan,Young,NW1020,Operations,Logistics Coordinator,noah.green,Operations,GG-Operations,
+ava.king,Ava,King,NW1027,Operations,Operations Analyst,noah.green,Operations,GG-Operations,
+sarah.mitchell,Sarah,Mitchell,NW1010,Operations,Customer Service Lead,noah.green,Operations,GG-Operations,pwnoexpire
+oliver.scott,Oliver,Scott,NW1014,Sales,Sales Executive,ben.foster,Leavers,,disabled;nologon
+isla.wright,Isla,Wright,NW1021,Operations,Stock Controller,noah.green,Leavers,,disabled;nologon
+leo.martin,Leo,Martin,C-0042,IT,Contract Developer,james.carter,IT,GG-IT;Developers,nologon
+adm.jcarter,James,Carter,,IT,Administrator account (James Carter),james.carter,Admins,Domain Admins,
+adm.akhan,Aisha,Khan,,IT,Administrator account (Aisha Khan),aisha.khan,Admins,Domain Admins,
+finance.shared,Finance,Team,,Finance,Shared finance team login,,Finance,GG-Finance;Finance-Payments-Initiators,pwnoexpire
+svc-backup,Backup,Service,,IT,Service account for nightly backups,james.carter,ServiceAccounts,Domain Admins,pwnoexpire
+svc-financeapp,FinanceApp,Service,,IT,Service account for the finance application,aisha.khan,ServiceAccounts,,pwnoexpire;nologon

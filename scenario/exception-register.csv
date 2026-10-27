@@ -1,0 +1,3 @@
+exception_id,account,policy_clause,exception,business_reason,approved_by,approved_date,review_date
+EX-2024-01,svc-financeapp,4.3,Password never expires,Application service account; password held in the vault and rotated manually each year,james.carter,2024-01-15,2027-01-15
+EX-2024-02,svc-backup,4.3,Password never expires,Backup service account; password held in the vault and rotated manually each year,james.carter,2024-01-15,2027-01-15

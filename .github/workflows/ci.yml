@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install openpyxl pytest ruff
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Test the audit scripts
+        run: pytest
+      - name: Rerun the testing from the committed evidence
+        run: python3 audit/run_tests.py --evidence "$(ls -d evidence/directory-* | head -1)" --out /tmp/wp
+      - name: Check the report and testing programme are up to date
+        run: |
+          python3 audit/make_report.py
+          git diff --exit-code report docs

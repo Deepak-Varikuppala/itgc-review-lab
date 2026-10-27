@@ -1,0 +1,71 @@
+Northwind Retail: directory evidence extraction
+Extracted at (UTC):  2026-10-27T03:02:29+00:00
+Performed by:        labadmin (via sudo on the domain controller)
+Host:                linux
+Source:              /var/lib/samba/private/sam.ldb
+Method:              read only queries; no changes were made to the directory
+
+Record counts (completeness check: the first two must match)
+  user objects in raw-users.ldif: 32
+  rows in users.csv: 32
+  groups listed: 50
+  rows in group-members.csv: 100
+
+Commands run
+  $ ldbsearch -H /var/lib/samba/private/sam.ldb -b DC=northwind,DC=internal '(&(objectClass=user)(!(objectClass=computer)))' sAMAccountName givenName sn employeeID department title manager userAccountControl pwdLastSet lastLogonTimestamp whenCreated accountExpires memberOf description distinguishedName
+  $ samba-tool group list
+  $ samba-tool group listmembers 'Account Operators'
+  $ samba-tool group listmembers Administrators
+  $ samba-tool group listmembers 'Allowed RODC Password Replication Group'
+  $ samba-tool group listmembers 'Backup Operators'
+  $ samba-tool group listmembers 'Cert Publishers'
+  $ samba-tool group listmembers 'Certificate Service DCOM Access'
+  $ samba-tool group listmembers Change-Approvers
+  $ samba-tool group listmembers Change-Deployers
+  $ samba-tool group listmembers 'Cryptographic Operators'
+  $ samba-tool group listmembers 'Denied RODC Password Replication Group'
+  $ samba-tool group listmembers Developers
+  $ samba-tool group listmembers 'Distributed COM Users'
+  $ samba-tool group listmembers DnsAdmins
+  $ samba-tool group listmembers DnsUpdateProxy
+  $ samba-tool group listmembers 'Domain Admins'
+  $ samba-tool group listmembers 'Domain Computers'
+  $ samba-tool group listmembers 'Domain Controllers'
+  $ samba-tool group listmembers 'Domain Guests'
+  $ samba-tool group listmembers 'Domain Users'
+  $ samba-tool group listmembers 'Enterprise Admins'
+  $ samba-tool group listmembers 'Enterprise Read-only Domain Controllers'
+  $ samba-tool group listmembers 'Event Log Readers'
+  $ samba-tool group listmembers Finance-Payments-Approvers
+  $ samba-tool group listmembers Finance-Payments-Initiators
+  $ samba-tool group listmembers GG-Finance
+  $ samba-tool group listmembers GG-HR
+  $ samba-tool group listmembers GG-IT
+  $ samba-tool group listmembers GG-Operations
+  $ samba-tool group listmembers GG-Sales
+  $ samba-tool group listmembers 'Group Policy Creator Owners'
+  $ samba-tool group listmembers Guests
+  $ samba-tool group listmembers Helpdesk
+  $ samba-tool group listmembers IIS_IUSRS
+  $ samba-tool group listmembers IT-Server-Admins
+  $ samba-tool group listmembers 'Incoming Forest Trust Builders'
+  $ samba-tool group listmembers 'Network Configuration Operators'
+  $ samba-tool group listmembers 'Performance Log Users'
+  $ samba-tool group listmembers 'Performance Monitor Users'
+  $ samba-tool group listmembers 'Pre-Windows 2000 Compatible Access'
+  $ samba-tool group listmembers 'Print Operators'
+  $ samba-tool group listmembers 'Protected Users'
+  $ samba-tool group listmembers 'RAS and IAS Servers'
+  $ samba-tool group listmembers 'Read-only Domain Controllers'
+  $ samba-tool group listmembers 'Remote Desktop Users'
+  $ samba-tool group listmembers Replicator
+  $ samba-tool group listmembers 'Schema Admins'
+  $ samba-tool group listmembers 'Server Operators'
+  $ samba-tool group listmembers 'Terminal Server License Servers'
+  $ samba-tool group listmembers Users
+  $ samba-tool group listmembers 'Windows Authorization Access Group'
+  $ samba-tool group listmembers 'Domain Admins'
+  $ samba-tool group listmembers 'Enterprise Admins'
+  $ samba-tool group listmembers 'Schema Admins'
+  $ samba-tool group listmembers Administrators
+  $ samba-tool domain passwordsettings show
