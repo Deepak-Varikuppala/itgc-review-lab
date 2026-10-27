@@ -1,0 +1,46 @@
+{
+  "evidence": "directory-20261027T033513Z",
+  "as_at": "2026-10-27",
+  "results": {
+    "F1": {
+      "status": "Resolved, follow up open",
+      "note": "mark.taylor is disabled, has no group memberships and is in Leavers. The sign in after the leaving date still needs to be investigated."
+    },
+    "F2": {
+      "status": "Resolved",
+      "note": "Domain Admins now contains only Administrator and the adm. accounts: Administrator, adm.akhan, adm.jcarter."
+    },
+    "F3": {
+      "status": "Resolved",
+      "note": "finance.shared is disabled with no group memberships."
+    },
+    "F4": {
+      "status": "Resolved",
+      "note": "emma.wilson holds only Sales access: GG-Sales."
+    },
+    "F5": {
+      "status": "Resolved, follow up open",
+      "note": "leo.martin is disabled with no group memberships. Setting expiry dates on new contractor accounts is a process change to confirm on the next contractor joiner."
+    },
+    "F6": {
+      "status": "Resolved",
+      "note": "Minimum password length 12; lockout after 5 attempts."
+    },
+    "F7": {
+      "status": "Resolved",
+      "note": "Only service accounts with approved exceptions keep non-expiring passwords."
+    },
+    "F8": {
+      "status": "Resolved, follow up open",
+      "note": "Nobody now holds both payment roles. The review of payments approved by priya.shah since November 2025, and blocking self approval in the request process, remain open."
+    },
+    "F9": {
+      "status": "Resolved",
+      "note": "svc-financeapp is disabled."
+    },
+    "F10": {
+      "status": "Open",
+      "note": "Process change. The first quarterly review is due at the end of Q4 2026 and will be tested then."
+    }
+  }
+}

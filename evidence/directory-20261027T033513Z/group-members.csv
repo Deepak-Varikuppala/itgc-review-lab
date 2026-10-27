@@ -1,0 +1,91 @@
+group,member
+Administrators,Domain Admins
+Administrators,Administrator
+Administrators,Enterprise Admins
+Backup Operators,svc-backup
+Change-Approvers,james.carter
+Change-Deployers,ryan.patel
+Change-Deployers,aisha.khan
+Denied RODC Password Replication Group,krbtgt
+Denied RODC Password Replication Group,Domain Admins
+Denied RODC Password Replication Group,Domain Controllers
+Denied RODC Password Replication Group,Cert Publishers
+Denied RODC Password Replication Group,Group Policy Creator Owners
+Denied RODC Password Replication Group,Enterprise Admins
+Denied RODC Password Replication Group,Schema Admins
+Denied RODC Password Replication Group,Read-only Domain Controllers
+Developers,ryan.patel
+Domain Admins,adm.akhan
+Domain Admins,Administrator
+Domain Admins,adm.jcarter
+Domain Controllers,LINUX$
+Domain Guests,Guest
+Domain Users,krbtgt
+Domain Users,harry.walker
+Domain Users,grace.thompson
+Domain Users,ryan.patel
+Domain Users,adm.akhan
+Domain Users,priya.shah
+Domain Users,finance.shared
+Domain Users,mark.taylor
+Domain Users,ethan.young
+Domain Users,svc-backup
+Domain Users,Administrator
+Domain Users,jack.lewis
+Domain Users,daniel.hughes
+Domain Users,ben.foster
+Domain Users,svc-financeapp
+Domain Users,adm.jcarter
+Domain Users,mia.roberts
+Domain Users,james.carter
+Domain Users,leo.martin
+Domain Users,lucy.hall
+Domain Users,emma.wilson
+Domain Users,liam.brooks
+Domain Users,ava.king
+Domain Users,isla.wright
+Domain Users,aisha.khan
+Domain Users,sophie.turner
+Domain Users,sarah.mitchell
+Domain Users,chloe.evans
+Domain Users,noah.green
+Domain Users,olivia.bennett
+Domain Users,oliver.scott
+Enterprise Admins,Administrator
+Finance-Payments-Approvers,olivia.bennett
+Finance-Payments-Initiators,priya.shah
+Finance-Payments-Initiators,daniel.hughes
+Finance-Payments-Initiators,chloe.evans
+GG-Finance,priya.shah
+GG-Finance,daniel.hughes
+GG-Finance,chloe.evans
+GG-Finance,olivia.bennett
+GG-HR,grace.thompson
+GG-HR,sophie.turner
+GG-IT,ryan.patel
+GG-IT,james.carter
+GG-IT,liam.brooks
+GG-IT,aisha.khan
+GG-Operations,ethan.young
+GG-Operations,lucy.hall
+GG-Operations,ava.king
+GG-Operations,sarah.mitchell
+GG-Operations,noah.green
+GG-Sales,harry.walker
+GG-Sales,jack.lewis
+GG-Sales,ben.foster
+GG-Sales,mia.roberts
+GG-Sales,emma.wilson
+Group Policy Creator Owners,Administrator
+Guests,Guest
+Guests,Domain Guests
+Helpdesk,liam.brooks
+IIS_IUSRS,S-1-5-17
+IT-Server-Admins,james.carter
+IT-Server-Admins,aisha.khan
+Pre-Windows 2000 Compatible Access,S-1-5-11
+Schema Admins,Administrator
+Users,S-1-5-11
+Users,Domain Users
+Users,S-1-5-4
+Windows Authorization Access Group,S-1-5-9

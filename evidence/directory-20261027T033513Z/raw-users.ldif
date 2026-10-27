@@ -1,0 +1,606 @@
+# record 1
+dn: CN=harry.walker,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Walker
+title: Sales Executive
+description: Sales Executive
+givenName: Harry
+whenCreated: 20261027021923.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: harry.walker
+pwdLastSet: 134375411633729597
+userAccountControl: 512
+employeeID: NW1019
+manager: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-Sales,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411714652520
+distinguishedName: CN=harry.walker,OU=Sales,OU=Staff,OU=Northwind,DC=northwind
+ ,DC=internal
+
+# record 2
+dn: CN=aisha.khan,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Khan
+title: Systems Administrator
+description: Systems Administrator
+givenName: Aisha
+whenCreated: 20261027021918.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: aisha.khan
+pwdLastSet: 134375411586729997
+userAccountControl: 512
+employeeID: NW1009
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-IT,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=IT-Server-Admins,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Change-Deployers,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411712995520
+distinguishedName: CN=aisha.khan,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=i
+ nternal
+
+# record 3
+dn: CN=finance.shared,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Team
+title: Shared finance team login
+description: Shared finance team login
+givenName: Finance
+whenCreated: 20261027021929.0Z
+department: Finance
+sAMAccountName: finance.shared
+pwdLastSet: 134375411694380863
+accountExpires: 0
+lastLogonTimestamp: 134375411716999180
+userAccountControl: 514
+distinguishedName: CN=finance.shared,OU=Finance,OU=Staff,OU=Northwind,DC=north
+ wind,DC=internal
+
+# record 4
+dn: CN=liam.brooks,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Brooks
+title: IT Support Analyst
+description: IT Support Analyst
+givenName: Liam
+whenCreated: 20261027021920.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: liam.brooks
+pwdLastSet: 134375411603395966
+userAccountControl: 512
+employeeID: NW1018
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-IT,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Helpdesk,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411713474820
+distinguishedName: CN=liam.brooks,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=
+ internal
+
+# record 5
+dn: CN=svc-backup,OU=ServiceAccounts,OU=Northwind,DC=northwind,DC=internal
+sn: Service
+title: Service account for nightly backups
+description: Service account for nightly backups
+givenName: Backup
+whenCreated: 20261027021930.0Z
+department: IT
+sAMAccountName: svc-backup
+pwdLastSet: 134375411701525327
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+userAccountControl: 66048
+accountExpires: 0
+lastLogonTimestamp: 134375411717237290
+memberOf: CN=Backup Operators,CN=Builtin,DC=northwind,DC=internal
+distinguishedName: CN=svc-backup,OU=ServiceAccounts,OU=Northwind,DC=northwind,
+ DC=internal
+
+# record 6
+dn: CN=Guest,CN=Users,DC=northwind,DC=internal
+description: Built-in account for guest access to the computer/domain
+whenCreated: 20261027015042.0Z
+userAccountControl: 66082
+pwdLastSet: 0
+accountExpires: 9223372036854775807
+sAMAccountName: Guest
+memberOf: CN=Guests,CN=Builtin,DC=northwind,DC=internal
+distinguishedName: CN=Guest,CN=Users,DC=northwind,DC=internal
+
+# record 7
+dn: CN=svc-financeapp,OU=ServiceAccounts,OU=Northwind,DC=northwind,DC=internal
+sn: Service
+title: Service account for the finance application
+description: Service account for the finance application
+givenName: FinanceApp
+whenCreated: 20261027021930.0Z
+department: IT
+sAMAccountName: svc-financeapp
+pwdLastSet: 134375411707157573
+manager: CN=aisha.khan,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+accountExpires: 0
+userAccountControl: 66050
+distinguishedName: CN=svc-financeapp,OU=ServiceAccounts,OU=Northwind,DC=northw
+ ind,DC=internal
+
+# record 8
+dn: CN=emma.wilson,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Wilson
+title: Account Manager
+description: Account Manager
+givenName: Emma
+whenCreated: 20261027021922.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: emma.wilson
+pwdLastSet: 134375411625447104
+userAccountControl: 512
+employeeID: NW1011
+manager: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-Sales,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411714419680
+distinguishedName: CN=emma.wilson,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,
+ DC=internal
+
+# record 9
+dn: CN=ava.king,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: King
+title: Operations Analyst
+description: Operations Analyst
+givenName: Ava
+whenCreated: 20261027021926.0Z
+department: Operations
+accountExpires: 9223372036854775807
+sAMAccountName: ava.king
+pwdLastSet: 134375411661085252
+userAccountControl: 512
+employeeID: NW1027
+manager: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=int
+ ernal
+memberOf: CN=GG-Operations,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411716051940
+distinguishedName: CN=ava.king,OU=Operations,OU=Staff,OU=Northwind,DC=northwin
+ d,DC=internal
+
+# record 10
+dn: CN=priya.shah,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Shah
+title: Senior Accountant
+description: Senior Accountant
+givenName: Priya
+whenCreated: 20261027021915.0Z
+department: Finance
+accountExpires: 9223372036854775807
+sAMAccountName: priya.shah
+pwdLastSet: 134375411557582600
+userAccountControl: 512
+employeeID: NW1007
+manager: CN=olivia.bennett,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=in
+ ternal
+memberOf: CN=GG-Finance,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Finance-Payments-Initiators,OU=Groups,OU=Northwind,DC=northwind,D
+ C=internal
+lastLogonTimestamp: 134375411712017280
+distinguishedName: CN=priya.shah,OU=Finance,OU=Staff,OU=Northwind,DC=northwind
+ ,DC=internal
+
+# record 11
+dn: CN=ryan.patel,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Patel
+title: Software Developer
+description: Software Developer
+givenName: Ryan
+whenCreated: 20261027021919.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: ryan.patel
+pwdLastSet: 134375411595015137
+userAccountControl: 512
+employeeID: NW1012
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-IT,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Developers,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Change-Deployers,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411713233280
+distinguishedName: CN=ryan.patel,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=i
+ nternal
+
+# record 12
+dn: CN=sarah.mitchell,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Mitchell
+title: Customer Service Lead
+description: Customer Service Lead
+givenName: Sarah
+whenCreated: 20261027021926.0Z
+department: Operations
+sAMAccountName: sarah.mitchell
+pwdLastSet: 134375411665624302
+employeeID: NW1010
+manager: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=int
+ ernal
+accountExpires: 0
+memberOf: CN=GG-Operations,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411716288510
+userAccountControl: 512
+distinguishedName: CN=sarah.mitchell,OU=Operations,OU=Staff,OU=Northwind,DC=no
+ rthwind,DC=internal
+
+# record 13
+dn: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Carter
+title: Head of IT
+description: Head of IT
+givenName: James
+whenCreated: 20261027021917.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: james.carter
+pwdLastSet: 134375411578452370
+userAccountControl: 512
+employeeID: NW1002
+memberOf: CN=GG-IT,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=IT-Server-Admins,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Change-Approvers,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411712742290
+distinguishedName: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC
+ =internal
+
+# record 14
+dn: CN=adm.jcarter,OU=Admins,OU=Northwind,DC=northwind,DC=internal
+sn: Carter
+title: Administrator account (James Carter)
+description: Administrator account (James Carter)
+givenName: James
+whenCreated: 20261027021928.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: adm.jcarter
+pwdLastSet: 134375411685267401
+userAccountControl: 512
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Domain Admins,CN=Users,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411716527550
+distinguishedName: CN=adm.jcarter,OU=Admins,OU=Northwind,DC=northwind,DC=inter
+ nal
+
+# record 15
+dn: CN=oliver.scott,OU=Leavers,OU=Northwind,DC=northwind,DC=internal
+sn: Scott
+title: Sales Executive
+description: Sales Executive
+givenName: Oliver
+whenCreated: 20261027021927.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: oliver.scott
+pwdLastSet: 134375411671298194
+employeeID: NW1014
+manager: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+userAccountControl: 514
+distinguishedName: CN=oliver.scott,OU=Leavers,OU=Northwind,DC=northwind,DC=int
+ ernal
+
+# record 16
+dn: CN=olivia.bennett,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Bennett
+title: Finance Director
+description: Finance Director
+givenName: Olivia
+whenCreated: 20261027021914.0Z
+department: Finance
+accountExpires: 9223372036854775807
+sAMAccountName: olivia.bennett
+pwdLastSet: 134375411544925592
+userAccountControl: 512
+employeeID: NW1001
+memberOf: CN=GG-Finance,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Finance-Payments-Approvers,OU=Groups,OU=Northwind,DC=northwind,DC
+ =internal
+lastLogonTimestamp: 134375411711444270
+distinguishedName: CN=olivia.bennett,OU=Finance,OU=Staff,OU=Northwind,DC=north
+ wind,DC=internal
+
+# record 17
+dn: CN=isla.wright,OU=Leavers,OU=Northwind,DC=northwind,DC=internal
+sn: Wright
+title: Stock Controller
+description: Stock Controller
+givenName: Isla
+whenCreated: 20261027021927.0Z
+department: Operations
+accountExpires: 9223372036854775807
+sAMAccountName: isla.wright
+pwdLastSet: 134375411675053416
+employeeID: NW1021
+manager: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=int
+ ernal
+userAccountControl: 514
+distinguishedName: CN=isla.wright,OU=Leavers,OU=Northwind,DC=northwind,DC=inte
+ rnal
+
+# record 18
+dn: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Green
+title: Operations Manager
+description: Operations Manager
+givenName: Noah
+whenCreated: 20261027021924.0Z
+department: Operations
+accountExpires: 9223372036854775807
+sAMAccountName: noah.green
+pwdLastSet: 134375411647421132
+userAccountControl: 512
+employeeID: NW1006
+memberOf: CN=GG-Operations,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411715350610
+distinguishedName: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northw
+ ind,DC=internal
+
+# record 19
+dn: CN=leo.martin,OU=Leavers,OU=Northwind,DC=northwind,DC=internal
+sn: Martin
+title: Contract Developer
+description: Contract Developer
+givenName: Leo
+whenCreated: 20261027021927.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: leo.martin
+pwdLastSet: 134375411678814288
+employeeID: C-0042
+manager: CN=james.carter,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+userAccountControl: 514
+distinguishedName: CN=leo.martin,OU=Leavers,OU=Northwind,DC=northwind,DC=inter
+ nal
+
+# record 20
+dn: CN=mark.taylor,OU=Leavers,OU=Northwind,DC=northwind,DC=internal
+sn: Taylor
+title: Financial Controller
+description: Financial Controller
+givenName: Mark
+whenCreated: 20261027021915.0Z
+department: Finance
+accountExpires: 9223372036854775807
+sAMAccountName: mark.taylor
+pwdLastSet: 134375411551287297
+employeeID: NW1004
+manager: CN=olivia.bennett,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=in
+ ternal
+lastLogonTimestamp: 134375411711779900
+userAccountControl: 514
+distinguishedName: CN=mark.taylor,OU=Leavers,OU=Northwind,DC=northwind,DC=inte
+ rnal
+
+# record 21
+dn: CN=jack.lewis,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Lewis
+title: Sales Executive
+description: Sales Executive
+givenName: Jack
+whenCreated: 20261027021924.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: jack.lewis
+pwdLastSet: 134375411642832248
+userAccountControl: 512
+employeeID: NW1026
+manager: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-Sales,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411715112900
+distinguishedName: CN=jack.lewis,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,D
+ C=internal
+
+# record 22
+dn: CN=mia.roberts,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Roberts
+title: Sales Executive
+description: Sales Executive
+givenName: Mia
+whenCreated: 20261027021923.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: mia.roberts
+pwdLastSet: 134375411638277642
+userAccountControl: 512
+employeeID: NW1024
+manager: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=GG-Sales,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411714884350
+distinguishedName: CN=mia.roberts,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,
+ DC=internal
+
+# record 23
+dn: CN=adm.akhan,OU=Admins,OU=Northwind,DC=northwind,DC=internal
+sn: Khan
+title: Administrator account (Aisha Khan)
+description: Administrator account (Aisha Khan)
+givenName: Aisha
+whenCreated: 20261027021928.0Z
+department: IT
+accountExpires: 9223372036854775807
+sAMAccountName: adm.akhan
+pwdLastSet: 134375411689797524
+userAccountControl: 512
+manager: CN=aisha.khan,OU=IT,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Domain Admins,CN=Users,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411716763820
+distinguishedName: CN=adm.akhan,OU=Admins,OU=Northwind,DC=northwind,DC=interna
+ l
+
+# record 24
+dn: CN=grace.thompson,OU=HR,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Thompson
+title: HR Manager
+description: HR Manager
+givenName: Grace
+whenCreated: 20261027021921.0Z
+department: HR
+accountExpires: 9223372036854775807
+sAMAccountName: grace.thompson
+pwdLastSet: 134375411611703906
+userAccountControl: 512
+employeeID: NW1003
+memberOf: CN=GG-HR,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411713713090
+distinguishedName: CN=grace.thompson,OU=HR,OU=Staff,OU=Northwind,DC=northwind,
+ DC=internal
+
+# record 25
+dn: CN=chloe.evans,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Evans
+title: Accounts Payable Clerk
+description: Accounts Payable Clerk
+givenName: Chloe
+whenCreated: 20261027021917.0Z
+department: Finance
+accountExpires: 9223372036854775807
+sAMAccountName: chloe.evans
+pwdLastSet: 134375411572085519
+userAccountControl: 512
+employeeID: NW1022
+manager: CN=priya.shah,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=intern
+ al
+memberOf: CN=GG-Finance,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Finance-Payments-Initiators,OU=Groups,OU=Northwind,DC=northwind,D
+ C=internal
+lastLogonTimestamp: 134375411712504860
+distinguishedName: CN=chloe.evans,OU=Finance,OU=Staff,OU=Northwind,DC=northwin
+ d,DC=internal
+
+# record 26
+dn: CN=krbtgt,CN=Users,DC=northwind,DC=internal
+description: Key Distribution Center Service Account
+whenCreated: 20261027015042.0Z
+userAccountControl: 514
+pwdLastSet: 134375394420551488
+accountExpires: 9223372036854775807
+sAMAccountName: krbtgt
+memberOf: CN=Denied RODC Password Replication Group,CN=Users,DC=northwind,DC=i
+ nternal
+distinguishedName: CN=krbtgt,CN=Users,DC=northwind,DC=internal
+
+# record 27
+dn: CN=ethan.young,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Young
+title: Logistics Coordinator
+description: Logistics Coordinator
+givenName: Ethan
+whenCreated: 20261027021925.0Z
+department: Operations
+accountExpires: 9223372036854775807
+sAMAccountName: ethan.young
+pwdLastSet: 134375411656538267
+userAccountControl: 512
+employeeID: NW1020
+manager: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=int
+ ernal
+memberOf: CN=GG-Operations,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411715821670
+distinguishedName: CN=ethan.young,OU=Operations,OU=Staff,OU=Northwind,DC=north
+ wind,DC=internal
+
+# record 28
+dn: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Foster
+title: Sales Director
+description: Sales Director
+givenName: Ben
+whenCreated: 20261027021922.0Z
+department: Sales
+accountExpires: 9223372036854775807
+sAMAccountName: ben.foster
+pwdLastSet: 134375411620848093
+userAccountControl: 512
+employeeID: NW1005
+memberOf: CN=GG-Sales,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411714187950
+distinguishedName: CN=ben.foster,OU=Sales,OU=Staff,OU=Northwind,DC=northwind,D
+ C=internal
+
+# record 29
+dn: CN=daniel.hughes,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Hughes
+title: Accounts Payable Clerk
+description: Accounts Payable Clerk
+givenName: Daniel
+whenCreated: 20261027021916.0Z
+department: Finance
+accountExpires: 9223372036854775807
+sAMAccountName: daniel.hughes
+pwdLastSet: 134375411565726588
+userAccountControl: 512
+employeeID: NW1015
+manager: CN=priya.shah,OU=Finance,OU=Staff,OU=Northwind,DC=northwind,DC=intern
+ al
+memberOf: CN=GG-Finance,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+memberOf: CN=Finance-Payments-Initiators,OU=Groups,OU=Northwind,DC=northwind,D
+ C=internal
+lastLogonTimestamp: 134375411712268810
+distinguishedName: CN=daniel.hughes,OU=Finance,OU=Staff,OU=Northwind,DC=northw
+ ind,DC=internal
+
+# record 30
+dn: CN=Administrator,CN=Users,DC=northwind,DC=internal
+description: Built-in account for administering the computer/domain
+whenCreated: 20261027015042.0Z
+userAccountControl: 512
+pwdLastSet: 134375394420455195
+accountExpires: 9223372036854775807
+sAMAccountName: Administrator
+memberOf: CN=Domain Admins,CN=Users,DC=northwind,DC=internal
+memberOf: CN=Schema Admins,CN=Users,DC=northwind,DC=internal
+memberOf: CN=Enterprise Admins,CN=Users,DC=northwind,DC=internal
+memberOf: CN=Group Policy Creator Owners,CN=Users,DC=northwind,DC=internal
+memberOf: CN=Administrators,CN=Builtin,DC=northwind,DC=internal
+lastLogonTimestamp: 134375394894873260
+distinguishedName: CN=Administrator,CN=Users,DC=northwind,DC=internal
+
+# record 31
+dn: CN=sophie.turner,OU=HR,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Turner
+title: HR Advisor
+description: HR Advisor
+givenName: Sophie
+whenCreated: 20261027021921.0Z
+department: HR
+accountExpires: 9223372036854775807
+sAMAccountName: sophie.turner
+pwdLastSet: 134375411616279900
+userAccountControl: 512
+employeeID: NW1016
+manager: CN=grace.thompson,OU=HR,OU=Staff,OU=Northwind,DC=northwind,DC=interna
+ l
+memberOf: CN=GG-HR,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411713954240
+distinguishedName: CN=sophie.turner,OU=HR,OU=Staff,OU=Northwind,DC=northwind,D
+ C=internal
+
+# record 32
+dn: CN=lucy.hall,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=internal
+sn: Hall
+title: Warehouse Supervisor
+description: Warehouse Supervisor
+givenName: Lucy
+whenCreated: 20261027021925.0Z
+department: Operations
+accountExpires: 9223372036854775807
+sAMAccountName: lucy.hall
+pwdLastSet: 134375411651952920
+userAccountControl: 512
+employeeID: NW1013
+manager: CN=noah.green,OU=Operations,OU=Staff,OU=Northwind,DC=northwind,DC=int
+ ernal
+memberOf: CN=GG-Operations,OU=Groups,OU=Northwind,DC=northwind,DC=internal
+lastLogonTimestamp: 134375411715592370
+distinguishedName: CN=lucy.hall,OU=Operations,OU=Staff,OU=Northwind,DC=northwi
+ nd,DC=internal
+
+# Referral
+ref: ldap://northwind.internal/CN=Configuration,DC=northwind,DC=internal
+
+# Referral
+ref: ldap://northwind.internal/DC=DomainDnsZones,DC=northwind,DC=internal
+
+# Referral
+ref: ldap://northwind.internal/DC=ForestDnsZones,DC=northwind,DC=internal
+
+# returned 35 records
+# 32 entries
+# 3 referrals
