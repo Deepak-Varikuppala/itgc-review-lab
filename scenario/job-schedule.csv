@@ -1,0 +1,2 @@
+job_id,server,program,schedule,runs_as,owner,purpose,approved_by,approved_date
+JOB-01,linux2,/usr/local/sbin/northwind-backup,Daily at 01:30 UTC,root,aisha.khan,Nightly backup of the finance database,james.carter,2025-11-03

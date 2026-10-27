@@ -1,0 +1,21 @@
+job_title,directory_groups,code_repository,server_rights,notes
+Finance Director,GG-Finance;Finance-Payments-Approvers,none,none,
+Financial Controller,GG-Finance;Finance-Payments-Approvers,none,none,
+Senior Accountant,GG-Finance;Finance-Payments-Initiators,none,none,Creates payments; does not approve them
+Accounts Payable Clerk,GG-Finance;Finance-Payments-Initiators,none,none,
+Head of IT,GG-IT;IT-Server-Admins;Change-Approvers,owner,administrator,Domain administration through the separate adm.jcarter account
+Systems Administrator,GG-IT;IT-Server-Admins;Change-Deployers,site administrator,administrator,Domain administration through the separate adm.akhan account
+Software Developer,GG-IT;Developers,write,none,Does not deploy to production
+Contract Developer,GG-IT;Developers,write,none,Only for the length of the contract
+IT Support Analyst,GG-IT;Helpdesk,none,none,Password resets only
+HR Manager,GG-HR,none,none,
+HR Advisor,GG-HR,none,none,
+Sales Director,GG-Sales,none,none,
+Account Manager,GG-Sales,none,none,
+Sales Executive,GG-Sales,none,none,
+Operations Manager,GG-Operations,none,none,
+Warehouse Supervisor,GG-Operations,none,none,
+Logistics Coordinator,GG-Operations,none,none,
+Operations Analyst,GG-Operations,none,none,
+Customer Service Lead,GG-Operations,none,none,
+Stock Controller,GG-Operations,none,none,

@@ -1,3 +1,4 @@
 exception_id,account,policy_clause,exception,business_reason,approved_by,approved_date,review_date
 EX-2024-01,svc-financeapp,4.3,Password never expires,Application service account; password held in the vault and rotated manually each year,james.carter,2024-01-15,2027-01-15
 EX-2024-02,svc-backup,4.3,Password never expires,Backup service account; password held in the vault and rotated manually each year,james.carter,2024-01-15,2027-01-15
+EX-2025-03,labadmin,Change and Operations Standard 5.1 and 5.2,Local administrator account on the Linux servers; sudo without a password,Emergency access when the domain is unavailable and unattended maintenance; password held in the vault,james.carter,2025-11-03,2026-11-03
