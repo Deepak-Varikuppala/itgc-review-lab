@@ -8,7 +8,7 @@ item to be read and judged, so they use a random sample drawn with a recorded se
     python3 audit/run_change_ops_tests.py \\
         --app evidence/app-<timestamp> \\
         --host evidence/host-linux-<timestamp> --host evidence/host-linux2-<timestamp> \\
-        --directory evidence/directory-<timestamp>
+        --directory evidence/directory-<timestamp> --pc evidence/pc-nw-pc01-<timestamp>
 
 Outputs workpapers/change-operations-workpaper.xlsx and
 workpapers/change-operations-results.json.
@@ -138,10 +138,42 @@ class HostEvidence:
         self.as_at = datetime.fromisoformat(stamp.split(":", 1)[1].strip())
 
 
+class PcEvidence:
+    def __init__(self, folder: Path):
+        self.dir = folder
+        self.host = folder.name.split("-")[1]
+        self.name = next(
+            line.split(": ", 1)[1]
+            for line in (folder / "host.txt").read_text().splitlines()
+            if line.startswith("Computer name")
+        )
+        self.accounts = read_csv(folder / "local-accounts.csv")
+        self.admins = read_csv(folder / "local-administrators.csv")
+        self.time_sync = (folder / "time-sync.txt").read_text()
+        self.pending = read_csv(folder / "updates-pending.csv")
+        self.installed = read_csv(folder / "updates-installed.csv")
+        self.update_settings = (folder / "update-settings.txt").read_text()
+        log = (folder / "extraction-log.txt").read_text()
+        stamp = next(line for line in log.splitlines() if line.startswith("Extracted at"))
+        self.as_at = datetime.fromisoformat(stamp.split(":", 1)[1].strip())
+
+
+# Built in Windows accounts that are disabled when Windows is installed.
+WINDOWS_BUILT_IN = {"Administrator", "Guest", "DefaultAccount", "WDAGUtilityAccount"}
+
+
 class Evidence:
-    def __init__(self, app: Path, hosts: list[Path], directory: Path, scenario: Path):
+    def __init__(
+        self,
+        app: Path,
+        hosts: list[Path],
+        directory: Path,
+        scenario: Path,
+        pc: Path | None = None,
+    ):
         self.app_dir, self.directory_dir = app, directory
         self.hosts = {h.host: h for h in (HostEvidence(p) for p in hosts)}
+        self.pc = PcEvidence(pc) if pc else None
         self.gitea_users = {u["username"]: u for u in read_csv(app / "gitea-users.csv")}
         self.repo_access = read_csv(app / "gitea-repo-access.csv")
         self.prs = {int(p["number"]): p for p in read_csv(app / "gitea-pull-requests.csv")}
@@ -240,8 +272,8 @@ class Evidence:
 def test_server_sign_in(ev: Evidence) -> Test:
     t = Test(
         "AC-15",
-        "Only authorised people can sign in to the servers",
-        "Standard 5.1",
+        "Only authorised people can sign in to the servers and the PC",
+        "Standard 5.1, 5.4",
         "Design and operating effectiveness",
         "Nobody can sign in to a server except IT staff with their own domain account, and "
         "the emergency administrator account.",
@@ -249,8 +281,8 @@ def test_server_sign_in(ev: Evidence) -> Test:
         "every local account on each server that can sign in (a login shell and a usable "
         "password or SSH key). Each must be the emergency administrator account with an "
         "exception in the register, or an account that cannot sign in.",
-        "Every local account on both Linux servers, and the domain sign in setting on the "
-        "app server",
+        "Every local account on both Linux servers and the PC, and the domain sign in "
+        "setting on the app server",
     )
     app = ev.hosts[APP_SERVER]
     allowed = re.search(r"^simple_allow_groups\s*=\s*(.+)$", app.sign_in, re.M)
@@ -297,15 +329,42 @@ def test_server_sign_in(ev: Evidence) -> Test:
                         "neither the password nor the account ever expires.",
                     )
                 )
-    t.conclude(["F17"] if t.exceptions() else None)
+    findings = ["F17"] if t.exceptions() else []
+    if ev.pc:
+        before = len(t.exceptions())
+        for a in ev.pc.accounts:
+            name = f"{ev.pc.name}: {a['username']}"
+            detail = (
+                f"Enabled: {a['enabled'].lower()}; password last set "
+                f"{a['password_last_set'][:10] or 'never'}; last sign in "
+                f"{a['last_logon'][:10] or 'never'}; {a['description'] or 'no description'}"
+            )
+            if a["enabled"] != "Yes":
+                t.items.append(Item(name, detail, "Pass", "Disabled."))
+            elif ev.exception_for(a["username"], "5.4"):
+                e = ev.exception_for(a["username"], "5.4")
+                t.items.append(Item(name, detail, "Pass", f"Covered by {e['exception_id']}."))
+            else:
+                t.items.append(
+                    Item(
+                        name,
+                        detail,
+                        "Exception",
+                        "Enabled local account on the PC, outside the domain's sign in and "
+                        "password controls, with no exception recorded.",
+                    )
+                )
+        if len(t.exceptions()) > before:
+            findings.append("F23")
+    t.conclude(findings or None)
     return t
 
 
 def test_server_admin(ev: Evidence) -> Test:
     t = Test(
         "AC-16",
-        "Administrator rights on the servers are limited to IT-Server-Admins",
-        "Standard 5.2",
+        "Administrator rights on the servers and the PC are limited as required",
+        "Standard 5.2, 5.4",
         "Operating effectiveness",
         "Full control of a server is held only by approved IT administrators, and every use "
         "of it asks for a password.",
@@ -313,8 +372,10 @@ def test_server_admin(ev: Evidence) -> Test:
         "rights are allowed only through IT-Server-Admins. Rights limited to the deployment "
         "tool are allowed for Change-Deployers. A rule granted to a person directly, or one "
         "that does not ask for a password, is an exception unless the exception register "
-        "covers it.",
-        "Every sudo rule on both Linux servers and every account it covers",
+        "covers it. On the PC, any member of the local Administrators group other than "
+        "Domain Admins and the disabled built in Administrator is an exception.",
+        "Every sudo rule on both Linux servers and every account it covers, and every "
+        "member of the PC's local Administrators group",
     )
     for host in sorted(ev.hosts):
         for r in ev.hosts[host].sudo:
@@ -359,7 +420,52 @@ def test_server_admin(ev: Evidence) -> Test:
                         ),
                     )
                 )
-    t.conclude(["F17"] if t.exceptions() else None)
+    findings = ["F17"] if t.exceptions() else []
+    if ev.pc:
+        before = len(t.exceptions())
+        for m in ev.pc.admins:
+            name = f"{ev.pc.name}: {m['member']}"
+            detail = f"{m['type']} from {m['source']}" + (
+                f"; enabled: {m['enabled'].lower()}" if m["enabled"] else ""
+            )
+            short = m["member"].split("\\")[-1]
+            if m["sid"].endswith("-500"):
+                ok = m["enabled"] == "No"
+                t.items.append(
+                    Item(
+                        name,
+                        detail,
+                        "Pass" if ok else "Exception",
+                        "Built in Administrator, disabled as required."
+                        if ok
+                        else "The built in Administrator account is enabled.",
+                    )
+                )
+            elif m["sid"].endswith("-512") or short == "Domain Admins":
+                t.items.append(Item(name, detail, "Pass", "Domain Admins, as the Standard allows."))
+            else:
+                person = short.lower()
+                role = ev.users.get(person, {}).get("job_title", "")
+                why = (
+                    f"a domain account belonging to the {role}"
+                    if role
+                    else "a local account"
+                    if m["source"] == "Local"
+                    else "an account"
+                )
+                t.items.append(
+                    Item(
+                        name,
+                        detail,
+                        "Exception",
+                        f"Administrator rights on the PC for {why}. Only Domain Admins and the "
+                        "disabled built in Administrator may hold them"
+                        + (", and IT support staff may not." if "Support" in role else "."),
+                    )
+                )
+        if len(t.exceptions()) > before:
+            findings.append("F23")
+    t.conclude(findings or None)
     return t
 
 
@@ -1241,14 +1347,15 @@ def test_scheduled_jobs(ev: Evidence) -> Test:
 def test_time(ev: Evidence) -> Test:
     t = Test(
         "OP-06",
-        "Server clocks are synchronised",
+        "Server and PC clocks are synchronised",
         "Standard 4.6",
         "Operating effectiveness",
-        "Every server keeps the correct time, so logs can be relied on and Kerberos sign in works.",
-        "Confirm each server synchronises with a time source and was within 5 seconds of it "
-        "when the evidence was collected. Consider anything seen during fieldwork that shows "
-        "the clock was wrong at other times.",
-        "Both Linux servers",
+        "Every server and PC keeps the correct time, so logs can be relied on and Kerberos "
+        "sign in works.",
+        "Confirm each machine synchronises with a time source and was within 5 seconds of "
+        "it when the evidence was collected. Consider anything seen during fieldwork that "
+        "shows the clock was wrong at other times.",
+        "Both Linux servers and the PC",
     )
     for host in sorted(ev.hosts):
         text = ev.hosts[host].time_sync
@@ -1275,7 +1382,32 @@ def test_time(ev: Evidence) -> Test:
             )
         else:
             t.items.append(Item(host, detail, "Exception", "Not synchronised within 5 seconds."))
-    t.conclude(["F22"] if t.exceptions() else None)
+    findings = ["F22"] if t.exceptions() else []
+    if ev.pc:
+        text = ev.pc.time_sync
+        source = re.search(r"^Source: (.+)$", text, re.M)
+        source = source.group(1).strip() if source else "unknown"
+        last = re.search(r"^Last Successful Sync Time: (.+)$", text, re.M)
+        offsets = [abs(float(x)) for x in re.findall(r", ([+-]\d+\.\d+)s", text)]
+        local = source in ("Local CMOS Clock", "Free-running System Clock", "unknown")
+        detail = (
+            f"Source {source}; last successful sync "
+            f"{last.group(1).strip() if last else 'unknown'}; offset from the domain "
+            f"controller {max(offsets):.3f} seconds"
+            if offsets
+            else f"Source {source}; offset from the domain controller could not be measured"
+        )
+        if not local and offsets and max(offsets) <= 5:
+            t.items.append(Item(ev.pc.name, detail, "Pass", "Synchronised and within 5 seconds."))
+        else:
+            reason = (
+                "The PC is not synchronising with any time source: it is running on its own clock"
+                if local
+                else "The PC's clock is more than 5 seconds from the domain controller"
+            )
+            t.items.append(Item(ev.pc.name, detail, "Exception", reason + "."))
+            findings.append("F24")
+    t.conclude(findings or None)
     return t
 
 
@@ -1285,11 +1417,11 @@ def test_patching(ev: Evidence) -> Test:
         "Security updates are installed",
         "Standard 4.7",
         "Design and operating effectiveness",
-        "Known security weaknesses in the servers' software are fixed promptly.",
+        "Known security weaknesses in the software on the servers and the PC are fixed promptly.",
         "Confirm automatic security updates are switched on. List security updates still "
         "waiting to be installed when the evidence was collected. Any security update "
         "waiting for more than 14 days is an exception.",
-        "Both Linux servers",
+        "Both Linux servers and the PC",
     )
     for host in sorted(ev.hosts):
         text = ev.hosts[host].patching
@@ -1312,7 +1444,42 @@ def test_patching(ev: Evidence) -> Test:
                 + f"; {pending} security update(s) waiting.",
             )
         )
-    t.conclude(["F23"] if t.exceptions() else None)
+    if ev.pc:
+        auto = "not set (automatic updates on)" in ev.pc.update_settings
+        late = []
+        for u in ev.pc.pending:
+            if u["security"] != "Yes":
+                continue
+            released = ts(u["released"]).date() if u["released"] else None
+            age = (ev.pc.as_at.date() - released).days if released else None
+            if age is None or age > 14:
+                late.append(f"{u['title']} (released {released or 'date unknown'}, {age} days)")
+        search_ok = "Update search: completed" in ev.pc.update_settings
+        last = max((u["date"] for u in ev.pc.installed if u["result"] == "Succeeded"), default="")
+        detail = (
+            f"{len(ev.pc.pending)} update(s) waiting; last update installed {last[:10] or 'never'}"
+        )
+        problems = []
+        if not auto:
+            problems.append("automatic updates are switched off by policy")
+        if not search_ok:
+            problems.append("the check for waiting updates did not complete")
+        if late:
+            problems.append(
+                f"{len(late)} security update(s) waiting more than 14 days: " + "; ".join(late)
+            )
+        t.items.append(
+            Item(
+                ev.pc.name,
+                detail,
+                "Exception" if problems else "Pass",
+                sentence("; ".join(problems))
+                if problems
+                else "Automatic updates are on and no security update has waited more than "
+                "14 days.",
+            )
+        )
+    t.conclude(["F25"] if t.exceptions() else None)
     return t
 
 
@@ -1390,9 +1557,9 @@ FRAMEWORKS = {
 
 
 def run_all(
-    app: Path, hosts: list[Path], directory: Path, scenario: Path
+    app: Path, hosts: list[Path], directory: Path, scenario: Path, pc: Path | None = None
 ) -> tuple[Evidence, list[Test], dict]:
-    ev = Evidence(app, hosts, directory, scenario)
+    ev = Evidence(app, hosts, directory, scenario, pc)
     tests, samples = [], {}
     for fn in ALL_TESTS:
         result = fn(ev)
@@ -1418,18 +1585,19 @@ def main() -> int:
         type=Path,
         help="directory extraction for the end of the period",
     )
+    parser.add_argument("--pc", type=Path, help="evidence from the office PC")
     parser.add_argument("--scenario", default=ROOT / "scenario", type=Path)
     parser.add_argument("--out", default=ROOT / "workpapers", type=Path)
     args = parser.parse_args()
 
-    for folder in [args.app, *args.host, args.directory]:
+    for folder in [args.app, *args.host, args.directory, *([args.pc] if args.pc else [])]:
         problems = verify_evidence(folder)
         if problems:
             print(f"{folder} failed its integrity check, so it cannot be relied on:")
             print("\n".join(f"  {p}" for p in problems))
             return 1
 
-    ev, tests, samples = run_all(args.app, args.host, args.directory, args.scenario)
+    ev, tests, samples = run_all(args.app, args.host, args.directory, args.scenario, args.pc)
     args.out.mkdir(parents=True, exist_ok=True)
     from workpaper import build_change_ops_workpaper
 
@@ -1443,6 +1611,7 @@ def main() -> int:
                     "app": relative(args.app),
                     "hosts": [relative(h) for h in args.host],
                     "directory": relative(args.directory),
+                    "pc": relative(args.pc) if args.pc else None,
                 },
                 "as_at": ev.as_at.isoformat(),
                 "period": [PERIOD_START.isoformat(), PERIOD_END.isoformat()],

@@ -5,6 +5,7 @@
 | `collect_evidence.py` | Domain controller | Read only extraction of users, groups, privileged groups and password policy, with an extraction log and SHA-256 hashes |
 | `collect_app_evidence.py` | App server | Read only extraction from Gitea's database and repository (accounts, access, pull requests, reviews, branch protection, commits on main) and the server (deployment log, deployment tool, backup log and job) |
 | `collect_host_evidence.py` | Each Linux server | Read only extraction of local accounts, sudo rules, effective SSH settings, domain sign in settings, scheduled jobs, time synchronisation and patch status |
+| `collect_pc_evidence.ps1` | The office PC | Read only extraction of local accounts, local Administrators members, password policy, time synchronisation and Windows Update status |
 | `run_tests.py` | Anywhere | Runs the 14 logical access tests on the directory and builds its workpaper |
 | `run_change_ops_tests.py` | Anywhere | Runs the 18 change management, IT operations and server access tests, including the two sampled tests, and builds their workpaper |
 | `make_report.py` | Anywhere | Writes both reports, both testing programmes and the overall summary from the results |
@@ -44,6 +45,14 @@ Run from your Mac, with both servers switched on:
 scp -r audit labadmin@192.168.64.11:~/ && scp -r audit labadmin@192.168.64.10:~/
 ssh -t labadmin@192.168.64.11 'sudo python3 ~/audit/collect_app_evidence.py --out ~/evidence && sudo python3 ~/audit/collect_host_evidence.py --out ~/evidence'
 ssh -t labadmin@192.168.64.10 'sudo python3 ~/audit/collect_host_evidence.py --out ~/evidence'
+```
+
+For the office PC:
+
+```bash
+scp audit/collect_pc_evidence.ps1 pcadmin@<pc address>:
+ssh pcadmin@<pc address> 'powershell -NoProfile -ExecutionPolicy Bypass -File collect_pc_evidence.ps1 -Out C:\Users\pcadmin\evidence'
+scp -r 'pcadmin@<pc address>:evidence/pc-*' evidence/
 ```
 
 This creates `evidence/app-<timestamp>/` on the app server and `evidence/host-<hostname>-<timestamp>/` on each server. Copy them back with `scp -r`. Each has its own `extraction-log.txt` with record counts and a `SHA256SUMS` file.

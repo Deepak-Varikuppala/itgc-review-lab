@@ -259,6 +259,8 @@ def build_change_ops_workpaper(ev, tests, samples, out: Path, seed: int) -> Path
     ws["A1"].font = TITLE_FONT
     ws.merge_cells("A1:D1")
     folders = [ev.app_dir, *(h.dir for h in ev.hosts.values()), ev.directory_dir]
+    if ev.pc:
+        folders.append(ev.pc.dir)
     _label_block(
         ws,
         [
