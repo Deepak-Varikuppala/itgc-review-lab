@@ -1,0 +1,2313 @@
+{
+  "evidence": {
+    "app": "evidence/app-20261028T015418Z",
+    "hosts": [
+      "evidence/host-linux-20261028T015420Z",
+      "evidence/host-linux2-20261028T015418Z"
+    ],
+    "directory": "evidence/directory-20261027T030229Z"
+  },
+  "as_at": "2026-10-28",
+  "period": [
+    "2026-07-01",
+    "2026-09-30"
+  ],
+  "seed": 20261001,
+  "samples": {
+    "AC-18": {
+      "population": [
+        "aisha.khan",
+        "ava.king",
+        "ben.foster",
+        "chloe.evans",
+        "daniel.hughes",
+        "emma.wilson",
+        "ethan.young",
+        "grace.thompson",
+        "harry.walker",
+        "jack.lewis",
+        "james.carter",
+        "leo.martin",
+        "liam.brooks",
+        "lucy.hall",
+        "mark.taylor",
+        "mia.roberts",
+        "noah.green",
+        "olivia.bennett",
+        "priya.shah",
+        "ryan.patel",
+        "sarah.mitchell",
+        "sophie.turner"
+      ],
+      "sample": [
+        "aisha.khan",
+        "ava.king",
+        "ben.foster",
+        "chloe.evans",
+        "daniel.hughes",
+        "grace.thompson",
+        "jack.lewis",
+        "james.carter",
+        "leo.martin",
+        "liam.brooks",
+        "noah.green",
+        "olivia.bennett",
+        "priya.shah",
+        "ryan.patel",
+        "sarah.mitchell"
+      ]
+    },
+    "CM-04": {
+      "population": [
+        "2026-07-02T18:10:00+00:00 8275fe3",
+        "2026-07-07T18:20:00+00:00 9e5f139",
+        "2026-07-09T18:30:00+00:00 e9a1fb3",
+        "2026-07-13T18:40:00+00:00 f9a78ef",
+        "2026-07-14T18:10:00+00:00 5e1a2ab",
+        "2026-07-16T18:20:00+00:00 0857f77",
+        "2026-07-17T17:05:00+00:00 a58c016",
+        "2026-07-20T18:30:00+00:00 d77b60c",
+        "2026-07-21T18:40:00+00:00 3a861f2",
+        "2026-07-23T18:10:00+00:00 4b61840",
+        "2026-07-27T18:20:00+00:00 85c471c",
+        "2026-07-28T18:30:00+00:00 33e7d2f",
+        "2026-07-30T18:40:00+00:00 68dab97",
+        "2026-08-04T18:10:00+00:00 48de56b",
+        "2026-08-06T18:20:00+00:00 6bf70a1",
+        "2026-08-10T18:30:00+00:00 440f058",
+        "2026-08-11T18:40:00+00:00 00330e9",
+        "2026-08-13T18:10:00+00:00 d5e2c09",
+        "2026-08-17T18:20:00+00:00 ed2c99e",
+        "2026-08-18T18:30:00+00:00 5e081d7",
+        "2026-08-19T22:40:00+00:00 f952bda",
+        "2026-08-20T18:40:00+00:00 96e198c",
+        "2026-08-21T17:05:00+00:00 3aef765",
+        "2026-08-24T18:10:00+00:00 979e9c4",
+        "2026-08-25T18:20:00+00:00 eb3e38d",
+        "2026-08-27T18:30:00+00:00 b1f9ab7",
+        "2026-09-01T18:40:00+00:00 43ad0f0",
+        "2026-09-03T18:10:00+00:00 3d4bc89",
+        "2026-09-08T18:20:00+00:00 e7a3eb3",
+        "2026-09-10T18:30:00+00:00 7be77c7",
+        "2026-09-11T17:05:00+00:00 5d0048d",
+        "2026-09-14T18:40:00+00:00 01e08dc",
+        "2026-09-15T18:10:00+00:00 e516fae",
+        "2026-09-17T18:20:00+00:00 70f58de",
+        "2026-09-21T18:30:00+00:00 59c30a8",
+        "2026-09-22T18:40:00+00:00 3f75e98",
+        "2026-09-23T21:15:00+00:00 36dcf23",
+        "2026-09-24T18:10:00+00:00 8da47b7",
+        "2026-09-28T18:20:00+00:00 6edb084",
+        "2026-09-29T18:30:00+00:00 9f4e3b5"
+      ],
+      "sample": [
+        "2026-07-07T18:20:00+00:00 9e5f139",
+        "2026-07-14T18:10:00+00:00 5e1a2ab",
+        "2026-07-16T18:20:00+00:00 0857f77",
+        "2026-07-20T18:30:00+00:00 d77b60c",
+        "2026-07-23T18:10:00+00:00 4b61840",
+        "2026-07-30T18:40:00+00:00 68dab97",
+        "2026-08-06T18:20:00+00:00 6bf70a1",
+        "2026-08-10T18:30:00+00:00 440f058",
+        "2026-08-19T22:40:00+00:00 f952bda",
+        "2026-08-20T18:40:00+00:00 96e198c",
+        "2026-08-24T18:10:00+00:00 979e9c4",
+        "2026-08-27T18:30:00+00:00 b1f9ab7",
+        "2026-09-14T18:40:00+00:00 01e08dc",
+        "2026-09-15T18:10:00+00:00 e516fae",
+        "2026-09-17T18:20:00+00:00 70f58de"
+      ]
+    }
+  },
+  "tests": [
+    {
+      "test_id": "AC-15",
+      "title": "Only authorised people can sign in to the servers",
+      "policy_ref": "Standard 5.1",
+      "test_type": "Design and operating effectiveness",
+      "objective": "Nobody can sign in to a server except IT staff with their own domain account, and the emergency administrator account.",
+      "procedure": "Confirm the app server only lets members of GG-IT sign in with domain accounts. List every local account on each server that can sign in (a login shell and a usable password or SSH key). Each must be the emergency administrator account with an exception in the register, or an account that cannot sign in.",
+      "population": "Every local account on both Linux servers, and the domain sign in setting on the app server",
+      "items": [
+        {
+          "item": "linux2: domain sign in",
+          "detail": "SSSD access settings",
+          "result": "Pass",
+          "comment": "Only members of GG-IT may sign in with a domain account (access_provider = simple)."
+        },
+        {
+          "item": "linux: labadmin",
+          "detail": "uid 1000; password set; 1 SSH key(s); groups adm;cdrom;dip;lxd;plugdev;sudo;users",
+          "result": "Pass",
+          "comment": "Emergency administrator account covered by EX-2025-03, review due 2026-11-03."
+        },
+        {
+          "item": "linux2: labadmin",
+          "detail": "uid 1000; password set; 1 SSH key(s); groups adm;cdrom;dip;lxd;plugdev;sudo;users",
+          "result": "Pass",
+          "comment": "Emergency administrator account covered by EX-2025-03, review due 2026-11-03."
+        },
+        {
+          "item": "linux2: support",
+          "detail": "uid 1001; password set; 0 SSH key(s); groups sudo",
+          "result": "Exception",
+          "comment": "Local account \"DevPartners support engineer\" can sign in and is not in the exception register. Password last set 2026-08-12, and neither the password nor the account ever expires."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 4 tested)",
+      "findings": [
+        "F17"
+      ],
+      "iso27001": "A.5.15 Access control; A.5.16 Identity management",
+      "cis_controls": "5.1 Inventory of accounts; 6.7 Centralise access control",
+      "sample": ""
+    },
+    {
+      "test_id": "AC-16",
+      "title": "Administrator rights on the servers are limited to IT-Server-Admins",
+      "policy_ref": "Standard 5.2",
+      "test_type": "Operating effectiveness",
+      "objective": "Full control of a server is held only by approved IT administrators, and every use of it asks for a password.",
+      "procedure": "For every sudo rule on each server, record who it covers and what it allows. Full rights are allowed only through IT-Server-Admins. Rights limited to the deployment tool are allowed for Change-Deployers. A rule granted to a person directly, or one that does not ask for a password, is an exception unless the exception register covers it.",
+      "population": "Every sudo rule on both Linux servers and every account it covers",
+      "items": [
+        {
+          "item": "linux: root via root",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Pass",
+          "comment": "The root account itself."
+        },
+        {
+          "item": "linux: (no members) via %admin",
+          "detail": "(ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Not applicable",
+          "comment": "The group has no members."
+        },
+        {
+          "item": "linux: labadmin via %sudo",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Pass",
+          "comment": "Covered by EX-2025-03."
+        },
+        {
+          "item": "linux: labadmin via labadmin",
+          "detail": "(ALL) ALL; password asked: no; /etc/sudoers.d/90-labadmin (modified 2026-10-27)",
+          "result": "Pass",
+          "comment": "Covered by EX-2025-03."
+        },
+        {
+          "item": "linux2: root via root",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Pass",
+          "comment": "The root account itself."
+        },
+        {
+          "item": "linux2: (no members) via %admin",
+          "detail": "(ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Not applicable",
+          "comment": "The group has no members."
+        },
+        {
+          "item": "linux2: labadmin via %sudo",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Pass",
+          "comment": "Covered by EX-2025-03."
+        },
+        {
+          "item": "linux2: support via %sudo",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers (modified 2026-01-21)",
+          "result": "Exception",
+          "comment": "Full administrator rights granted through %sudo, not IT-Server-Admins, with no exception recorded."
+        },
+        {
+          "item": "linux2: labadmin via labadmin",
+          "detail": "(ALL) ALL; password asked: no; /etc/sudoers.d/90-labadmin (modified 2026-10-27)",
+          "result": "Pass",
+          "comment": "Covered by EX-2025-03."
+        },
+        {
+          "item": "linux2: aisha.khan via %it-server-admins",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers.d/northwind (modified 2026-10-28)",
+          "result": "Pass",
+          "comment": "Granted through IT-Server-Admins, with a password."
+        },
+        {
+          "item": "linux2: james.carter via %it-server-admins",
+          "detail": "(ALL:ALL) ALL; password asked: yes; /etc/sudoers.d/northwind (modified 2026-10-28)",
+          "result": "Pass",
+          "comment": "Granted through IT-Server-Admins, with a password."
+        },
+        {
+          "item": "linux2: aisha.khan via %change-deployers",
+          "detail": "(root) /usr/local/sbin/northwind-deploy; password asked: yes; /etc/sudoers.d/northwind (modified 2026-10-28)",
+          "result": "Pass",
+          "comment": "Limited to the deployment tool, with a password."
+        },
+        {
+          "item": "linux2: ryan.patel via %change-deployers",
+          "detail": "(root) /usr/local/sbin/northwind-deploy; password asked: yes; /etc/sudoers.d/northwind (modified 2026-10-28)",
+          "result": "Pass",
+          "comment": "Limited to the deployment tool, with a password."
+        },
+        {
+          "item": "linux2: ryan.patel via ryan.patel",
+          "detail": "(ALL) ALL; password asked: no; /etc/sudoers.d/ryan-emergency (modified 2026-09-23)",
+          "result": "Exception",
+          "comment": "Full administrator rights granted to the person directly, does not ask for a password, with no exception recorded."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 12 tested)",
+      "findings": [
+        "F17"
+      ],
+      "iso27001": "A.8.2 Privileged access rights",
+      "cis_controls": "5.4 Restrict administrator privileges; 6.8 Role based access",
+      "sample": ""
+    },
+    {
+      "test_id": "AC-17",
+      "title": "SSH settings on the servers meet the Standard",
+      "policy_ref": "Standard 5.3",
+      "test_type": "Design",
+      "objective": "Remote access to the servers resists password guessing and misuse of idle or forwarded sessions.",
+      "procedure": "Compare each setting in the table in Standard 5.3 with the effective SSH configuration reported by sshd -T, which includes defaults and every included file.",
+      "population": "Both Linux servers, eight settings each",
+      "items": [
+        {
+          "item": "linux: permitrootlogin",
+          "detail": "Required: no",
+          "result": "Exception",
+          "comment": "Effective value: prohibit-password."
+        },
+        {
+          "item": "linux: permitemptypasswords",
+          "detail": "Required: no",
+          "result": "Pass",
+          "comment": "Effective value: no."
+        },
+        {
+          "item": "linux: maxauthtries",
+          "detail": "Required: 4 or fewer",
+          "result": "Exception",
+          "comment": "Effective value: 6."
+        },
+        {
+          "item": "linux: x11forwarding",
+          "detail": "Required: no",
+          "result": "Exception",
+          "comment": "Effective value: yes."
+        },
+        {
+          "item": "linux: ignorerhosts",
+          "detail": "Required: yes",
+          "result": "Pass",
+          "comment": "Effective value: yes."
+        },
+        {
+          "item": "linux: hostbasedauthentication",
+          "detail": "Required: no",
+          "result": "Pass",
+          "comment": "Effective value: no."
+        },
+        {
+          "item": "linux: logingracetime",
+          "detail": "Required: 60 seconds or less",
+          "result": "Exception",
+          "comment": "Effective value: 120."
+        },
+        {
+          "item": "linux: clientaliveinterval",
+          "detail": "Required: 1 to 900 seconds",
+          "result": "Exception",
+          "comment": "Effective value: 0."
+        },
+        {
+          "item": "linux2: permitrootlogin",
+          "detail": "Required: no",
+          "result": "Exception",
+          "comment": "Effective value: prohibit-password."
+        },
+        {
+          "item": "linux2: permitemptypasswords",
+          "detail": "Required: no",
+          "result": "Pass",
+          "comment": "Effective value: no."
+        },
+        {
+          "item": "linux2: maxauthtries",
+          "detail": "Required: 4 or fewer",
+          "result": "Exception",
+          "comment": "Effective value: 6."
+        },
+        {
+          "item": "linux2: x11forwarding",
+          "detail": "Required: no",
+          "result": "Exception",
+          "comment": "Effective value: yes."
+        },
+        {
+          "item": "linux2: ignorerhosts",
+          "detail": "Required: yes",
+          "result": "Pass",
+          "comment": "Effective value: yes."
+        },
+        {
+          "item": "linux2: hostbasedauthentication",
+          "detail": "Required: no",
+          "result": "Pass",
+          "comment": "Effective value: no."
+        },
+        {
+          "item": "linux2: logingracetime",
+          "detail": "Required: 60 seconds or less",
+          "result": "Exception",
+          "comment": "Effective value: 120."
+        },
+        {
+          "item": "linux2: clientaliveinterval",
+          "detail": "Required: 1 to 900 seconds",
+          "result": "Exception",
+          "comment": "Effective value: 0."
+        }
+      ],
+      "conclusion": "Design deficiency (10 exceptions in 16 tested)",
+      "findings": [
+        "F18"
+      ],
+      "iso27001": "A.8.9 Configuration management; A.8.5 Secure authentication",
+      "cis_controls": "4.1 Secure configuration process",
+      "sample": ""
+    },
+    {
+      "test_id": "AC-18",
+      "title": "Each person's access matches their job (sample)",
+      "policy_ref": "Policy 3.1, 6.1, 6.3; Standard 3.8",
+      "test_type": "Operating effectiveness",
+      "objective": "People hold only the access their job needs, across every system, and no one holds a combination of access that lets them complete a sensitive process alone.",
+      "procedure": "For each sampled person, gather their directory groups, their access to the code repository and their rights on the app server, and compare them with the role access matrix for their job. For anything beyond the matrix, look for an approved request and judge whether it is still needed and whether it combines duties that should be kept apart. Confirm the person is still employed.",
+      "population": "22 enabled personal accounts in the directory at the end of the period",
+      "items": [
+        {
+          "item": "aisha.khan",
+          "detail": "Systems Administrator, current. Directory: Change-Deployers, GG-IT, IT-Server-Admins. Code: write (team Developers), admin (Gitea site administrator). App server: ALL via %it-server-admins; /usr/local/sbin/northwind-deploy via %change-deployers",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "ava.king",
+          "detail": "Operations Analyst, current. Directory: GG-Operations. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "ben.foster",
+          "detail": "Sales Director, current. Directory: GG-Sales. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "chloe.evans",
+          "detail": "Accounts Payable Clerk, current. Directory: Finance-Payments-Initiators, GG-Finance. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "daniel.hughes",
+          "detail": "Accounts Payable Clerk, current. Directory: Finance-Payments-Initiators, GG-Finance. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "grace.thompson",
+          "detail": "HR Manager, current. Directory: GG-HR. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "jack.lewis",
+          "detail": "Sales Executive, current. Directory: GG-Sales. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "james.carter",
+          "detail": "Head of IT, current. Directory: Change-Approvers, GG-IT, IT-Server-Admins. Code: owner (team Owners). App server: ALL via %it-server-admins",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "leo.martin",
+          "detail": "Contract Developer, contract ended. Directory: Developers, GG-IT. Code: write (team Developers). App server: none",
+          "result": "Exception",
+          "comment": "No longer works for Northwind (contract ended on 2026-06-30) but the account is enabled and has write access to the code repository."
+        },
+        {
+          "item": "liam.brooks",
+          "detail": "IT Support Analyst, current. Directory: Domain Admins, GG-IT, Helpdesk. Code: none. App server: none",
+          "result": "Exception",
+          "comment": "Domain Admins is not needed for the job of IT Support Analyst (no approved request)."
+        },
+        {
+          "item": "noah.green",
+          "detail": "Operations Manager, current. Directory: GG-Operations. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "olivia.bennett",
+          "detail": "Finance Director, current. Directory: Finance-Payments-Approvers, GG-Finance. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        },
+        {
+          "item": "priya.shah",
+          "detail": "Senior Accountant, current. Directory: Finance-Payments-Approvers, Finance-Payments-Initiators, GG-Finance. Code: none. App server: none",
+          "result": "Exception",
+          "comment": "Finance-Payments-Approvers is not needed for the job of Senior Accountant (approved in REQ-2025-118 by priya.shah (their own approval)); can both create and approve supplier payments."
+        },
+        {
+          "item": "ryan.patel",
+          "detail": "Software Developer, current. Directory: Change-Deployers, Developers, GG-IT. Code: owner (team Owners). App server: /usr/local/sbin/northwind-deploy via %change-deployers; ALL via ryan.patel",
+          "result": "Exception",
+          "comment": "Change-Deployers is not needed for the job of Software Developer (approved in REQ-2022-052 by james.carter); code repository access is owner, but the job needs write; has full administrator rights on the app server without a password; writes code and can deploy it to production."
+        },
+        {
+          "item": "sarah.mitchell",
+          "detail": "Customer Service Lead, current. Directory: GG-Operations. Code: none. App server: none",
+          "result": "Pass",
+          "comment": "Access matches the role access matrix."
+        }
+      ],
+      "conclusion": "Not operating effectively (4 exceptions in 15 tested)",
+      "findings": [
+        "F2",
+        "F5",
+        "F8",
+        "F12",
+        "F16",
+        "F17"
+      ],
+      "iso27001": "A.5.18 Access rights; A.5.3 Segregation of duties",
+      "cis_controls": "6.8 Role based access",
+      "sample": "15 of 22, selected with random.Random(20261001).sample()"
+    },
+    {
+      "test_id": "CM-01",
+      "title": "Every deployment to production has a change ticket",
+      "policy_ref": "Standard 3.1",
+      "test_type": "Operating effectiveness",
+      "objective": "Every change to production is recorded and can be traced to a request and approval.",
+      "procedure": "Match each deployment's ticket number to the service desk extract. A deployment with no ticket, or a ticket number that does not exist, is an exception.",
+      "population": "All 40 deployments between 1 July and 30 September 2026. Completeness: 40 commits were added to main in the period; 40 were deployed in the period, and every deployed commit is on main",
+      "items": [
+        {
+          "item": "2026-07-02 18:10 8275fe3",
+          "detail": "Add supplier VAT number validation; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0101: Add supplier VAT number validation."
+        },
+        {
+          "item": "2026-07-07 18:20 9e5f139",
+          "detail": "Show payment due date on the payments list; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0102: Show payment due date on the payments list."
+        },
+        {
+          "item": "2026-07-09 18:30 e9a1fb3",
+          "detail": "Reject payments to suppliers with no bank details; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0103: Reject payments to suppliers with no bank details."
+        },
+        {
+          "item": "2026-07-13 18:40 f9a78ef",
+          "detail": "Log every payment approval with the approver's username; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0104: Log every payment approval with the approver's username."
+        },
+        {
+          "item": "2026-07-14 18:10 5e1a2ab",
+          "detail": "Round payment amounts to two decimal places on import; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0105: Round payment amounts to two decimal places on import."
+        },
+        {
+          "item": "2026-07-16 18:20 0857f77",
+          "detail": "Add search by supplier name; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0106: Add search by supplier name."
+        },
+        {
+          "item": "2026-07-17 17:05 a58c016",
+          "detail": "Quick fix: payment list sort order; deployed by ryan.patel",
+          "result": "Exception",
+          "comment": "Deployed with no change ticket (ticket recorded as \"none\")."
+        },
+        {
+          "item": "2026-07-20 18:30 d77b60c",
+          "detail": "Upgrade the HTTP server dependency; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0107: Upgrade the HTTP server dependency."
+        },
+        {
+          "item": "2026-07-21 18:40 3a861f2",
+          "detail": "Paginate the payments list; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0108: Paginate the payments list."
+        },
+        {
+          "item": "2026-07-23 18:10 4b61840",
+          "detail": "Add a health check endpoint for monitoring; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0109: Add a health check endpoint for monitoring."
+        },
+        {
+          "item": "2026-07-27 18:20 85c471c",
+          "detail": "Store the time each payment was approved; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0110: Store the time each payment was approved."
+        },
+        {
+          "item": "2026-07-28 18:30 33e7d2f",
+          "detail": "Warn when a supplier's bank details change; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0111: Warn when a supplier's bank details change."
+        },
+        {
+          "item": "2026-07-30 18:40 68dab97",
+          "detail": "Export approved payments to the bank file format; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0112: Export approved payments to the bank file format."
+        },
+        {
+          "item": "2026-08-04 18:10 48de56b",
+          "detail": "Rotate application logs daily; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0113: Rotate application logs daily."
+        },
+        {
+          "item": "2026-08-06 18:20 6bf70a1",
+          "detail": "Add currency code to each payment; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0114: Add currency code to each payment."
+        },
+        {
+          "item": "2026-08-10 18:30 440f058",
+          "detail": "Validate sort codes before saving supplier details; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0115: Validate sort codes before saving supplier details."
+        },
+        {
+          "item": "2026-08-11 18:40 00330e9",
+          "detail": "Show who created each payment; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0116: Show who created each payment."
+        },
+        {
+          "item": "2026-08-13 18:10 d5e2c09",
+          "detail": "Fix timezone on payment dates; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0117: Fix timezone on payment dates."
+        },
+        {
+          "item": "2026-08-17 18:20 ed2c99e",
+          "detail": "Add a daily total of approved payments; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0118: Add a daily total of approved payments."
+        },
+        {
+          "item": "2026-08-18 18:30 5e081d7",
+          "detail": "Reduce database lock time during imports; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0119: Reduce database lock time during imports."
+        },
+        {
+          "item": "2026-08-19 22:40 f952bda",
+          "detail": "Emergency: bank rejected payment file, fix field order; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0136: Emergency: bank rejected payment file, fix field order."
+        },
+        {
+          "item": "2026-08-20 18:40 96e198c",
+          "detail": "Add unit tests for payment validation; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0120: Add unit tests for payment validation."
+        },
+        {
+          "item": "2026-08-21 17:05 3aef765",
+          "detail": "Quick fix: typo on approval screen; deployed by ryan.patel",
+          "result": "Exception",
+          "comment": "Deployed with no change ticket (ticket recorded as \"none\")."
+        },
+        {
+          "item": "2026-08-24 18:10 979e9c4",
+          "detail": "Highlight payments over the approval limit; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0121: Highlight payments over the approval limit."
+        },
+        {
+          "item": "2026-08-25 18:20 eb3e38d",
+          "detail": "Mask bank account numbers on screen; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0122: Mask bank account numbers on screen."
+        },
+        {
+          "item": "2026-08-27 18:30 b1f9ab7",
+          "detail": "Read configuration from environment variables; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0123: Read configuration from environment variables."
+        },
+        {
+          "item": "2026-09-01 18:40 43ad0f0",
+          "detail": "Add supplier status (active or blocked); deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0124: Add supplier status (active or blocked)."
+        },
+        {
+          "item": "2026-09-03 18:10 3d4bc89",
+          "detail": "Block payments to blocked suppliers; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0125: Block payments to blocked suppliers."
+        },
+        {
+          "item": "2026-09-08 18:20 e7a3eb3",
+          "detail": "Record the IP address of each approval; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0126: Record the IP address of each approval."
+        },
+        {
+          "item": "2026-09-10 18:30 7be77c7",
+          "detail": "Improve error message for duplicate invoices; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0127: Improve error message for duplicate invoices."
+        },
+        {
+          "item": "2026-09-11 17:05 5d0048d",
+          "detail": "Quick fix: increase export timeout; deployed by ryan.patel",
+          "result": "Exception",
+          "comment": "Deployed with no change ticket (ticket recorded as \"none\")."
+        },
+        {
+          "item": "2026-09-14 18:40 01e08dc",
+          "detail": "Detect duplicate invoice numbers; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0128: Detect duplicate invoice numbers."
+        },
+        {
+          "item": "2026-09-15 18:10 e516fae",
+          "detail": "Add a weekly supplier report; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0129: Add a weekly supplier report."
+        },
+        {
+          "item": "2026-09-17 18:20 70f58de",
+          "detail": "Move the database path to configuration; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0130: Move the database path to configuration."
+        },
+        {
+          "item": "2026-09-21 18:30 59c30a8",
+          "detail": "Tidy up unused payment fields; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0131: Tidy up unused payment fields."
+        },
+        {
+          "item": "2026-09-22 18:40 3f75e98",
+          "detail": "Add a dry run option to the bank export; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0132: Add a dry run option to the bank export."
+        },
+        {
+          "item": "2026-09-23 21:15 36dcf23",
+          "detail": "Emergency: approvals page timing out; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0137: Emergency: approvals page timing out."
+        },
+        {
+          "item": "2026-09-24 18:10 8da47b7",
+          "detail": "Speed up the supplier lookup; deployed by ryan.patel",
+          "result": "Pass",
+          "comment": "CHG-2026-0133: Speed up the supplier lookup."
+        },
+        {
+          "item": "2026-09-28 18:20 6edb084",
+          "detail": "Show the last login time on the admin page; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0134: Show the last login time on the admin page."
+        },
+        {
+          "item": "2026-09-29 18:30 9f4e3b5",
+          "detail": "Prepare quarter end payment summary; deployed by aisha.khan",
+          "result": "Pass",
+          "comment": "CHG-2026-0135: Prepare quarter end payment summary."
+        }
+      ],
+      "conclusion": "Not operating effectively (3 exceptions in 40 tested)",
+      "findings": [
+        "F11"
+      ],
+      "iso27001": "A.8.32 Change management",
+      "cis_controls": "16.1 Secure application development process",
+      "sample": ""
+    },
+    {
+      "test_id": "CM-02",
+      "title": "Code reaches main only through an approved pull request",
+      "policy_ref": "Standard 3.4",
+      "test_type": "Operating effectiveness",
+      "objective": "Every change to the finance application's code is checked by a second person before it can be deployed.",
+      "procedure": "Match each commit added to main to the merged pull request that added it. Confirm the pull request had an approving review that counts towards approval, from someone other than its author, before it was merged. A commit with no pull request, or a pull request merged without such an approval, is an exception.",
+      "population": "All 40 commits added to main between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "8275fe3 Add supplier VAT number validation",
+          "detail": "Pull request #12 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-01 15:05, before the merge."
+        },
+        {
+          "item": "9e5f139 Show payment due date on the payments list",
+          "detail": "Pull request #13 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-06 15:06, before the merge."
+        },
+        {
+          "item": "e9a1fb3 Reject payments to suppliers with no bank details",
+          "detail": "Pull request #14 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-07-08 15:07, before the merge."
+        },
+        {
+          "item": "f9a78ef Log every payment approval with the approver's username",
+          "detail": "Pull request #15 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-10 15:08, before the merge."
+        },
+        {
+          "item": "5e1a2ab Round payment amounts to two decimal places on import",
+          "detail": "Pull request #16 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-13 15:09, before the merge."
+        },
+        {
+          "item": "0857f77 Add search by supplier name",
+          "detail": "Pull request #17 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-07-15 15:10, before the merge."
+        },
+        {
+          "item": "d77b60c Upgrade the HTTP server dependency",
+          "detail": "Pull request #18 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-17 15:11, before the merge."
+        },
+        {
+          "item": "a58c016 Quick fix: payment list sort order",
+          "detail": "Author ryan.patel",
+          "result": "Exception",
+          "comment": "Pushed directly to main by ryan.patel at 2026-07-17 16:48, with no pull request or review."
+        },
+        {
+          "item": "3a861f2 Paginate the payments list",
+          "detail": "Pull request #19 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-20 15:12, before the merge."
+        },
+        {
+          "item": "4b61840 Add a health check endpoint for monitoring",
+          "detail": "Pull request #20 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-07-22 15:13, before the merge."
+        },
+        {
+          "item": "85c471c Store the time each payment was approved",
+          "detail": "Pull request #21 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-24 15:14, before the merge."
+        },
+        {
+          "item": "33e7d2f Warn when a supplier's bank details change",
+          "detail": "Pull request #22 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-07-27 15:15, before the merge."
+        },
+        {
+          "item": "68dab97 Export approved payments to the bank file format",
+          "detail": "Pull request #23 by aisha.khan, merged by aisha.khan",
+          "result": "Exception",
+          "comment": "Merged by its author aisha.khan with no approving review, although branch protection requires one approval."
+        },
+        {
+          "item": "48de56b Rotate application logs daily",
+          "detail": "Pull request #24 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-03 15:17, before the merge."
+        },
+        {
+          "item": "6bf70a1 Add currency code to each payment",
+          "detail": "Pull request #25 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-05 15:18, before the merge."
+        },
+        {
+          "item": "440f058 Validate sort codes before saving supplier details",
+          "detail": "Pull request #26 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-08-07 15:19, before the merge."
+        },
+        {
+          "item": "00330e9 Show who created each payment",
+          "detail": "Pull request #27 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-10 15:20, before the merge."
+        },
+        {
+          "item": "d5e2c09 Fix timezone on payment dates",
+          "detail": "Pull request #28 by leo.martin, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-08-12 15:21, before the merge."
+        },
+        {
+          "item": "ed2c99e Add a daily total of approved payments",
+          "detail": "Pull request #29 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-08-14 15:22, before the merge."
+        },
+        {
+          "item": "5e081d7 Reduce database lock time during imports",
+          "detail": "Pull request #30 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-17 15:23, before the merge."
+        },
+        {
+          "item": "96e198c Add unit tests for payment validation",
+          "detail": "Pull request #31 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-19 15:24, before the merge."
+        },
+        {
+          "item": "f952bda Emergency: bank rejected payment file, fix field order",
+          "detail": "Pull request #32 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-19 21:55, before the merge."
+        },
+        {
+          "item": "979e9c4 Highlight payments over the approval limit",
+          "detail": "Pull request #33 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-08-21 15:25, before the merge."
+        },
+        {
+          "item": "3aef765 Quick fix: typo on approval screen",
+          "detail": "Author ryan.patel",
+          "result": "Exception",
+          "comment": "Pushed directly to main by ryan.patel at 2026-08-21 16:48, with no pull request or review."
+        },
+        {
+          "item": "eb3e38d Mask bank account numbers on screen",
+          "detail": "Pull request #34 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-24 15:26, before the merge."
+        },
+        {
+          "item": "b1f9ab7 Read configuration from environment variables",
+          "detail": "Pull request #35 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-26 15:27, before the merge."
+        },
+        {
+          "item": "43ad0f0 Add supplier status (active or blocked)",
+          "detail": "Pull request #36 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-08-28 15:28, before the merge."
+        },
+        {
+          "item": "3d4bc89 Block payments to blocked suppliers",
+          "detail": "Pull request #37 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-02 15:29, before the merge."
+        },
+        {
+          "item": "e7a3eb3 Record the IP address of each approval",
+          "detail": "Pull request #38 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-07 15:05, before the merge."
+        },
+        {
+          "item": "7be77c7 Improve error message for duplicate invoices",
+          "detail": "Pull request #39 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-09-09 15:06, before the merge."
+        },
+        {
+          "item": "01e08dc Detect duplicate invoice numbers",
+          "detail": "Pull request #40 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-11 15:07, before the merge."
+        },
+        {
+          "item": "5d0048d Quick fix: increase export timeout",
+          "detail": "Author ryan.patel",
+          "result": "Exception",
+          "comment": "Pushed directly to main by ryan.patel at 2026-09-11 16:48, with no pull request or review."
+        },
+        {
+          "item": "e516fae Add a weekly supplier report",
+          "detail": "Pull request #41 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-14 15:08, before the merge."
+        },
+        {
+          "item": "70f58de Move the database path to configuration",
+          "detail": "Pull request #42 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-09-16 15:09, before the merge."
+        },
+        {
+          "item": "59c30a8 Tidy up unused payment fields",
+          "detail": "Pull request #43 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-18 15:10, before the merge."
+        },
+        {
+          "item": "3f75e98 Add a dry run option to the bank export",
+          "detail": "Pull request #44 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-21 15:11, before the merge."
+        },
+        {
+          "item": "8da47b7 Speed up the supplier lookup",
+          "detail": "Pull request #45 by aisha.khan, merged by ryan.patel",
+          "result": "Pass",
+          "comment": "Approved by ryan.patel at 2026-09-23 15:12, before the merge."
+        },
+        {
+          "item": "36dcf23 Emergency: approvals page timing out",
+          "detail": "Author ryan.patel",
+          "result": "Exception",
+          "comment": "Pushed directly to main by ryan.patel at 2026-09-23 20:58, with no pull request or review."
+        },
+        {
+          "item": "6edb084 Show the last login time on the admin page",
+          "detail": "Pull request #46 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-25 15:13, before the merge."
+        },
+        {
+          "item": "9f4e3b5 Prepare quarter end payment summary",
+          "detail": "Pull request #47 by ryan.patel, merged by aisha.khan",
+          "result": "Pass",
+          "comment": "Approved by aisha.khan at 2026-09-28 15:14, before the merge."
+        }
+      ],
+      "conclusion": "Not operating effectively (5 exceptions in 40 tested)",
+      "findings": [
+        "F11",
+        "F15"
+      ],
+      "iso27001": "A.8.32 Change management; A.8.4 Access to source code",
+      "cis_controls": "16.1 Secure application development process",
+      "sample": ""
+    },
+    {
+      "test_id": "CM-03",
+      "title": "Nobody deploys their own change",
+      "policy_ref": "Standard 3.5; Policy 6.3",
+      "test_type": "Operating effectiveness",
+      "objective": "No one can write a change and put it into production without another person being involved.",
+      "procedure": "Compare the person who ran each deployment with the author of the deployed commit. The same person is an exception.",
+      "population": "All 40 deployments between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "2026-07-02 18:10 8275fe3",
+          "detail": "Add supplier VAT number validation; ticket CHG-2026-0101",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-07 18:20 9e5f139",
+          "detail": "Show payment due date on the payments list; ticket CHG-2026-0102",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-09 18:30 e9a1fb3",
+          "detail": "Reject payments to suppliers with no bank details; ticket CHG-2026-0103",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-07-13 18:40 f9a78ef",
+          "detail": "Log every payment approval with the approver's username; ticket CHG-2026-0104",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-14 18:10 5e1a2ab",
+          "detail": "Round payment amounts to two decimal places on import; ticket CHG-2026-0105",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-07-16 18:20 0857f77",
+          "detail": "Add search by supplier name; ticket CHG-2026-0106",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-07-17 17:05 a58c016",
+          "detail": "Quick fix: payment list sort order; ticket none",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-07-20 18:30 d77b60c",
+          "detail": "Upgrade the HTTP server dependency; ticket CHG-2026-0107",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-21 18:40 3a861f2",
+          "detail": "Paginate the payments list; ticket CHG-2026-0108",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-23 18:10 4b61840",
+          "detail": "Add a health check endpoint for monitoring; ticket CHG-2026-0109",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-07-27 18:20 85c471c",
+          "detail": "Store the time each payment was approved; ticket CHG-2026-0110",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-28 18:30 33e7d2f",
+          "detail": "Warn when a supplier's bank details change; ticket CHG-2026-0111",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-07-30 18:40 68dab97",
+          "detail": "Export approved payments to the bank file format; ticket CHG-2026-0112",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-04 18:10 48de56b",
+          "detail": "Rotate application logs daily; ticket CHG-2026-0113",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-06 18:20 6bf70a1",
+          "detail": "Add currency code to each payment; ticket CHG-2026-0114",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-10 18:30 440f058",
+          "detail": "Validate sort codes before saving supplier details; ticket CHG-2026-0115",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-11 18:40 00330e9",
+          "detail": "Show who created each payment; ticket CHG-2026-0116",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-13 18:10 d5e2c09",
+          "detail": "Fix timezone on payment dates; ticket CHG-2026-0117",
+          "result": "Pass",
+          "comment": "Written by leo.martin, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-17 18:20 ed2c99e",
+          "detail": "Add a daily total of approved payments; ticket CHG-2026-0118",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-18 18:30 5e081d7",
+          "detail": "Reduce database lock time during imports; ticket CHG-2026-0119",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-19 22:40 f952bda",
+          "detail": "Emergency: bank rejected payment file, fix field order; ticket CHG-2026-0136",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-20 18:40 96e198c",
+          "detail": "Add unit tests for payment validation; ticket CHG-2026-0120",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-21 17:05 3aef765",
+          "detail": "Quick fix: typo on approval screen; ticket none",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-24 18:10 979e9c4",
+          "detail": "Highlight payments over the approval limit; ticket CHG-2026-0121",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-08-25 18:20 eb3e38d",
+          "detail": "Mask bank account numbers on screen; ticket CHG-2026-0122",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-08-27 18:30 b1f9ab7",
+          "detail": "Read configuration from environment variables; ticket CHG-2026-0123",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-01 18:40 43ad0f0",
+          "detail": "Add supplier status (active or blocked); ticket CHG-2026-0124",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-03 18:10 3d4bc89",
+          "detail": "Block payments to blocked suppliers; ticket CHG-2026-0125",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-08 18:20 e7a3eb3",
+          "detail": "Record the IP address of each approval; ticket CHG-2026-0126",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-10 18:30 7be77c7",
+          "detail": "Improve error message for duplicate invoices; ticket CHG-2026-0127",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-11 17:05 5d0048d",
+          "detail": "Quick fix: increase export timeout; ticket none",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-14 18:40 01e08dc",
+          "detail": "Detect duplicate invoice numbers; ticket CHG-2026-0128",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-15 18:10 e516fae",
+          "detail": "Add a weekly supplier report; ticket CHG-2026-0129",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-17 18:20 70f58de",
+          "detail": "Move the database path to configuration; ticket CHG-2026-0130",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-21 18:30 59c30a8",
+          "detail": "Tidy up unused payment fields; ticket CHG-2026-0131",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-22 18:40 3f75e98",
+          "detail": "Add a dry run option to the bank export; ticket CHG-2026-0132",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-23 21:15 36dcf23",
+          "detail": "Emergency: approvals page timing out; ticket CHG-2026-0137",
+          "result": "Exception",
+          "comment": "Written and deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-24 18:10 8da47b7",
+          "detail": "Speed up the supplier lookup; ticket CHG-2026-0133",
+          "result": "Pass",
+          "comment": "Written by aisha.khan, deployed by ryan.patel."
+        },
+        {
+          "item": "2026-09-28 18:20 6edb084",
+          "detail": "Show the last login time on the admin page; ticket CHG-2026-0134",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        },
+        {
+          "item": "2026-09-29 18:30 9f4e3b5",
+          "detail": "Prepare quarter end payment summary; ticket CHG-2026-0135",
+          "result": "Pass",
+          "comment": "Written by ryan.patel, deployed by aisha.khan."
+        }
+      ],
+      "conclusion": "Not operating effectively (8 exceptions in 40 tested)",
+      "findings": [
+        "F12"
+      ],
+      "iso27001": "A.5.3 Segregation of duties; A.8.31 Separation of environments",
+      "cis_controls": "16.1 Secure application development process",
+      "sample": ""
+    },
+    {
+      "test_id": "CM-04",
+      "title": "Changes are approved and tested before deployment (sample)",
+      "policy_ref": "Standard 3.2, 3.3",
+      "test_type": "Operating effectiveness",
+      "objective": "Only changes that the business has approved, and that have been tested, reach production.",
+      "procedure": "For each sampled deployment, inspect its change ticket and confirm: (a) the ticket exists and describes the change deployed; (b) it was approved by a member of Change-Approvers; (c) the approval came before the deployment; (d) testing is recorded on the ticket. Emergency changes are assessed against the emergency procedure in CM-05 instead of (c).",
+      "population": "All 40 deployments between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "2026-07-07 18:20 9e5f139",
+          "detail": "CHG-2026-0102 (Normal): Show payment due date on the payments list; approved by james.carter 2026-07-06 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-07-14 18:10 5e1a2ab",
+          "detail": "CHG-2026-0105 (Normal): Round payment amounts to two decimal places on import; approved by james.carter 2026-07-13 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-07-16 18:20 0857f77",
+          "detail": "CHG-2026-0106 (Normal): Add search by supplier name; approved by james.carter 2026-07-15 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-07-20 18:30 d77b60c",
+          "detail": "CHG-2026-0107 (Normal): Upgrade the HTTP server dependency; approved by james.carter 2026-07-17 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-07-23 18:10 4b61840",
+          "detail": "CHG-2026-0109 (Normal): Add a health check endpoint for monitoring; approved by james.carter 2026-07-24 09:00",
+          "result": "Exception",
+          "comment": "(c) approved 2026-07-24 09:00, 1 day after deployment."
+        },
+        {
+          "item": "2026-07-30 18:40 68dab97",
+          "detail": "CHG-2026-0112 (Normal): Export approved payments to the bank file format; approved by james.carter 2026-07-29 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-08-06 18:20 6bf70a1",
+          "detail": "CHG-2026-0114 (Normal): Add currency code to each payment; approved by james.carter 2026-08-05 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-08-10 18:30 440f058",
+          "detail": "CHG-2026-0115 (Normal): Validate sort codes before saving supplier details; approved by james.carter 2026-08-07 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-08-19 22:40 f952bda",
+          "detail": "CHG-2026-0136 (Emergency): Emergency: bank rejected payment file, fix field order; approved by james.carter 2026-08-20 09:30",
+          "result": "Pass",
+          "comment": "(a) to (d) met: (c) emergency change, see CM-05."
+        },
+        {
+          "item": "2026-08-20 18:40 96e198c",
+          "detail": "CHG-2026-0120 (Normal): Add unit tests for payment validation; approved by james.carter 2026-08-19 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-08-24 18:10 979e9c4",
+          "detail": "CHG-2026-0121 (Normal): Highlight payments over the approval limit; approved by james.carter 2026-08-21 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-08-27 18:30 b1f9ab7",
+          "detail": "CHG-2026-0123 (Normal): Read configuration from environment variables; approved by james.carter 2026-08-26 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-09-14 18:40 01e08dc",
+          "detail": "CHG-2026-0128 (Normal): Detect duplicate invoice numbers; approved by james.carter 2026-09-11 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        },
+        {
+          "item": "2026-09-15 18:10 e516fae",
+          "detail": "CHG-2026-0129 (Normal): Add a weekly supplier report; approved by james.carter 2026-09-17 09:00",
+          "result": "Exception",
+          "comment": "(c) approved 2026-09-17 09:00, 2 days after deployment."
+        },
+        {
+          "item": "2026-09-17 18:20 70f58de",
+          "detail": "CHG-2026-0130 (Normal): Move the database path to configuration; approved by james.carter 2026-09-16 11:00",
+          "result": "Pass",
+          "comment": "(a) to (d) met."
+        }
+      ],
+      "conclusion": "Not operating effectively (2 exceptions in 15 tested)",
+      "findings": [
+        "F13"
+      ],
+      "iso27001": "A.8.32 Change management; A.8.29 Security testing",
+      "cis_controls": "16.1 Secure application development process",
+      "sample": "15 of 40, selected with random.Random(20261001).sample()"
+    },
+    {
+      "test_id": "CM-05",
+      "title": "Emergency changes follow the emergency procedure",
+      "policy_ref": "Standard 3.6",
+      "test_type": "Operating effectiveness",
+      "objective": "Changes deployed in a hurry are still checked by a second person and approved and reviewed soon afterwards.",
+      "procedure": "For each emergency change, confirm a second person approved the code before it was deployed, the ticket was approved within 2 working days of deployment, and a post implementation review was recorded within 5 working days.",
+      "population": "All 2 emergency changes in the period",
+      "items": [
+        {
+          "item": "CHG-2026-0136",
+          "detail": "Emergency: bank rejected payment file, fix field order; deployed 2026-08-19 22:40 by aisha.khan",
+          "result": "Pass",
+          "comment": "Reviewed by a second person in pull request #32, approved 1 working day(s) later, review completed 2026-08-21."
+        },
+        {
+          "item": "CHG-2026-0137",
+          "detail": "Emergency: approvals page timing out; deployed 2026-09-23 21:15 by ryan.patel",
+          "result": "Exception",
+          "comment": "No second person reviewed the code before deployment (pushed directly to main); approved 2026-10-06, 9 working days after deployment; no post implementation review recorded."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 2 tested)",
+      "findings": [
+        "F14"
+      ],
+      "iso27001": "A.8.32 Change management",
+      "cis_controls": "16.1 Secure application development process",
+      "sample": ""
+    },
+    {
+      "test_id": "CM-06",
+      "title": "Branch protection and the deployment tool are set up as required",
+      "policy_ref": "Standard 3.7",
+      "test_type": "Design",
+      "objective": "The tools enforce the change process, so it cannot be skipped by mistake or on purpose.",
+      "procedure": "Inspect the branch protection rule on main: one approval required, direct pushes blocked for everyone, administrators unable to override. Inspect the deployment tool: every deployment logged with commit, ticket and person, and whether it checks the ticket exists and is approved.",
+      "population": "The branch protection rule on main and the deployment tool",
+      "items": [
+        {
+          "item": "Branch protection: approvals",
+          "detail": "Rule last changed 2026-02-02",
+          "result": "Pass",
+          "comment": "1 approval required before merging."
+        },
+        {
+          "item": "Branch protection: direct pushes",
+          "detail": "Rule last changed 2026-02-02",
+          "result": "Exception",
+          "comment": "Direct pushes to main are allowed for ryan.patel, so changes can skip the pull request and review."
+        },
+        {
+          "item": "Branch protection: administrator override",
+          "detail": "Rule last changed 2026-02-02",
+          "result": "Exception",
+          "comment": "Repository administrators (organisation owners and Gitea site administrators) can merge without the required approval."
+        },
+        {
+          "item": "Branch protection: new commits after approval",
+          "detail": "Rule last changed 2026-02-02",
+          "result": "Exception",
+          "comment": "An approval stays valid if more commits are pushed after it, so unreviewed code can be merged under an earlier approval."
+        },
+        {
+          "item": "Deployment tool: logging",
+          "detail": "/usr/local/sbin/northwind-deploy",
+          "result": "Pass",
+          "comment": "Every deployment is logged with its commit, ticket and the person who ran it."
+        },
+        {
+          "item": "Deployment tool: ticket check",
+          "detail": "/usr/local/sbin/northwind-deploy",
+          "result": "Exception",
+          "comment": "The ticket is optional (it defaults to \"none\") and is never checked against the service desk, so anything can be deployed without an approved ticket."
+        }
+      ],
+      "conclusion": "Design deficiency (4 exceptions in 6 tested)",
+      "findings": [
+        "F15"
+      ],
+      "iso27001": "A.8.32 Change management; A.8.9 Configuration management",
+      "cis_controls": "16.1 Secure application development process; 4.1 Secure configuration process",
+      "sample": ""
+    },
+    {
+      "test_id": "CM-07",
+      "title": "Only current developers can change code, and only non developers can deploy",
+      "policy_ref": "Standard 3.8",
+      "test_type": "Operating effectiveness",
+      "objective": "Code and production can only be changed by people who should, and no one can both write code and deploy it.",
+      "procedure": "Match every account with write access or more to the code repository, and every account that can run the deployment tool, to the HR extract and contractor list. Compare each person's access with the role access matrix. A leaver or ended contractor with active access, a developer who can deploy, or a developer with administrator rights over the repository is an exception.",
+      "population": "Every Gitea account with write access or more, and every account that can run the deployment tool on the app server",
+      "items": [
+        {
+          "item": "aisha.khan",
+          "detail": "Code: write (team Developers), admin (Gitea site administrator). Can deploy: yes. Commits in the period: 10",
+          "result": "Exception",
+          "comment": "Can deploy to production and wrote 10 of the commits deployed in the period."
+        },
+        {
+          "item": "gitea-admin",
+          "detail": "Code: admin (Gitea site administrator). Can deploy: no. Commits in the period: 0",
+          "result": "Pass",
+          "comment": "Gitea's built in administrator account, last used 2025-11-03; see observation O2."
+        },
+        {
+          "item": "james.carter",
+          "detail": "Code: owner (team Owners). Can deploy: yes. Commits in the period: 0",
+          "result": "Pass",
+          "comment": "Access matches the role and the person is current."
+        },
+        {
+          "item": "labadmin",
+          "detail": "Code: none. Can deploy: yes. Commits in the period: 0",
+          "result": "Pass",
+          "comment": "Local emergency account covered by EX-2025-03."
+        },
+        {
+          "item": "leo.martin",
+          "detail": "Code: write (team Developers). Can deploy: no. Commits in the period: 1",
+          "result": "Exception",
+          "comment": "Contract ended on 2026-06-30 but the Gitea account is still active; last signed in 2026-08-11; wrote 1 commit(s) in the period."
+        },
+        {
+          "item": "ryan.patel",
+          "detail": "Code: owner (team Owners). Can deploy: yes. Commits in the period: 29",
+          "result": "Exception",
+          "comment": "Owner access to the repository, more than the write the job needs, so they can change branch protection and push to main; can deploy to production and wrote 29 of the commits deployed in the period."
+        },
+        {
+          "item": "support",
+          "detail": "Code: none. Can deploy: yes. Commits in the period: 0",
+          "result": "Exception",
+          "comment": "Local server account, not a named person, that can deploy to production and is not in the exception register."
+        }
+      ],
+      "conclusion": "Not operating effectively (4 exceptions in 7 tested)",
+      "findings": [
+        "F12",
+        "F16"
+      ],
+      "iso27001": "A.8.4 Access to source code; A.5.18 Access rights",
+      "cis_controls": "6.2 Access revoking process; 6.8 Role based access",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-01",
+      "title": "The finance database was backed up every night",
+      "policy_ref": "Standard 4.1",
+      "test_type": "Operating effectiveness",
+      "objective": "A recent copy of the finance database is always available to restore from.",
+      "procedure": "For each night in the period, find the backup log entry. A failed run, or no entry at all, is an exception.",
+      "population": "All 92 nights between 1 July and 30 September 2026",
+      "items": [
+        {
+          "item": "2026-07-01",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1882 bytes)."
+        },
+        {
+          "item": "2026-07-02",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1885 bytes)."
+        },
+        {
+          "item": "2026-07-03",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1886 bytes)."
+        },
+        {
+          "item": "2026-07-04",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1888 bytes)."
+        },
+        {
+          "item": "2026-07-05",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1891 bytes)."
+        },
+        {
+          "item": "2026-07-06",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1892 bytes)."
+        },
+        {
+          "item": "2026-07-07",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1894 bytes)."
+        },
+        {
+          "item": "2026-07-08",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1897 bytes)."
+        },
+        {
+          "item": "2026-07-09",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1898 bytes)."
+        },
+        {
+          "item": "2026-07-10",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1900 bytes)."
+        },
+        {
+          "item": "2026-07-11",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1903 bytes)."
+        },
+        {
+          "item": "2026-07-12",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1904 bytes)."
+        },
+        {
+          "item": "2026-07-13",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1906 bytes)."
+        },
+        {
+          "item": "2026-07-14",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1909 bytes)."
+        },
+        {
+          "item": "2026-07-15",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1910 bytes)."
+        },
+        {
+          "item": "2026-07-16",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1912 bytes)."
+        },
+        {
+          "item": "2026-07-17",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1915 bytes)."
+        },
+        {
+          "item": "2026-07-18",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1916 bytes)."
+        },
+        {
+          "item": "2026-07-19",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "No log entry: the backup did not run."
+        },
+        {
+          "item": "2026-07-20",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1919 bytes)."
+        },
+        {
+          "item": "2026-07-21",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1920 bytes)."
+        },
+        {
+          "item": "2026-07-22",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1922 bytes)."
+        },
+        {
+          "item": "2026-07-23",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1925 bytes)."
+        },
+        {
+          "item": "2026-07-24",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1926 bytes)."
+        },
+        {
+          "item": "2026-07-25",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1928 bytes)."
+        },
+        {
+          "item": "2026-07-26",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1931 bytes)."
+        },
+        {
+          "item": "2026-07-27",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1932 bytes)."
+        },
+        {
+          "item": "2026-07-28",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1934 bytes)."
+        },
+        {
+          "item": "2026-07-29",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1937 bytes)."
+        },
+        {
+          "item": "2026-07-30",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1938 bytes)."
+        },
+        {
+          "item": "2026-07-31",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1940 bytes)."
+        },
+        {
+          "item": "2026-08-01",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1943 bytes)."
+        },
+        {
+          "item": "2026-08-02",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1944 bytes)."
+        },
+        {
+          "item": "2026-08-03",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1946 bytes)."
+        },
+        {
+          "item": "2026-08-04",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1949 bytes)."
+        },
+        {
+          "item": "2026-08-05",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1950 bytes)."
+        },
+        {
+          "item": "2026-08-06",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1952 bytes)."
+        },
+        {
+          "item": "2026-08-07",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1955 bytes)."
+        },
+        {
+          "item": "2026-08-08",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "Failed: No space left on device."
+        },
+        {
+          "item": "2026-08-09",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "Failed: No space left on device."
+        },
+        {
+          "item": "2026-08-10",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "Failed: No space left on device."
+        },
+        {
+          "item": "2026-08-11",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "Failed: No space left on device."
+        },
+        {
+          "item": "2026-08-12",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1957 bytes)."
+        },
+        {
+          "item": "2026-08-13",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1960 bytes)."
+        },
+        {
+          "item": "2026-08-14",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1961 bytes)."
+        },
+        {
+          "item": "2026-08-15",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1963 bytes)."
+        },
+        {
+          "item": "2026-08-16",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1966 bytes)."
+        },
+        {
+          "item": "2026-08-17",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1967 bytes)."
+        },
+        {
+          "item": "2026-08-18",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1969 bytes)."
+        },
+        {
+          "item": "2026-08-19",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1972 bytes)."
+        },
+        {
+          "item": "2026-08-20",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1973 bytes)."
+        },
+        {
+          "item": "2026-08-21",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1975 bytes)."
+        },
+        {
+          "item": "2026-08-22",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1978 bytes)."
+        },
+        {
+          "item": "2026-08-23",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1979 bytes)."
+        },
+        {
+          "item": "2026-08-24",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1981 bytes)."
+        },
+        {
+          "item": "2026-08-25",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1984 bytes)."
+        },
+        {
+          "item": "2026-08-26",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1985 bytes)."
+        },
+        {
+          "item": "2026-08-27",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1987 bytes)."
+        },
+        {
+          "item": "2026-08-28",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1990 bytes)."
+        },
+        {
+          "item": "2026-08-29",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1991 bytes)."
+        },
+        {
+          "item": "2026-08-30",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1993 bytes)."
+        },
+        {
+          "item": "2026-08-31",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1996 bytes)."
+        },
+        {
+          "item": "2026-09-01",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1997 bytes)."
+        },
+        {
+          "item": "2026-09-02",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (1999 bytes)."
+        },
+        {
+          "item": "2026-09-03",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2002 bytes)."
+        },
+        {
+          "item": "2026-09-04",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2003 bytes)."
+        },
+        {
+          "item": "2026-09-05",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2005 bytes)."
+        },
+        {
+          "item": "2026-09-06",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2008 bytes)."
+        },
+        {
+          "item": "2026-09-07",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2009 bytes)."
+        },
+        {
+          "item": "2026-09-08",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2011 bytes)."
+        },
+        {
+          "item": "2026-09-09",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2014 bytes)."
+        },
+        {
+          "item": "2026-09-10",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2015 bytes)."
+        },
+        {
+          "item": "2026-09-11",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2017 bytes)."
+        },
+        {
+          "item": "2026-09-12",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2020 bytes)."
+        },
+        {
+          "item": "2026-09-13",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2021 bytes)."
+        },
+        {
+          "item": "2026-09-14",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2023 bytes)."
+        },
+        {
+          "item": "2026-09-15",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2026 bytes)."
+        },
+        {
+          "item": "2026-09-16",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2027 bytes)."
+        },
+        {
+          "item": "2026-09-17",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2029 bytes)."
+        },
+        {
+          "item": "2026-09-18",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2032 bytes)."
+        },
+        {
+          "item": "2026-09-19",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2033 bytes)."
+        },
+        {
+          "item": "2026-09-20",
+          "detail": "Backup at 01:30",
+          "result": "Exception",
+          "comment": "Failed: database is locked."
+        },
+        {
+          "item": "2026-09-21",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2036 bytes)."
+        },
+        {
+          "item": "2026-09-22",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2037 bytes)."
+        },
+        {
+          "item": "2026-09-23",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2039 bytes)."
+        },
+        {
+          "item": "2026-09-24",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2042 bytes)."
+        },
+        {
+          "item": "2026-09-25",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2043 bytes)."
+        },
+        {
+          "item": "2026-09-26",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2045 bytes)."
+        },
+        {
+          "item": "2026-09-27",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2048 bytes)."
+        },
+        {
+          "item": "2026-09-28",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2049 bytes)."
+        },
+        {
+          "item": "2026-09-29",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2051 bytes)."
+        },
+        {
+          "item": "2026-09-30",
+          "detail": "Backup at 01:30",
+          "result": "Pass",
+          "comment": "Completed (2054 bytes)."
+        }
+      ],
+      "conclusion": "Not operating effectively (6 exceptions in 92 tested)",
+      "findings": [
+        "F19"
+      ],
+      "iso27001": "A.8.13 Information backup",
+      "cis_controls": "11.2 Automated backups",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-02",
+      "title": "Failed and missed backups were followed up",
+      "policy_ref": "Standard 4.2",
+      "test_type": "Operating effectiveness",
+      "objective": "Backup problems are noticed and fixed before the business needs a restore.",
+      "procedure": "For each failed or missed night, look for an incident raised by the end of the next working day, and a later successful backup.",
+      "population": "All 6 failed or missed nights from OP-01",
+      "items": [
+        {
+          "item": "2026-07-19",
+          "detail": "Missed; incident due by 2026-07-20",
+          "result": "Exception",
+          "comment": "No incident was raised. The next successful backup was on 2026-07-20."
+        },
+        {
+          "item": "2026-08-08",
+          "detail": "Failed; incident due by 2026-08-10",
+          "result": "Exception",
+          "comment": "No incident was raised. The next successful backup was on 2026-08-12."
+        },
+        {
+          "item": "2026-08-09",
+          "detail": "Failed; incident due by 2026-08-10",
+          "result": "Exception",
+          "comment": "No incident was raised. The next successful backup was on 2026-08-12."
+        },
+        {
+          "item": "2026-08-10",
+          "detail": "Failed; incident due by 2026-08-11",
+          "result": "Exception",
+          "comment": "No incident was raised. The next successful backup was on 2026-08-12."
+        },
+        {
+          "item": "2026-08-11",
+          "detail": "Failed; incident due by 2026-08-12",
+          "result": "Exception",
+          "comment": "No incident was raised. The next successful backup was on 2026-08-12."
+        },
+        {
+          "item": "2026-09-20",
+          "detail": "Failed; incident due by 2026-09-21",
+          "result": "Pass",
+          "comment": "INC-2026-0193 raised 2026-09-21 by aisha.khan; next successful backup 2026-09-21."
+        }
+      ],
+      "conclusion": "Not operating effectively (5 exceptions in 6 tested)",
+      "findings": [
+        "F19"
+      ],
+      "iso27001": "A.8.13 Information backup; A.8.16 Monitoring activities",
+      "cis_controls": "11.2 Automated backups",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-03",
+      "title": "Restores were tested in the quarter",
+      "policy_ref": "Standard 4.3",
+      "test_type": "Operating effectiveness",
+      "objective": "The backups are known to work, because a restore from them has been tried.",
+      "procedure": "Look for a restore test in the period in the restore test log, and inspect its result.",
+      "population": "The restore test log, for 1 July to 30 September 2026",
+      "items": [
+        {
+          "item": "Q3 2026 restore test",
+          "detail": "Restore test log",
+          "result": "Exception",
+          "comment": "No restore was tested in the quarter. The last test was RT-2026-02 on 2026-04-14, 169 days before the end of the period."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 1 tested)",
+      "findings": [
+        "F20"
+      ],
+      "iso27001": "A.8.13 Information backup",
+      "cis_controls": "11.5 Test data recovery",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-04",
+      "title": "The backup job is designed as required",
+      "policy_ref": "Standard 4.1, 4.2, 4.4",
+      "test_type": "Design",
+      "objective": "The backup job can produce, check and keep the backups the business needs, and makes failures visible.",
+      "procedure": "Inspect the scheduled job and the backup program: it runs nightly, writes a log line for success and for failure, records a checksum for each file, and removes files older than 30 days. Note whether anything alerts a person when a run fails.",
+      "population": "The backup job and program on the app server",
+      "items": [
+        {
+          "item": "Schedule",
+          "detail": "northwind-backup",
+          "result": "Pass",
+          "comment": "Runs every night at 01:30 UTC as root."
+        },
+        {
+          "item": "Logging",
+          "detail": "northwind-backup",
+          "result": "Pass",
+          "comment": "Writes a log line for every run, successful or not."
+        },
+        {
+          "item": "Checksum",
+          "detail": "northwind-backup",
+          "result": "Pass",
+          "comment": "Records a SHA-256 checksum for each backup file."
+        },
+        {
+          "item": "Retention",
+          "detail": "northwind-backup",
+          "result": "Pass",
+          "comment": "Removes backups older than 30 days."
+        },
+        {
+          "item": "Alerting",
+          "detail": "northwind-backup",
+          "result": "Exception",
+          "comment": "Nothing tells anyone when a backup fails or does not run: the only record is a line in a log file on the same server. This is why the failures in OP-01 went unnoticed."
+        }
+      ],
+      "conclusion": "Design deficiency (1 exception in 5 tested)",
+      "findings": [
+        "F19"
+      ],
+      "iso27001": "A.8.13 Information backup",
+      "cis_controls": "11.1 Data recovery process",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-05",
+      "title": "Only approved jobs are scheduled on the servers",
+      "policy_ref": "Standard 4.5",
+      "test_type": "Operating effectiveness",
+      "objective": "Nothing runs on a schedule on the servers that IT has not approved, and jobs that run as root cannot be changed by someone without root rights.",
+      "procedure": "Match every scheduled job not installed by an Ubuntu package to the job schedule. A job not on the schedule is an exception. For a job that runs as root, check the program it runs can only be changed by root.",
+      "population": "Every scheduled job on both Linux servers not installed with Ubuntu",
+      "items": [
+        {
+          "item": "linux",
+          "detail": "31 jobs installed with Ubuntu",
+          "result": "Not applicable",
+          "comment": "No other scheduled jobs."
+        },
+        {
+          "item": "linux2: finance-tidy",
+          "detail": "15 2 * * * as root: /home/ryan.patel/bin/tidy-exports.sh (/etc/cron.d/finance-tidy, modified 2026-07-02)",
+          "result": "Exception",
+          "comment": "Not on the job schedule, so it was never approved; runs as root a script in ryan.patel's home folder, which ryan.patel can change, so it gives ryan.patel a way to run any command as root."
+        },
+        {
+          "item": "linux2: northwind-backup",
+          "detail": "30 1 * * * as root: /usr/local/sbin/northwind-backup (/etc/cron.d/northwind-backup, modified 2026-10-28)",
+          "result": "Pass",
+          "comment": "JOB-01, owner aisha.khan, approved by james.carter on 2025-11-03."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 2 tested)",
+      "findings": [
+        "F21"
+      ],
+      "iso27001": "A.8.9 Configuration management; A.8.19 Software on operational systems",
+      "cis_controls": "4.1 Secure configuration process",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-06",
+      "title": "Server clocks are synchronised",
+      "policy_ref": "Standard 4.6",
+      "test_type": "Operating effectiveness",
+      "objective": "Every server keeps the correct time, so logs can be relied on and Kerberos sign in works.",
+      "procedure": "Confirm each server synchronises with a time source and was within 5 seconds of it when the evidence was collected. Consider anything seen during fieldwork that shows the clock was wrong at other times.",
+      "population": "Both Linux servers",
+      "items": [
+        {
+          "item": "linux",
+          "detail": "Source 185.125.190.123; 0.000411561 seconds slow at 2026-10-28 01:54 UTC",
+          "result": "Exception",
+          "comment": "Synchronised when the evidence was collected, but found badly wrong twice during fieldwork: 27 October 2026: the clock was about 38 minutes slow and was corrected by hand (chronyc makestep) before the directory evidence was extracted; 28 October 2026: the clock was about 22 hours behind, which stopped the app server joining the domain (Kerberos rejects clocks more than 5 minutes apart); it was corrected by restarting chrony."
+        },
+        {
+          "item": "linux2",
+          "detail": "Source 185.125.190.123; 0.000028765 seconds slow at 2026-10-28 01:54 UTC",
+          "result": "Pass",
+          "comment": "Synchronised and within 5 seconds."
+        }
+      ],
+      "conclusion": "Not operating effectively (1 exception in 2 tested)",
+      "findings": [
+        "F22"
+      ],
+      "iso27001": "A.8.17 Clock synchronisation",
+      "cis_controls": "8.4 Standardise time synchronisation",
+      "sample": ""
+    },
+    {
+      "test_id": "OP-07",
+      "title": "Security updates are installed",
+      "policy_ref": "Standard 4.7",
+      "test_type": "Design and operating effectiveness",
+      "objective": "Known security weaknesses in the servers' software are fixed promptly.",
+      "procedure": "Confirm automatic security updates are switched on. List security updates still waiting to be installed when the evidence was collected. Any security update waiting for more than 14 days is an exception.",
+      "population": "Both Linux servers",
+      "items": [
+        {
+          "item": "linux",
+          "detail": "Package lists refreshed 2026-10-26 18:32",
+          "result": "Pass",
+          "comment": "Automatic security updates are on; 0 security update(s) waiting."
+        },
+        {
+          "item": "linux2",
+          "detail": "Package lists refreshed 2026-10-27 20:24",
+          "result": "Pass",
+          "comment": "Automatic security updates are on; 0 security update(s) waiting."
+        }
+      ],
+      "conclusion": "Effective (no exceptions)",
+      "findings": [],
+      "iso27001": "A.8.8 Management of technical vulnerabilities",
+      "cis_controls": "7.3 Automated operating system patch management",
+      "sample": ""
+    }
+  ]
+}

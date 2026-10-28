@@ -39,7 +39,8 @@
         "F1"
       ],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "6.2 Access revoking process"
+      "cis_controls": "6.2 Access revoking process",
+      "sample": ""
     },
     {
       "test_id": "AC-02",
@@ -62,7 +63,8 @@
         "F4"
       ],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "6.2 Access revoking process; 6.8 Role based access"
+      "cis_controls": "6.2 Access revoking process; 6.8 Role based access",
+      "sample": ""
     },
     {
       "test_id": "AC-03",
@@ -89,7 +91,8 @@
       "conclusion": "Effective (no exceptions)",
       "findings": [],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "6.1 Access granting process"
+      "cis_controls": "6.1 Access granting process",
+      "sample": ""
     },
     {
       "test_id": "AC-04",
@@ -239,7 +242,8 @@
         "F5"
       ],
       "iso27001": "A.5.16 Identity management; A.5.18 Access rights",
-      "cis_controls": "5.1 Inventory of accounts; 6.2 Access revoking process"
+      "cis_controls": "5.1 Inventory of accounts; 6.2 Access revoking process",
+      "sample": ""
     },
     {
       "test_id": "AC-05",
@@ -262,7 +266,8 @@
         "F5"
       ],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "6.2 Access revoking process"
+      "cis_controls": "6.2 Access revoking process",
+      "sample": ""
     },
     {
       "test_id": "AC-06",
@@ -448,7 +453,8 @@
         "F9"
       ],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "5.3 Disable dormant accounts"
+      "cis_controls": "5.3 Disable dormant accounts",
+      "sample": ""
     },
     {
       "test_id": "AC-07",
@@ -501,7 +507,8 @@
         "F6"
       ],
       "iso27001": "A.5.17 Authentication information; A.8.5 Secure authentication",
-      "cis_controls": "5.2 Use unique passwords"
+      "cis_controls": "5.2 Use unique passwords",
+      "sample": ""
     },
     {
       "test_id": "AC-08",
@@ -542,7 +549,8 @@
         "F7"
       ],
       "iso27001": "A.5.17 Authentication information",
-      "cis_controls": "5.2 Use unique passwords; 5.5 Inventory of service accounts"
+      "cis_controls": "5.2 Use unique passwords; 5.5 Inventory of service accounts",
+      "sample": ""
     },
     {
       "test_id": "AC-09",
@@ -565,7 +573,8 @@
         "F3"
       ],
       "iso27001": "A.5.16 Identity management",
-      "cis_controls": "5.1 Inventory of accounts"
+      "cis_controls": "5.1 Inventory of accounts",
+      "sample": ""
     },
     {
       "test_id": "AC-10",
@@ -612,7 +621,8 @@
         "F2"
       ],
       "iso27001": "A.8.2 Privileged access rights",
-      "cis_controls": "5.4 Dedicated administrator accounts; 5.5 Inventory of service accounts"
+      "cis_controls": "5.4 Dedicated administrator accounts; 5.5 Inventory of service accounts",
+      "sample": ""
     },
     {
       "test_id": "AC-11",
@@ -671,7 +681,8 @@
         "F8"
       ],
       "iso27001": "A.5.3 Segregation of duties",
-      "cis_controls": "6.8 Role based access"
+      "cis_controls": "6.8 Role based access",
+      "sample": ""
     },
     {
       "test_id": "AC-12",
@@ -796,7 +807,8 @@
         "F8"
       ],
       "iso27001": "A.5.3 Segregation of duties; A.5.18 Access rights",
-      "cis_controls": "6.1 Access granting process"
+      "cis_controls": "6.1 Access granting process",
+      "sample": ""
     },
     {
       "test_id": "AC-13",
@@ -922,7 +934,8 @@
         "F3"
       ],
       "iso27001": "A.5.18 Access rights; A.8.2 Privileged access rights",
-      "cis_controls": "6.1 Access granting process; 6.8 Role based access"
+      "cis_controls": "6.1 Access granting process; 6.8 Role based access",
+      "sample": ""
     },
     {
       "test_id": "AC-14",
@@ -945,7 +958,8 @@
         "F10"
       ],
       "iso27001": "A.5.18 Access rights",
-      "cis_controls": "6.8 Role based access (recurring access reviews)"
+      "cis_controls": "6.8 Role based access (recurring access reviews)",
+      "sample": ""
     }
   ]
 }

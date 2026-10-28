@@ -28,7 +28,7 @@ The most urgent actions are to disable the leaver's account and investigate its 
 
 ## 2. Scope and approach
 
-The review covered logical access to the `northwind.internal` Active Directory domain, which controls sign in to Northwind's systems and access to the finance application's payment roles. Change management and IT operations controls are out of scope and will be reviewed separately.
+The review covered logical access to the `northwind.internal` Active Directory domain, which controls sign in to Northwind's systems and access to the finance application's payment roles. Change management, IT operations and access to the servers are reported separately, for the same period, in [change-and-operations-review.md](change-and-operations-review.md).
 
 Directory data was extracted read only by the system administrator using a scripted extraction (`audit/collect_evidence.py`). Before testing, the extraction was checked for **completeness**, by confirming the record counts in the raw directory output matched the processed listing, and for **integrity**, by verifying SHA-256 hashes of every evidence file.
 
@@ -256,7 +256,7 @@ Rating: **Medium** | Policy clause 7.1 | Tests AC-14
 
 * This is a lab environment. The company and its records are fictional, and the weaknesses were seeded deliberately to be found.
 * Account creation dates in the directory are the date the lab was built, so HR start dates were relied on instead.
-* Last logon dates were recorded when the lab was built. At that time the domain controller's clock was about 38 minutes slow; it was corrected before the evidence was extracted. Time synchronisation will be tested as an IT operations control.
+* Last logon dates were recorded when the lab was built. At that time the domain controller's clock was about 38 minutes slow; it was corrected before the evidence was extracted. Time synchronisation was tested as an IT operations control (OP-06, finding F22).
 * No evidence of the quarterly access review was provided, so that control could not be tested beyond confirming its absence.
 
 ## 8. Remediation and retest
@@ -279,4 +279,4 @@ After remediation, a fresh extraction was taken on 2026-10-27 (`directory-202610
 ## 9. Next steps
 
 1. Complete the open follow ups from the retest, and test the first quarterly access review when it is performed.
-2. Phase 2: change management and IT operations (backups and time synchronisation) on the application server.
+2. Change management, IT operations and server access are reported in [change-and-operations-review.md](change-and-operations-review.md), and both reviews are brought together in [itgc-summary.md](itgc-summary.md).

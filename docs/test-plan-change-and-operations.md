@@ -4,6 +4,8 @@ Written before any evidence was collected from the application server or the off
 
 The criteria are Northwind's [Change Management and IT Operations Standard](../scenario/northwind-change-and-operations-standard.md) (the Standard) and, where stated, its [Access Control Policy](../scenario/northwind-access-control-policy.md) (the Policy). The audit period is 1 July to 30 September 2026, as for the logical access tests AC-01 to AC-14.
 
+> **Scope change, 28 October 2026.** The office PC had not been put into service when fieldwork took place, so AC-15, AC-16, OP-06 and OP-07 were performed on the two Linux servers only. The PC will be reviewed once it is in service. See the [fieldwork notes](fieldwork-notes.md).
+
 ## Scope
 
 | System | Where | What is tested |
