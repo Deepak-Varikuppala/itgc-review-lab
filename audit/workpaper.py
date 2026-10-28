@@ -242,3 +242,198 @@ def build_workpaper(ev, tests, out: Path) -> Path:
     out.parent.mkdir(parents=True, exist_ok=True)
     wb.save(out)
     return out
+
+
+def build_change_ops_workpaper(ev, tests, samples, out: Path, seed: int) -> Path:
+    """Workpaper for the change management, IT operations and server access review."""
+    from change_ops_findings import FINDINGS as CO_FINDINGS
+    from change_ops_findings import OBSERVATIONS as CO_OBSERVATIONS
+
+    wb = Workbook()
+    wb.properties.creator = "Deepak Kumar Varikuppala"
+    wb.properties.title = "Northwind Retail: Change Management, IT Operations and Server Access"
+
+    ws = wb.active
+    ws.title = "Cover"
+    ws["A1"] = "Northwind Retail: Change Management, IT Operations and Server Access Review"
+    ws["A1"].font = TITLE_FONT
+    ws.merge_cells("A1:D1")
+    folders = [ev.app_dir, *(h.dir for h in ev.hosts.values()), ev.directory_dir]
+    _label_block(
+        ws,
+        [
+            ("Entity", "Northwind Retail (fictional company, lab environment)"),
+            (
+                "Systems",
+                "Finance application and its code repository (Gitea) on linux2; Linux "
+                "servers linux (domain controller) and linux2 (application server)",
+            ),
+            ("Audit period", "1 July 2026 to 30 September 2026"),
+            ("Evidence extracted", f"{ev.as_at} (" + ", ".join(f.name for f in folders) + ")"),
+            (
+                "Criteria",
+                "Northwind Retail Change Management and IT Operations Standard v1.4 and "
+                "Access Control Policy v2.1, both approved 15 January 2026",
+            ),
+            (
+                "Approach",
+                "Tests that compare system records without judgement cover the whole "
+                "population. CM-04 and AC-18 need each item to be read and judged, so a "
+                f"random sample was taken with Python's random.Random({seed}).sample(), with "
+                "the size set by the table in the test plan. See the Samples sheet.",
+            ),
+            ("Tests performed", f"{len(tests)}"),
+            ("Tests with exceptions", f"{sum(1 for t in tests if t.exceptions())}"),
+            (
+                "Findings",
+                f"{len(CO_FINDINGS)} ("
+                + ", ".join(
+                    f"{sum(1 for f in CO_FINDINGS if f.rating == r)} {r}"
+                    for r in ("High", "Medium", "Low")
+                )
+                + ")",
+            ),
+            ("Prepared by", "Deepak Kumar Varikuppala"),
+            ("Workpaper generated", datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")),
+        ],
+        start=3,
+    )
+    ws.column_dimensions["A"].width = 24
+    for col in "BCD":
+        ws.column_dimensions[col].width = 40
+    _print_setup(ws)
+
+    ws = wb.create_sheet("Summary")
+    rows = [
+        [
+            t.test_id,
+            t.title,
+            t.policy_ref,
+            t.test_type,
+            t.sample or "Whole population",
+            len([i for i in t.items if i.result != "Not applicable"]),
+            len(t.exceptions()),
+            t.conclusion,
+            ", ".join(t.findings),
+            t.iso27001,
+            t.cis_controls,
+        ]
+        for t in tests
+    ]
+    _table(
+        ws,
+        1,
+        [
+            "Test",
+            "Control tested",
+            "Criteria",
+            "Type",
+            "Sample",
+            "Items tested",
+            "Exceptions",
+            "Conclusion",
+            "Findings",
+            "ISO/IEC 27001:2022",
+            "CIS Controls v8.1",
+        ],
+        rows,
+        [8, 44, 16, 18, 22, 9, 10, 34, 14, 30, 32],
+        fill_cols=(8,),
+    )
+
+    ws = wb.create_sheet("Findings")
+    rows = [
+        [
+            f.finding_id,
+            f.title,
+            f.rating,
+            ", ".join(f.tests),
+            f.policy,
+            f.condition,
+            f.recommendation,
+            "",
+            "",
+            "",
+        ]
+        for f in CO_FINDINGS
+    ]
+    rows += [[o[0], o[1], "Observation", "", "", o[2], "", "", "", ""] for o in CO_OBSERVATIONS]
+    _table(
+        ws,
+        1,
+        [
+            "ID",
+            "Finding",
+            "Rating",
+            "Tests",
+            "Criteria",
+            "Condition",
+            "Recommendation",
+            "Owner",
+            "Management response",
+            "Target date",
+        ],
+        rows,
+        [6, 34, 11, 16, 16, 60, 50, 14, 30, 12],
+        fill_cols=(3,),
+    )
+
+    ws = wb.create_sheet("Samples")
+    rows = []
+    for test_id, s in samples.items():
+        chosen = set(s["sample"])
+        for n, key in enumerate(s["population"], 1):
+            rows.append([test_id, n, key, "Selected" if key in chosen else ""])
+    _table(
+        ws,
+        1,
+        ["Test", "Population item", "Item", f"Selected (seed {seed})"],
+        rows,
+        [8, 10, 46, 18],
+    )
+
+    for t in tests:
+        ws = wb.create_sheet(t.test_id)
+        ws["A1"] = f"{t.test_id}: {t.title}"
+        ws["A1"].font = TITLE_FONT
+        ws.merge_cells("A1:D1")
+        nxt = _label_block(
+            ws,
+            [
+                ("Criteria", t.policy_ref),
+                ("ISO/IEC 27001:2022", t.iso27001),
+                ("CIS Controls v8.1", t.cis_controls),
+                ("Test type", t.test_type),
+                ("Control objective", t.objective),
+                ("Test procedure", t.procedure),
+                ("Population", t.population),
+                ("Sample", t.sample or "Whole population"),
+                ("Conclusion", t.conclusion),
+                ("Findings raised", ", ".join(t.findings) or "None"),
+            ],
+            start=3,
+        )
+        ws.cell(row=nxt - 2, column=2).fill = (
+            FILLS["Pass"] if t.conclusion.startswith("Effective") else FILLS["Exception"]
+        )
+        _table(
+            ws,
+            nxt + 1,
+            ["Item", "Detail", "Result", "Comment"],
+            [[i.item, i.detail, i.result, i.comment] for i in t.items],
+            [34, 40, 13, 70],
+            fill_cols=(3,),
+        )
+
+    ws = wb.create_sheet("Evidence")
+    rows = []
+    for folder in folders:
+        for p in sorted(x for x in folder.iterdir() if x.is_file()):
+            rows.append(
+                [folder.name, p.name, p.stat().st_size, hashlib.sha256(p.read_bytes()).hexdigest()]
+            )
+    _table(ws, 1, ["Folder", "Evidence file", "Bytes", "SHA-256"], rows, [32, 30, 10, 70])
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    wb.save(out)
+    return out

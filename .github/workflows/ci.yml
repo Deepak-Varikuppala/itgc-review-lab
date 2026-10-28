@@ -24,7 +24,15 @@ jobs:
       - name: Test the audit scripts
         run: pytest
       - name: Rerun the testing from the committed evidence
-        run: python3 audit/run_tests.py --evidence "$(ls -d evidence/directory-* | head -1)" --out /tmp/wp
+        run: |
+          python3 audit/run_tests.py --evidence evidence/directory-20261027T030229Z --out /tmp/wp
+          python3 audit/run_change_ops_tests.py --out /tmp/wp \
+            --app evidence/app-20261028T015418Z \
+            --host evidence/host-linux-20261028T015420Z \
+            --host evidence/host-linux2-20261028T015418Z \
+            --directory evidence/directory-20261027T030229Z
+          diff <(python3 -c "import json; print(json.dumps(json.load(open('/tmp/wp/change-operations-results.json'))['tests']))") \
+               <(python3 -c "import json; print(json.dumps(json.load(open('workpapers/change-operations-results.json'))['tests']))")
       - name: Check the report and testing programme are up to date
         run: |
           python3 audit/make_report.py

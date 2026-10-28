@@ -104,6 +104,7 @@ class Test:
     findings: list[str] = field(default_factory=list)
     iso27001: str = ""
     cis_controls: str = ""
+    sample: str = ""  # empty when the whole population is tested
 
     def exceptions(self) -> list[Item]:
         return [i for i in self.items if i.result == "Exception"]
