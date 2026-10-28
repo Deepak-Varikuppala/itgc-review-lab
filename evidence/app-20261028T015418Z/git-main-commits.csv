@@ -1,0 +1,53 @@
+commit,author,author_email,authored,committer,committed,subject
+9f4e3b5c4b4ceda6b81325fa5369b043ad77f3de,Ryan Patel,ryan.patel@northwind.internal,2026-09-25T10:49:00Z,Ryan Patel,2026-09-28T14:59:00Z,Prepare quarter end payment summary
+6edb084e23a04359a99255e430ff958f44de25ad,Ryan Patel,ryan.patel@northwind.internal,2026-09-24T10:48:00Z,Ryan Patel,2026-09-25T14:58:00Z,Show the last login time on the admin page
+36dcf23117b42bd4149dc7220a74d0cf1bbaa79b,Ryan Patel,ryan.patel@northwind.internal,2026-09-23T20:50:00Z,Ryan Patel,2026-09-23T20:50:00Z,Emergency: approvals page timing out
+8da47b7422e5214c074cb2129bbfe31b0357ac33,Aisha Khan,aisha.khan@northwind.internal,2026-09-22T10:47:00Z,Aisha Khan,2026-09-23T14:57:00Z,Speed up the supplier lookup
+3f75e98a78e8cb4f49965b09cff3ad73d6e119df,Ryan Patel,ryan.patel@northwind.internal,2026-09-18T10:46:00Z,Ryan Patel,2026-09-21T14:56:00Z,Add a dry run option to the bank export
+59c30a8c2fc7eaefc66b3faee3d50eda3ab059a2,Ryan Patel,ryan.patel@northwind.internal,2026-09-17T10:45:00Z,Ryan Patel,2026-09-18T14:55:00Z,Tidy up unused payment fields
+70f58deeb9bcabba049a9567f84b45ed868f3657,Aisha Khan,aisha.khan@northwind.internal,2026-09-15T10:44:00Z,Aisha Khan,2026-09-16T14:54:00Z,Move the database path to configuration
+e516fae6aeb3a682b5fe963c10c7f89eed514c2d,Ryan Patel,ryan.patel@northwind.internal,2026-09-11T10:43:00Z,Ryan Patel,2026-09-14T14:53:00Z,Add a weekly supplier report
+5d0048dd2db39a6aa4017282ec3819ac4edf1b88,Ryan Patel,ryan.patel@northwind.internal,2026-09-11T16:40:00Z,Ryan Patel,2026-09-11T16:40:00Z,Quick fix: increase export timeout
+01e08dccb3a49d4b95246010a4a272c45e5f0d3a,Ryan Patel,ryan.patel@northwind.internal,2026-09-10T10:42:00Z,Ryan Patel,2026-09-11T14:52:00Z,Detect duplicate invoice numbers
+7be77c72384f5049d91c17670525bdd4326f6f7e,Aisha Khan,aisha.khan@northwind.internal,2026-09-08T10:41:00Z,Aisha Khan,2026-09-09T14:51:00Z,Improve error message for duplicate invoices
+e7a3eb361d20dc26204e781adead90ad2f818e5b,Ryan Patel,ryan.patel@northwind.internal,2026-09-04T10:40:00Z,Ryan Patel,2026-09-07T14:50:00Z,Record the IP address of each approval
+3d4bc8921c6f47ace41e94c7c92f1b49b00330d5,Ryan Patel,ryan.patel@northwind.internal,2026-09-01T10:39:00Z,Ryan Patel,2026-09-02T15:14:00Z,Block payments to blocked suppliers
+43ad0f036e011526376357a9f2372c03b65a7a4a,Ryan Patel,ryan.patel@northwind.internal,2026-08-27T10:38:00Z,Ryan Patel,2026-08-28T15:13:00Z,Add supplier status (active or blocked)
+b1f9ab7d1da90a8a22c982e9b67ce779ba0dc5ea,Ryan Patel,ryan.patel@northwind.internal,2026-08-25T10:37:00Z,Ryan Patel,2026-08-26T15:12:00Z,Read configuration from environment variables
+eb3e38da7fcdf9dd89fcbc61b6d809644225e019,Ryan Patel,ryan.patel@northwind.internal,2026-08-21T10:36:00Z,Ryan Patel,2026-08-24T15:11:00Z,Mask bank account numbers on screen
+3aef7655a1f5c761c6a14e3a819cd340eaf0adc9,Ryan Patel,ryan.patel@northwind.internal,2026-08-21T16:40:00Z,Ryan Patel,2026-08-21T16:40:00Z,Quick fix: typo on approval screen
+979e9c4bd3cc799aecc60af52490194c2753dd18,Aisha Khan,aisha.khan@northwind.internal,2026-08-20T10:35:00Z,Aisha Khan,2026-08-21T15:10:00Z,Highlight payments over the approval limit
+f952bdab388c704d4a3b1564aaf2b9e0236608bb,Ryan Patel,ryan.patel@northwind.internal,2026-08-19T21:05:00Z,Ryan Patel,2026-08-19T21:40:00Z,"Emergency: bank rejected payment file, fix field order"
+96e198cca2b34854a5c1310b6e53aa66ce7d12d4,Ryan Patel,ryan.patel@northwind.internal,2026-08-18T10:34:00Z,Ryan Patel,2026-08-19T15:09:00Z,Add unit tests for payment validation
+5e081d7ae913d7c1a499298940b4348914decb27,Ryan Patel,ryan.patel@northwind.internal,2026-08-14T10:33:00Z,Ryan Patel,2026-08-17T15:08:00Z,Reduce database lock time during imports
+ed2c99e219e5d682f4b126decbf64eae6e2288ff,Aisha Khan,aisha.khan@northwind.internal,2026-08-13T10:32:00Z,Aisha Khan,2026-08-14T15:07:00Z,Add a daily total of approved payments
+d5e2c098d3b74f353ccef06da3670d3ef6f2d6c8,Leo Martin,leo.martin@northwind.internal,2026-08-11T10:31:00Z,Leo Martin,2026-08-12T15:06:00Z,Fix timezone on payment dates
+00330e9acc39f83ab772eb8c8b33f5160d70263c,Ryan Patel,ryan.patel@northwind.internal,2026-08-07T10:30:00Z,Ryan Patel,2026-08-10T15:05:00Z,Show who created each payment
+440f058a5fcae97c603b9a8375ae90b66901e2b0,Aisha Khan,aisha.khan@northwind.internal,2026-08-06T10:29:00Z,Aisha Khan,2026-08-07T15:04:00Z,Validate sort codes before saving supplier details
+6bf70a1fd8d61361aa0772cd8485160ec4d9d902,Ryan Patel,ryan.patel@northwind.internal,2026-08-04T10:28:00Z,Ryan Patel,2026-08-05T15:03:00Z,Add currency code to each payment
+48de56b03c8e6861d0b9aa13fb78f5019d936b85,Ryan Patel,ryan.patel@northwind.internal,2026-07-31T10:27:00Z,Ryan Patel,2026-08-03T15:02:00Z,Rotate application logs daily
+68dab97fb1d71994328fb45d6bb08c3e8e2f87f4,Aisha Khan,aisha.khan@northwind.internal,2026-07-28T10:26:00Z,Aisha Khan,2026-07-29T15:01:00Z,Export approved payments to the bank file format
+33e7d2f14b35a205500695f387b10138dde6d83a,Ryan Patel,ryan.patel@northwind.internal,2026-07-24T10:25:00Z,Ryan Patel,2026-07-27T15:00:00Z,Warn when a supplier's bank details change
+85c471c230d4e25b8f83e277cd65aa229d1c7e34,Ryan Patel,ryan.patel@northwind.internal,2026-07-23T10:24:00Z,Ryan Patel,2026-07-24T14:59:00Z,Store the time each payment was approved
+4b618409f43821299c8ec613caeed64165dd56ac,Aisha Khan,aisha.khan@northwind.internal,2026-07-21T10:23:00Z,Aisha Khan,2026-07-22T14:58:00Z,Add a health check endpoint for monitoring
+3a861f22e1cc90534bd0e3f2406598a6c5041a02,Ryan Patel,ryan.patel@northwind.internal,2026-07-17T10:22:00Z,Ryan Patel,2026-07-20T14:57:00Z,Paginate the payments list
+a58c016bba99a7073e18c58056108ae84771beea,Ryan Patel,ryan.patel@northwind.internal,2026-07-17T16:40:00Z,Ryan Patel,2026-07-17T16:40:00Z,Quick fix: payment list sort order
+d77b60cae137d3bd5f55918bad662cb72ca38b52,Ryan Patel,ryan.patel@northwind.internal,2026-07-16T10:21:00Z,Ryan Patel,2026-07-17T14:56:00Z,Upgrade the HTTP server dependency
+0857f77c9129f9df60713d4c87fb738a7e5a2dc7,Aisha Khan,aisha.khan@northwind.internal,2026-07-14T10:20:00Z,Aisha Khan,2026-07-15T14:55:00Z,Add search by supplier name
+5e1a2ab5dcc8010fa19bd4de21436d248d9d9391,Ryan Patel,ryan.patel@northwind.internal,2026-07-10T10:19:00Z,Ryan Patel,2026-07-13T14:54:00Z,Round payment amounts to two decimal places on import
+f9a78efb5bcd2c27f485dde5a28213665dad6c0c,Ryan Patel,ryan.patel@northwind.internal,2026-07-09T10:18:00Z,Ryan Patel,2026-07-10T14:53:00Z,Log every payment approval with the approver's username
+e9a1fb3fd766552c561307c56a5d58fbd8a0c755,Aisha Khan,aisha.khan@northwind.internal,2026-07-07T10:17:00Z,Aisha Khan,2026-07-08T14:52:00Z,Reject payments to suppliers with no bank details
+9e5f1397f164bee7049259b26a109d2ef04fd5e6,Ryan Patel,ryan.patel@northwind.internal,2026-07-03T10:16:00Z,Ryan Patel,2026-07-06T14:51:00Z,Show payment due date on the payments list
+8275fe3aa8e601e2744c867a850d16a9507d9241,Ryan Patel,ryan.patel@northwind.internal,2026-06-30T10:15:00Z,Ryan Patel,2026-07-01T14:50:00Z,Add supplier VAT number validation
+1d4b04338f4001c8f52185322e481252323c1ec4,Ryan Patel,ryan.patel@northwind.internal,2026-06-16T10:20:00Z,Ryan Patel,2026-06-17T15:00:00Z,Prepare for Q3 payment runs
+ae43ed98afab7cadf8f0919576ce6e30c63d35d6,Leo Martin,leo.martin@northwind.internal,2026-05-26T10:20:00Z,Leo Martin,2026-05-27T15:00:00Z,Move page templates into one module
+89489c4353488081b6d2336c32340eb6ead3588c,Aisha Khan,aisha.khan@northwind.internal,2026-05-12T10:20:00Z,Aisha Khan,2026-05-13T15:00:00Z,Open the database read only for the payments page
+460e8a1314798764a282ad57d91fcaca4a1a4653,Leo Martin,leo.martin@northwind.internal,2026-04-28T10:20:00Z,Leo Martin,2026-04-29T15:00:00Z,Add basic request logging
+633fb5340d3f00b0b0c65f6ef7e0746d562aef3e,Ryan Patel,ryan.patel@northwind.internal,2026-04-14T10:20:00Z,Ryan Patel,2026-04-15T15:00:00Z,Add invoice number to payments
+c50a379ae3ebcfe1793de133e60e0f2b22026bdc,Aisha Khan,aisha.khan@northwind.internal,2026-03-24T10:20:00Z,Aisha Khan,2026-03-25T15:00:00Z,Block negative payment amounts
+3f6bbe63b4ae936387fba1d1d8a7f0e1fb4669ae,Leo Martin,leo.martin@northwind.internal,2026-03-10T10:20:00Z,Leo Martin,2026-03-11T15:00:00Z,Add sort code to suppliers
+47e7cbe511aa70a9571d4c10a267df30b5e0488f,Ryan Patel,ryan.patel@northwind.internal,2026-02-24T10:20:00Z,Ryan Patel,2026-02-25T15:00:00Z,Add approval status to payments
+df78d4592c9813220918025a5fa56c6d751ba01d,Leo Martin,leo.martin@northwind.internal,2026-02-10T10:20:00Z,Leo Martin,2026-02-11T15:00:00Z,Add supplier bank details form
+8bdfbc7dee73d94dc2572aa32a0ef9660ed49366,Aisha Khan,aisha.khan@northwind.internal,2026-01-27T10:20:00Z,Aisha Khan,2026-01-28T15:00:00Z,Add payments table
+55564fa01e742da1a7879f2dc43cc06ce5919dae,Ryan Patel,ryan.patel@northwind.internal,2026-01-13T10:20:00Z,Ryan Patel,2026-01-14T15:00:00Z,Add supplier list page
+f4e50e889d11f927abef032f877bd1d13697f918,Ryan Patel,ryan.patel@northwind.internal,2025-11-03T14:20:00Z,Ryan Patel,2025-11-03T14:20:00Z,Initial version of the payments app

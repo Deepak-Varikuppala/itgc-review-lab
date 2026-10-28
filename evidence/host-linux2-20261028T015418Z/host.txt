@@ -1,0 +1,12 @@
+Hostname: linux2
+Fully qualified name: linux2
+Kernel: 7.0.0-38-generic
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+VERSION_ID="26.04"
+
+# ip -brief address
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s1           UP             192.168.64.11/24 fd6e:9e79:2696:fcd6:5c5f:57ff:fe7b:94b6/64 fe80::5c5f:57ff:fe7b:94b6/64
+
+# uptime
+01:54:18 up 8 min,  2 users,  load average: 0.94, 0.46, 0.19

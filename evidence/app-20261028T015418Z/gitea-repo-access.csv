@@ -1,0 +1,8 @@
+repository,account,access,granted_through
+northwind/finance-app,svc-deploy,read,team Deploy
+northwind/finance-app,aisha.khan,write,team Developers
+northwind/finance-app,leo.martin,write,team Developers
+northwind/finance-app,james.carter,owner,team Owners
+northwind/finance-app,ryan.patel,owner,team Owners
+northwind/finance-app,gitea-admin,admin,Gitea site administrator
+northwind/finance-app,aisha.khan,admin,Gitea site administrator

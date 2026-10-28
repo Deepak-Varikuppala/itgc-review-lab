@@ -1,0 +1,50 @@
+APP_NAME = Northwind Code
+RUN_USER = git
+RUN_MODE = prod
+WORK_PATH = /var/lib/gitea
+
+[server]
+PROTOCOL = http
+HTTP_ADDR = 0.0.0.0
+HTTP_PORT = 3000
+DOMAIN = 192.168.64.11
+ROOT_URL = http://192.168.64.11:3000/
+DISABLE_SSH = true
+LFS_START_SERVER = false
+OFFLINE_MODE = true
+
+[database]
+DB_TYPE = sqlite3
+PATH = /var/lib/gitea/data/gitea.db
+
+[repository]
+ROOT = /var/lib/gitea/data/gitea-repositories
+DEFAULT_BRANCH = main
+
+[security]
+INSTALL_LOCK = true
+SECRET_KEY = (removed)
+INTERNAL_TOKEN = (removed)
+MIN_PASSWORD_LENGTH = (removed)
+
+[oauth2]
+JWT_SECRET = (removed)
+
+[service]
+DISABLE_REGISTRATION = true
+REQUIRE_SIGNIN_VIEW = true
+DEFAULT_ALLOW_CREATE_ORGANIZATION = false
+
+[actions]
+ENABLED = false
+
+[session]
+PROVIDER = file
+
+[log]
+MODE = file
+LEVEL = Info
+ROOT_PATH = /var/lib/gitea/log
+
+[cron.update_checker]
+ENABLED = false

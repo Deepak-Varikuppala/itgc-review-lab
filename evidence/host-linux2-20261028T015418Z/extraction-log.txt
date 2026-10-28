@@ -1,0 +1,144 @@
+Northwind Retail: server evidence extraction
+Extracted at (UTC):  2026-10-28T01:54:18+00:00
+Performed by:        labadmin (via sudo on the server)
+Host:                linux2
+Method:              read only commands and file reads; nothing on the server was changed
+
+Record counts (completeness check: the first two must match)
+  lines in /etc/passwd: 35
+  rows in local-accounts.csv: 35
+  rows in local-groups.csv: 64
+  rows in sudo-rules.csv: 10
+  rows in scheduled-jobs.csv: 33
+
+Commands run and files read
+  $ ip -brief address
+  $ uptime
+  read /etc/passwd, /etc/group and /etc/shadow (password hashes are not copied)
+  read /etc/sudoers and every file in /etc/sudoers.d
+  $ getent group admin
+  $ getent group sudo
+  $ getent group it-server-admins
+  $ getent group change-deployers
+  $ sshd -T
+  $ realm list
+  read /etc/sssd/sssd.conf (sign in settings only)
+  $ getent group GG-IT
+  read /etc/crontab, /etc/cron.d, /etc/cron.<period> and /var/spool/cron/crontabs
+  $ dpkg -S /etc/crontab
+  $ dpkg -S /etc/cron.d/.placeholder
+  $ dpkg -S /etc/cron.d/e2scrub_all
+  $ dpkg -S /etc/cron.d/finance-tidy
+  $ dpkg -S /etc/cron.d/northwind-backup
+  $ dpkg -S /etc/cron.daily/apport
+  $ dpkg -S /etc/cron.daily/apt-compat
+  $ dpkg -S /etc/cron.daily/dpkg
+  $ dpkg -S /etc/cron.daily/logrotate
+  $ dpkg -S /etc/cron.daily/man-db
+  $ dpkg -S /etc/cron.weekly/man-db
+  $ systemctl list-timers --all --no-pager --no-legend --output=json
+  $ systemctl show -P FragmentPath fwupd-refresh.timer
+  $ systemctl show -P ExecStart fwupd-refresh.service
+  $ systemctl show -P User fwupd-refresh.service
+  $ systemctl show -P TimersCalendar fwupd-refresh.timer
+  $ dpkg -S /usr/lib/systemd/system/fwupd-refresh.timer
+  $ systemctl show -P FragmentPath sysstat-collect.timer
+  $ systemctl show -P ExecStart sysstat-collect.service
+  $ systemctl show -P User sysstat-collect.service
+  $ systemctl show -P TimersCalendar sysstat-collect.timer
+  $ dpkg -S /usr/lib/systemd/system/sysstat-collect.timer
+  $ systemctl show -P FragmentPath systemd-tmpfiles-clean.timer
+  $ systemctl show -P ExecStart systemd-tmpfiles-clean.service
+  $ systemctl show -P User systemd-tmpfiles-clean.service
+  $ systemctl show -P TimersCalendar systemd-tmpfiles-clean.timer
+  $ dpkg -S /usr/lib/systemd/system/systemd-tmpfiles-clean.timer
+  $ systemctl show -P FragmentPath apt-daily-upgrade.timer
+  $ systemctl show -P ExecStart apt-daily-upgrade.service
+  $ systemctl show -P User apt-daily-upgrade.service
+  $ systemctl show -P TimersCalendar apt-daily-upgrade.timer
+  $ dpkg -S /usr/lib/systemd/system/apt-daily-upgrade.timer
+  $ systemctl show -P FragmentPath man-db.timer
+  $ systemctl show -P ExecStart man-db.service
+  $ systemctl show -P User man-db.service
+  $ systemctl show -P TimersCalendar man-db.timer
+  $ dpkg -S /usr/lib/systemd/system/man-db.timer
+  $ systemctl show -P FragmentPath apt-daily.timer
+  $ systemctl show -P ExecStart apt-daily.service
+  $ systemctl show -P User apt-daily.service
+  $ systemctl show -P TimersCalendar apt-daily.timer
+  $ dpkg -S /usr/lib/systemd/system/apt-daily.timer
+  $ systemctl show -P FragmentPath motd-news.timer
+  $ systemctl show -P ExecStart motd-news.service
+  $ systemctl show -P User motd-news.service
+  $ systemctl show -P TimersCalendar motd-news.timer
+  $ dpkg -S /usr/lib/systemd/system/motd-news.timer
+  $ systemctl show -P FragmentPath dpkg-db-backup.timer
+  $ systemctl show -P ExecStart dpkg-db-backup.service
+  $ systemctl show -P User dpkg-db-backup.service
+  $ systemctl show -P TimersCalendar dpkg-db-backup.timer
+  $ dpkg -S /usr/lib/systemd/system/dpkg-db-backup.timer
+  $ systemctl show -P FragmentPath sysstat-rotate.timer
+  $ systemctl show -P ExecStart sysstat-rotate.service
+  $ systemctl show -P User sysstat-rotate.service
+  $ systemctl show -P TimersCalendar sysstat-rotate.timer
+  $ dpkg -S /usr/lib/systemd/system/sysstat-rotate.timer
+  $ systemctl show -P FragmentPath sysstat-summary.timer
+  $ systemctl show -P ExecStart sysstat-summary.service
+  $ systemctl show -P User sysstat-summary.service
+  $ systemctl show -P TimersCalendar sysstat-summary.timer
+  $ dpkg -S /usr/lib/systemd/system/sysstat-summary.timer
+  $ systemctl show -P FragmentPath logrotate.timer
+  $ systemctl show -P ExecStart logrotate.service
+  $ systemctl show -P User logrotate.service
+  $ systemctl show -P TimersCalendar logrotate.timer
+  $ dpkg -S /usr/lib/systemd/system/logrotate.timer
+  $ systemctl show -P FragmentPath update-notifier-download.timer
+  $ systemctl show -P ExecStart update-notifier-download.service
+  $ systemctl show -P User update-notifier-download.service
+  $ systemctl show -P TimersCalendar update-notifier-download.timer
+  $ dpkg -S /usr/lib/systemd/system/update-notifier-download.timer
+  $ systemctl show -P FragmentPath e2scrub_all.timer
+  $ systemctl show -P ExecStart e2scrub_all.service
+  $ systemctl show -P User e2scrub_all.service
+  $ systemctl show -P TimersCalendar e2scrub_all.timer
+  $ dpkg -S /usr/lib/systemd/system/e2scrub_all.timer
+  $ systemctl show -P FragmentPath xfs_scrub_all.timer
+  $ systemctl show -P ExecStart xfs_scrub_all.service
+  $ systemctl show -P User xfs_scrub_all.service
+  $ systemctl show -P TimersCalendar xfs_scrub_all.timer
+  $ dpkg -S /usr/lib/systemd/system/xfs_scrub_all.timer
+  $ systemctl show -P FragmentPath fstrim.timer
+  $ systemctl show -P ExecStart fstrim.service
+  $ systemctl show -P User fstrim.service
+  $ systemctl show -P TimersCalendar fstrim.timer
+  $ dpkg -S /usr/lib/systemd/system/fstrim.timer
+  $ systemctl show -P FragmentPath update-notifier-motd.timer
+  $ systemctl show -P ExecStart update-notifier-motd.service
+  $ systemctl show -P User update-notifier-motd.service
+  $ systemctl show -P TimersCalendar update-notifier-motd.timer
+  $ dpkg -S /usr/lib/systemd/system/update-notifier-motd.timer
+  $ systemctl show -P FragmentPath apport-autoreport.timer
+  $ systemctl show -P ExecStart apport-autoreport.service
+  $ systemctl show -P User apport-autoreport.service
+  $ systemctl show -P TimersCalendar apport-autoreport.timer
+  $ dpkg -S /usr/lib/systemd/system/apport-autoreport.timer
+  $ systemctl show -P FragmentPath snapd.snap-repair.timer
+  $ systemctl show -P ExecStart snapd.snap-repair.service
+  $ systemctl show -P User snapd.snap-repair.service
+  $ systemctl show -P TimersCalendar snapd.snap-repair.timer
+  $ dpkg -S /usr/lib/systemd/system/snapd.snap-repair.timer
+  $ systemctl show -P FragmentPath ua-timer.timer
+  $ systemctl show -P ExecStart ua-timer.service
+  $ systemctl show -P User ua-timer.service
+  $ systemctl show -P TimersCalendar ua-timer.timer
+  $ dpkg -S /usr/lib/systemd/system/ua-timer.timer
+  $ timedatectl
+  $ chronyc -n tracking
+  $ chronyc -n sources -v
+  $ apt-get -s -o Debug::NoLocking=1 dist-upgrade
+  read /var/log/apt/history.log
+  $ systemctl is-enabled unattended-upgrades
+  $ last -F -w -n 200
+    (command not available on this server)
+  $ wtmpdb last -n 200
+    (command not available on this server)

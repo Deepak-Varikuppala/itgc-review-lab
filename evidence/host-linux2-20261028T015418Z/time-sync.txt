@@ -1,0 +1,41 @@
+# timedatectl
+               Local time: Wed 2026-10-28 01:54:19 UTC
+           Universal time: Wed 2026-10-28 01:54:19 UTC
+                 RTC time: Wed 2026-10-28 01:54:20
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+# chronyc -n tracking
+Reference ID    : B97DBE7B (185.125.190.123)
+Stratum         : 3
+Ref time (UTC)  : Wed Oct 28 01:54:11 2026
+System time     : 0.000028765 seconds slow of NTP time
+Last offset     : +0.000172525 seconds
+RMS offset      : 0.001340588 seconds
+Frequency       : 4.447 ppm slow
+Residual freq   : +0.047 ppm
+Skew            : 5.371 ppm
+Root delay      : 0.008144518 seconds
+Root dispersion : 0.002218568 seconds
+Update interval : 65.1 seconds
+Leap status     : Normal
+
+# chronyc -n sources -v
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current best, '+' = combined, '-' = not combined,
+| /             'x' = may be in error, '~' = too variable, '?' = unusable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^+ 185.125.190.122               2   6   377     6   +517us[ +517us] +/- 4475us
+^* 185.125.190.123               2   6   377     7  -1372us[-1199us] +/- 6472us
+^- 91.189.91.112                 2   6   377     7  -1442us[-1442us] +/-   62ms
+^- 91.189.91.113                 2   6   377     7   -559us[ -559us] +/-   67ms
+^- 185.125.190.121               2   6   377     5  +2226us[+2226us] +/- 5859us

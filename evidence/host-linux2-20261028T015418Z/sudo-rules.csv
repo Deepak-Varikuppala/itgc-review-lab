@@ -1,0 +1,11 @@
+account,granted_to,granted_to_type,run_as,commands,no_password,file,line,file_modified
+root,root,user,(ALL:ALL),ALL,No,/etc/sudoers,47,2026-01-21T15:09:56+00:00
+(no members),%admin,group,(ALL),ALL,No,/etc/sudoers,50,2026-01-21T15:09:56+00:00
+labadmin,%sudo,group,(ALL:ALL),ALL,No,/etc/sudoers,53,2026-01-21T15:09:56+00:00
+support,%sudo,group,(ALL:ALL),ALL,No,/etc/sudoers,53,2026-01-21T15:09:56+00:00
+labadmin,labadmin,user,(ALL),ALL,Yes,/etc/sudoers.d/90-labadmin,1,2026-10-27T13:36:15+00:00
+aisha.khan,%it-server-admins,group,(ALL:ALL),ALL,No,/etc/sudoers.d/northwind,3,2026-10-28T01:54:07+00:00
+james.carter,%it-server-admins,group,(ALL:ALL),ALL,No,/etc/sudoers.d/northwind,3,2026-10-28T01:54:07+00:00
+aisha.khan,%change-deployers,group,(root),/usr/local/sbin/northwind-deploy,No,/etc/sudoers.d/northwind,5,2026-10-28T01:54:07+00:00
+ryan.patel,%change-deployers,group,(root),/usr/local/sbin/northwind-deploy,No,/etc/sudoers.d/northwind,5,2026-10-28T01:54:07+00:00
+ryan.patel,ryan.patel,user,(ALL),ALL,Yes,/etc/sudoers.d/ryan-emergency,2,2026-09-23T20:41:00+00:00

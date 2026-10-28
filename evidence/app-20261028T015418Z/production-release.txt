@@ -1,0 +1,4 @@
+Production checkout: /opt/northwind/finance-app
+Commit: 9f4e3b5c4b4ceda6b81325fa5369b043ad77f3de
+Version: 1.45.0
+Service finance-app: active

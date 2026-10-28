@@ -1,0 +1,3 @@
+# realm list
+(not joined to a domain)
+

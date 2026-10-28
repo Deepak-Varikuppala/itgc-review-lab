@@ -1,0 +1,43 @@
+Northwind Retail: app server evidence extraction
+Extracted at (UTC):  2026-10-28T01:54:18+00:00
+Performed by:        labadmin (via sudo on the app server)
+Host:                linux2
+Sources:             Gitea database /var/lib/gitea/data/gitea.db (opened read only), the repository under /var/lib/gitea/data/gitea-repositories, and the server's logs and configuration
+Method:              read only queries and file reads; nothing was changed
+
+Record counts (completeness check: where a source count is shown, the rows
+written from it must match)
+  accounts in the Gitea user table: 7
+  rows in gitea-users.csv: 7
+  rows in gitea-repo-access.csv: 7
+  pull requests in the database: 47
+  rows in gitea-pull-requests.csv: 47
+  rows in gitea-reviews.csv: 46
+  branch protection rules: 1
+  rows in gitea-main-updates.csv: 52
+  commits on main (git rev-list --count): 52
+  rows in git-main-commits.csv: 52
+  lines in deployments.log: 51
+  lines in backup.log: 92
+
+Commands and queries run
+  sql> SELECT r.id FROM repository r JOIN user o ON o.id = r.owner_id WHERE o.lower_name = ? AND r.lower_name = ?
+  sql> SELECT lower_name, full_name, email, type, is_admin, is_active, prohibit_login, is_restricted, created_unix, last_login_unix FROM user ORDER BY lower_name
+  sql> SELECT COUNT(*) FROM user
+  sql> SELECT t.name, t.authorize, t.includes_all_repositories, u.lower_name, COALESCE((SELECT access_mode FROM team_unit tu WHERE tu.team_id = t.id AND tu.type = 1), 0) FROM team t JOIN user o ON o.id = t.org_id JOIN team_user m ON m.team_id = t.id JOIN user u ON u.id = m.uid WHERE o.lower_name = ? AND (t.includes_all_repositories = 1 OR EXISTS (SELECT 1 FROM team_repo tr WHERE tr.team_id = t.id AND tr.repo_id = ?)) ORDER BY t.name, u.lower_name
+  sql> SELECT u.lower_name, c.mode FROM collaboration c JOIN user u ON u.id = c.user_id WHERE c.repo_id = ?
+  sql> SELECT lower_name FROM user WHERE is_admin = 1 AND type = 0
+  sql> SELECT i."index", i.name, a.lower_name, i.created_unix, p.has_merged, p.merged_unix, m.lower_name, p.merged_commit_id, p.head_branch, p.base_branch, i.content FROM pull_request p JOIN issue i ON i.id = p.issue_id JOIN user a ON a.id = i.poster_id LEFT JOIN user m ON m.id = p.merger_id WHERE p.base_repo_id = ? ORDER BY i."index"
+  sql> SELECT COUNT(*) FROM issue WHERE repo_id = ? AND is_pull = 1
+  sql> SELECT i."index", u.lower_name, r.type, r.official, r.commit_id, r.created_unix, r.content FROM review r JOIN issue i ON i.id = r.issue_id JOIN user u ON u.id = r.reviewer_id WHERE i.repo_id = ? AND r.type != 0 ORDER BY i."index", r.created_unix
+  sql> SELECT * FROM protected_branch WHERE repo_id = ?
+  sql> SELECT a.created_unix, u.lower_name, a.ref_name, a.content FROM action a JOIN user u ON u.id = a.act_user_id WHERE a.repo_id = ? AND a.op_type = 5 AND a.user_id = a.act_user_id AND a.ref_name = 'refs/heads/main' ORDER BY a.created_unix
+  read /etc/gitea/app.ini (values of secret settings removed)
+  $ git -c safe.directory=/var/lib/gitea/data/gitea-repositories/northwind/finance-app.git -C /var/lib/gitea/data/gitea-repositories/northwind/finance-app.git log --first-parent --format=%H%x1f%an%x1f%ae%x1f%aI%x1f%cn%x1f%cI%x1f%s main
+  $ git -c safe.directory=/var/lib/gitea/data/gitea-repositories/northwind/finance-app.git -C /var/lib/gitea/data/gitea-repositories/northwind/finance-app.git rev-list --count --first-parent main
+  copied /var/log/northwind/deployments.log
+  copied /var/log/northwind/backup.log
+  read /usr/local/sbin/northwind-deploy, /usr/local/sbin/northwind-backup and /etc/cron.d/northwind-backup
+  listed /var/backups/northwind
+  $ git -c safe.directory=/opt/northwind/finance-app -C /opt/northwind/finance-app rev-parse HEAD
+  $ systemctl is-active finance-app

@@ -1,0 +1,41 @@
+### /etc/cron.d/northwind-backup  sha256 4fdf5992ec21022d28b07ba512b9fee4a724131bedc5ed31b5f07e1d181d8469  modified 2026-10-28T01:54:08+00:00
+# Nightly backup of the finance database (owner: aisha.khan)
+SHELL=/bin/bash
+30 1 * * * root /usr/local/sbin/northwind-backup
+
+### /usr/local/sbin/northwind-backup  sha256 efe68a763b54f68c577d7d0002bf46854ff38fcfd6909a4de856d8d3315861d6  modified 2026-10-28T01:54:08+00:00
+#!/bin/bash
+# Nightly backup of the Northwind finance database.
+# Runs from /etc/cron.d/northwind-backup at 01:30 UTC. Every run writes one line to
+# /var/log/northwind/backup.log, whether it succeeds or fails, so the log is the record
+# of the control operating. Backups older than 30 days are removed.
+
+set -uo pipefail
+
+DB="${FINANCE_DB:-/var/lib/northwind/finance.db}"
+DEST="${BACKUP_DIR:-/var/backups/northwind}"
+LOG="${BACKUP_LOG:-/var/log/northwind/backup.log}"
+STAMP="$(date -u +%Y-%m-%dT%H:%M:%S+00:00)"
+NAME="finance-$(date -u +%Y%m%d).db.gz"
+TMP="$(mktemp)"
+
+mkdir -p "$DEST" "$(dirname "$LOG")"
+
+if err="$(sqlite3 "$DB" ".backup '$TMP'" 2>&1)" && gzip -c "$TMP" > "$DEST/$NAME.part" \
+    && mv "$DEST/$NAME.part" "$DEST/$NAME"; then
+  bytes="$(stat -c %s "$DEST/$NAME")"
+  digest="$(sha256sum "$DEST/$NAME" | cut -d' ' -f1)"
+  echo "$digest  $NAME" > "$DEST/$NAME.sha256"
+  echo "$STAMP backup OK file=$NAME bytes=$bytes sha256=$digest" >> "$LOG"
+  find "$DEST" -name 'finance-*.db.gz*' -mtime +30 -delete
+  status=0
+else
+  rm -f "$DEST/$NAME.part"
+  echo "$STAMP backup FAILED file=$NAME error=\"${err:-gzip or write failed}\"" >> "$LOG"
+  status=1
+fi
+rm -f "$TMP"
+exit $status
+
+### Backup files in /var/backups/northwind
+finance-20261028.db.gz  2083 bytes  modified 2026-10-28T01:54:08+00:00

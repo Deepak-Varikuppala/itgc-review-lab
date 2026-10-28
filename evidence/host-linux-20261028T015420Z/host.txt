@@ -1,0 +1,12 @@
+Hostname: linux
+Fully qualified name: linux.northwind.internal
+Kernel: 7.0.0-38-generic
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+VERSION_ID="26.04"
+
+# ip -brief address
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s1           UP             192.168.64.10/24 fd6e:9e79:2696:fcd6:c838:44ff:fe96:b3f1/64 fe80::c838:44ff:fe96:b3f1/64
+
+# uptime
+01:54:20 up  1:39,  2 users,  load average: 0.13, 0.14, 0.10

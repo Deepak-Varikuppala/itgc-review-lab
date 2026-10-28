@@ -1,0 +1,32 @@
+kind,source,schedule,runs_as,command,file_owner,file_modified,package
+cron,/etc/crontab,17 * * * *,root,cd / && run-parts --report /etc/cron.hourly,root,2025-11-05T10:57:47+00:00,cron-daemon-common
+cron,/etc/crontab,25 6 * * *,root,test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; },root,2025-11-05T10:57:47+00:00,cron-daemon-common
+cron,/etc/crontab,47 6 * * 7,root,test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; },root,2025-11-05T10:57:47+00:00,cron-daemon-common
+cron,/etc/crontab,52 6 1 * *,root,test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; },root,2025-11-05T10:57:47+00:00,cron-daemon-common
+cron,/etc/cron.d/e2scrub_all,30 3 * * 0,root,test -e /run/systemd/system || SERVICE_MODE=1 /usr/libexec/e2fsprogs/e2scrub_all_cron,root,2026-02-13T12:17:00+00:00,e2fsprogs
+cron,/etc/cron.d/e2scrub_all,10 3 * * *,root,test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r,root,2026-02-13T12:17:00+00:00,e2fsprogs
+cron,/etc/cron.daily/apport,daily,root,/etc/cron.daily/apport,root,2026-07-03T11:16:07+00:00,apport
+cron,/etc/cron.daily/apt-compat,daily,root,/etc/cron.daily/apt-compat,root,2026-04-07T09:02:39+00:00,apt
+cron,/etc/cron.daily/dpkg,daily,root,/etc/cron.daily/dpkg,root,2025-12-16T00:50:46+00:00,dpkg
+cron,/etc/cron.daily/logrotate,daily,root,/etc/cron.daily/logrotate,root,2025-12-06T10:35:42+00:00,logrotate
+cron,/etc/cron.daily/man-db,daily,root,/etc/cron.daily/man-db,root,2025-05-02T13:24:27+00:00,man-db
+cron,/etc/cron.weekly/man-db,weekly,root,/etc/cron.weekly/man-db,root,2025-05-02T13:24:27+00:00,man-db
+systemd timer,/usr/lib/systemd/system/sysstat-collect.timer,{ OnCalendar=*-*-* *:00/10:00 ; next_elapse=Wed 2026-10-28 02:00:00 UTC },root,/usr/libexec/sysstat/sa1 1 1,root,2026-01-11T22:40:46+00:00,sysstat
+systemd timer,/usr/lib/systemd/system/fwupd-refresh.timer,{ OnCalendar=*-*-* *:00:00 ; next_elapse=Wed 2026-10-28 02:00:00 UTC },fwupd-refresh,/usr/bin/fwupdmgr refresh,root,2026-03-12T10:08:33+00:00,fwupd
+systemd timer,/usr/lib/systemd/system/apt-daily.timer,"{ OnCalendar=*-*-* 06,18:00:00 ; next_elapse=Wed 2026-10-28 00:14:44 UTC }",root,/usr/lib/apt/apt.systemd.daily update,root,2026-04-07T09:02:39+00:00,apt
+systemd timer,/usr/lib/systemd/system/apt-daily-upgrade.timer,{ OnCalendar=*-*-* 06:00:00 ; next_elapse=Wed 2026-10-28 06:00:00 UTC },root,/usr/lib/apt/apt.systemd.daily install,root,2026-04-07T09:02:39+00:00,apt
+systemd timer,/usr/lib/systemd/system/motd-news.timer,"{ OnCalendar=*-*-* 00,12:00:00 ; next_elapse=Wed 2026-10-28 00:14:44 UTC }",root,/etc/update-motd.d/50-motd-news --force,root,2026-08-24T10:33:48+00:00,base-files
+systemd timer,/usr/lib/systemd/system/dpkg-db-backup.timer,{ OnCalendar=*-*-* 00:00:00 ; next_elapse=Thu 2026-10-29 00:00:00 UTC },root,/usr/libexec/dpkg/dpkg-db-backup,root,2025-12-16T00:50:46+00:00,dpkg
+systemd timer,/usr/lib/systemd/system/sysstat-rotate.timer,{ OnCalendar=*-*-* 00:00:00 ; next_elapse=Thu 2026-10-29 00:00:00 UTC },root,/usr/libexec/sysstat/sa1 --rotate,root,2026-01-11T22:40:46+00:00,sysstat
+systemd timer,/usr/lib/systemd/system/sysstat-summary.timer,{ OnCalendar=*-*-* 00:07:00 ; next_elapse=Thu 2026-10-29 00:07:00 UTC },root,/usr/libexec/sysstat/sa2 -A,root,2026-01-11T22:40:46+00:00,sysstat
+systemd timer,/usr/lib/systemd/system/update-notifier-download.timer,(see unit),root,/usr/lib/update-notifier/package-data-downloader,root,2025-03-17T13:31:39+00:00,not from a package
+systemd timer,/usr/lib/systemd/system/systemd-tmpfiles-clean.timer,(see unit),root,systemd-tmpfiles --clean,root,2026-09-10T23:27:10+00:00,systemd
+systemd timer,/usr/lib/systemd/system/logrotate.timer,{ OnCalendar=*-*-* 00:00:00 ; next_elapse=Thu 2026-10-29 00:00:00 UTC },root,/usr/sbin/logrotate /etc/logrotate.conf,root,2024-05-24T18:47:35+00:00,logrotate
+systemd timer,/usr/lib/systemd/system/man-db.timer,{ OnCalendar=*-*-* 00:00:00 ; next_elapse=Thu 2026-10-29 00:00:00 UTC },man,/usr/bin/install -d -o man -g man -m 0755 /var/cache/man,root,2026-02-02T20:49:31+00:00,man-db
+systemd timer,/usr/lib/systemd/system/e2scrub_all.timer,{ OnCalendar=Sun *-*-* 03:10:00 ; next_elapse=Sun 2026-11-01 03:10:00 UTC },root,/sbin/e2scrub_all,root,2026-02-13T12:17:00+00:00,e2fsprogs
+systemd timer,/usr/lib/systemd/system/xfs_scrub_all.timer,{ OnCalendar=Sun *-*-* 03:10:00 ; next_elapse=Sun 2026-11-01 03:10:00 UTC },root,/usr/sbin/xfs_scrub_all --auto-media-scan-interval 1mo,root,2026-01-29T22:05:48+00:00,xfsprogs
+systemd timer,/usr/lib/systemd/system/fstrim.timer,{ OnCalendar=Mon *-*-* 00:00:00 ; next_elapse=Mon 2026-11-02 00:00:00 UTC },root,/sbin/fstrim --listed-in /etc/fstab:/proc/self/mountinfo --verbose --quiet-unsupported,root,2026-08-19T14:23:36+00:00,util-linux
+systemd timer,/usr/lib/systemd/system/update-notifier-motd.timer,{ OnCalendar=Sun *-*-* 06:00:00 ; next_elapse=Sun 2026-11-01 06:00:00 UTC },root,/usr/lib/ubuntu-release-upgrader/release-upgrade-motd,root,2025-03-17T13:31:39+00:00,not from a package
+systemd timer,/usr/lib/systemd/system/apport-autoreport.timer,(see unit),root,/usr/share/apport/whoopsie-upload-all --timeout 20,root,2026-07-03T10:58:56+00:00,apport
+systemd timer,/usr/lib/systemd/system/snapd.snap-repair.timer,"{ OnCalendar=*-*-* 05,11,17,23:00:00 ; next_elapse=(null) }",root,/usr/lib/snapd/snap-repair run,root,2026-09-02T12:39:12+00:00,snapd
+systemd timer,/usr/lib/systemd/system/ua-timer.timer,(see unit),root,/usr/bin/python3 /usr/lib/ubuntu-advantage/timer.py,root,2026-09-08T20:12:45+00:00,not from a package

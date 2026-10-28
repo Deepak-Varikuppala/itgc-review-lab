@@ -1,0 +1,26 @@
+### /usr/local/sbin/northwind-deploy  sha256 f3d42573027f458f8da7dfe720d065bff11f743e3fc22102d2d692c9a2974194  modified 2026-10-28T01:54:07+00:00
+#!/bin/bash
+# Deploys a commit of the finance application to production.
+#
+#   sudo northwind-deploy CHG-2026-0140            deploys the latest commit on main
+#   sudo northwind-deploy CHG-2026-0140 <commit>   deploys that commit
+#
+# The ticket number is recorded but not checked against the service desk.
+#
+# Every deployment is written to /var/log/northwind/deployments.log with the commit, the
+# change ticket and the person who ran it. That log is the population of production
+# changes used for change management testing.
+
+set -euo pipefail
+
+TICKET="${1:-none}"
+APP=/opt/northwind/finance-app
+LOG=/var/log/northwind/deployments.log
+WHO="${SUDO_USER:-$(id -un)}"
+
+git -C "$APP" fetch --quiet origin main
+COMMIT="$(git -C "$APP" rev-parse "${2:-origin/main}^{commit}")"
+git -C "$APP" checkout --quiet --detach "$COMMIT"
+systemctl restart finance-app
+echo "$(date -u +%Y-%m-%dT%H:%M:%S+00:00) deploy commit=$COMMIT ticket=$TICKET by=$WHO result=success" >> "$LOG"
+echo "Deployed $COMMIT for $TICKET"

@@ -1,0 +1,31 @@
+# realm list
+northwind.internal
+  type: kerberos
+  realm-name: NORTHWIND.INTERNAL
+  domain-name: northwind.internal
+  configured: kerberos-member
+  server-software: active-directory
+  client-software: sssd
+  required-package: sssd-tools
+  required-package: sssd
+  required-package: libnss-sss
+  required-package: libpam-sss
+  required-package: adcli
+  required-package: samba-common-bin
+  login-formats: %U
+  login-policy: allow-permitted-logins
+  permitted-logins: 
+  permitted-groups: GG-IT
+
+# /etc/sssd/sssd.conf, sign in settings
+[sssd]
+[domain/northwind.internal]
+ad_gpo_access_control = permissive
+id_provider = ad
+ad_domain = northwind.internal
+use_fully_qualified_names = False
+access_provider = simple
+simple_allow_groups = GG-IT
+
+# getent group GG-IT
+aisha.khan, james.carter, liam.brooks, ryan.patel

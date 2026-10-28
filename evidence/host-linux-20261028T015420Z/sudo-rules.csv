@@ -1,0 +1,5 @@
+account,granted_to,granted_to_type,run_as,commands,no_password,file,line,file_modified
+root,root,user,(ALL:ALL),ALL,No,/etc/sudoers,47,2026-01-21T15:09:56+00:00
+(no members),%admin,group,(ALL),ALL,No,/etc/sudoers,50,2026-01-21T15:09:56+00:00
+labadmin,%sudo,group,(ALL:ALL),ALL,No,/etc/sudoers,53,2026-01-21T15:09:56+00:00
+labadmin,labadmin,user,(ALL),ALL,Yes,/etc/sudoers.d/90-labadmin,1,2026-10-27T03:30:46+00:00

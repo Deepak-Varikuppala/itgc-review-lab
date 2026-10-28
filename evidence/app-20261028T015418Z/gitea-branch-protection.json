@@ -1,0 +1,19 @@
+[
+  {
+    "rule": "main",
+    "direct_push_allowed": true,
+    "direct_push_limited_to_listed_accounts": true,
+    "accounts_allowed_to_push": "ryan.patel",
+    "force_push_allowed": false,
+    "required_approvals": 1,
+    "approvals_limited_to_listed_accounts": false,
+    "merge_limited_to_listed_accounts": false,
+    "blocked_by_rejected_review": true,
+    "approvals_dismissed_when_new_commits_pushed": false,
+    "status_checks_required": false,
+    "signed_commits_required": false,
+    "administrators_cannot_override": false,
+    "created": "2026-02-02T11:00:00+00:00",
+    "updated": "2026-02-02T11:00:00+00:00"
+  }
+]
