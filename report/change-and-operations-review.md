@@ -41,8 +41,8 @@ Each test is mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1.
 
 | Test | Control | Criteria | Tested | Exceptions | Conclusion |
 |---|---|---|---|---|---|
-| AC-15 | Only authorised people can sign in to the servers | Standard 5.1 | 4 | 1 | Not operating effectively (1 exception in 4 tested) |
-| AC-16 | Administrator rights on the servers are limited to IT-Server-Admins | Standard 5.2 | 12 | 2 | Not operating effectively (2 exceptions in 12 tested) |
+| AC-15 | Only authorised people can sign in to the servers and the PC | Standard 5.1, 5.4 | 4 | 1 | Not operating effectively (1 exception in 4 tested) |
+| AC-16 | Administrator rights on the servers and the PC are limited as required | Standard 5.2, 5.4 | 12 | 2 | Not operating effectively (2 exceptions in 12 tested) |
 | AC-17 | SSH settings on the servers meet the Standard | Standard 5.3 | 16 | 10 | Design deficiency (10 exceptions in 16 tested) |
 | AC-18 | Each person's access matches their job (sample) | Policy 3.1, 6.1, 6.3; Standard 3.8 | 15 (sample) | 4 | Not operating effectively (4 exceptions in 15 tested) |
 | CM-01 | Every deployment to production has a change ticket | Standard 3.1 | 40 | 3 | Not operating effectively (3 exceptions in 40 tested) |
@@ -57,7 +57,7 @@ Each test is mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1.
 | OP-03 | Restores were tested in the quarter | Standard 4.3 | 1 | 1 | Not operating effectively (1 exception in 1 tested) |
 | OP-04 | The backup job is designed as required | Standard 4.1, 4.2, 4.4 | 5 | 1 | Design deficiency (1 exception in 5 tested) |
 | OP-05 | Only approved jobs are scheduled on the servers | Standard 4.5 | 2 | 1 | Not operating effectively (1 exception in 2 tested) |
-| OP-06 | Server clocks are synchronised | Standard 4.6 | 2 | 1 | Not operating effectively (1 exception in 2 tested) |
+| OP-06 | Server and PC clocks are synchronised | Standard 4.6 | 2 | 1 | Not operating effectively (1 exception in 2 tested) |
 | OP-07 | Security updates are installed | Standard 4.7 | 2 | 0 | Effective (no exceptions) |
 
 AC-18 also found access already reported in the logical access review: Domain Admins rights without approval (F2), an ended contractor's enabled account (F5) and conflicting payment roles (F8).

@@ -5,7 +5,8 @@
       "evidence/host-linux-20261028T015420Z",
       "evidence/host-linux2-20261028T015418Z"
     ],
-    "directory": "evidence/directory-20261027T030229Z"
+    "directory": "evidence/directory-20261027T030229Z",
+    "pc": null
   },
   "as_at": "2026-10-28",
   "period": [
@@ -122,12 +123,12 @@
   "tests": [
     {
       "test_id": "AC-15",
-      "title": "Only authorised people can sign in to the servers",
-      "policy_ref": "Standard 5.1",
+      "title": "Only authorised people can sign in to the servers and the PC",
+      "policy_ref": "Standard 5.1, 5.4",
       "test_type": "Design and operating effectiveness",
       "objective": "Nobody can sign in to a server except IT staff with their own domain account, and the emergency administrator account.",
       "procedure": "Confirm the app server only lets members of GG-IT sign in with domain accounts. List every local account on each server that can sign in (a login shell and a usable password or SSH key). Each must be the emergency administrator account with an exception in the register, or an account that cannot sign in.",
-      "population": "Every local account on both Linux servers, and the domain sign in setting on the app server",
+      "population": "Every local account on both Linux servers and the PC, and the domain sign in setting on the app server",
       "items": [
         {
           "item": "linux2: domain sign in",
@@ -164,12 +165,12 @@
     },
     {
       "test_id": "AC-16",
-      "title": "Administrator rights on the servers are limited to IT-Server-Admins",
-      "policy_ref": "Standard 5.2",
+      "title": "Administrator rights on the servers and the PC are limited as required",
+      "policy_ref": "Standard 5.2, 5.4",
       "test_type": "Operating effectiveness",
       "objective": "Full control of a server is held only by approved IT administrators, and every use of it asks for a password.",
-      "procedure": "For every sudo rule on each server, record who it covers and what it allows. Full rights are allowed only through IT-Server-Admins. Rights limited to the deployment tool are allowed for Change-Deployers. A rule granted to a person directly, or one that does not ask for a password, is an exception unless the exception register covers it.",
-      "population": "Every sudo rule on both Linux servers and every account it covers",
+      "procedure": "For every sudo rule on each server, record who it covers and what it allows. Full rights are allowed only through IT-Server-Admins. Rights limited to the deployment tool are allowed for Change-Deployers. A rule granted to a person directly, or one that does not ask for a password, is an exception unless the exception register covers it. On the PC, any member of the local Administrators group other than Domain Admins and the disabled built in Administrator is an exception.",
+      "population": "Every sudo rule on both Linux servers and every account it covers, and every member of the PC's local Administrators group",
       "items": [
         {
           "item": "linux: root via root",
@@ -2253,12 +2254,12 @@
     },
     {
       "test_id": "OP-06",
-      "title": "Server clocks are synchronised",
+      "title": "Server and PC clocks are synchronised",
       "policy_ref": "Standard 4.6",
       "test_type": "Operating effectiveness",
-      "objective": "Every server keeps the correct time, so logs can be relied on and Kerberos sign in works.",
-      "procedure": "Confirm each server synchronises with a time source and was within 5 seconds of it when the evidence was collected. Consider anything seen during fieldwork that shows the clock was wrong at other times.",
-      "population": "Both Linux servers",
+      "objective": "Every server and PC keeps the correct time, so logs can be relied on and Kerberos sign in works.",
+      "procedure": "Confirm each machine synchronises with a time source and was within 5 seconds of it when the evidence was collected. Consider anything seen during fieldwork that shows the clock was wrong at other times.",
+      "population": "Both Linux servers and the PC",
       "items": [
         {
           "item": "linux",
@@ -2286,9 +2287,9 @@
       "title": "Security updates are installed",
       "policy_ref": "Standard 4.7",
       "test_type": "Design and operating effectiveness",
-      "objective": "Known security weaknesses in the servers' software are fixed promptly.",
+      "objective": "Known security weaknesses in the software on the servers and the PC are fixed promptly.",
       "procedure": "Confirm automatic security updates are switched on. List security updates still waiting to be installed when the evidence was collected. Any security update waiting for more than 14 days is an exception.",
-      "population": "Both Linux servers",
+      "population": "Both Linux servers and the PC",
       "items": [
         {
           "item": "linux",

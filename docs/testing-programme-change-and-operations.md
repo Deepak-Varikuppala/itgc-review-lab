@@ -4,8 +4,8 @@ Generated from the test definitions in `audit/run_change_ops_tests.py`, which im
 
 | Test | Control | Criteria | Type | Sample | ISO/IEC 27001:2022 | CIS Controls v8.1 |
 |---|---|---|---|---|---|---|
-| AC-15 | Only authorised people can sign in to the servers | Standard 5.1 | Design and operating effectiveness | Whole population | A.5.15 Access control; A.5.16 Identity management | 5.1 Inventory of accounts; 6.7 Centralise access control |
-| AC-16 | Administrator rights on the servers are limited to IT-Server-Admins | Standard 5.2 | Operating effectiveness | Whole population | A.8.2 Privileged access rights | 5.4 Restrict administrator privileges; 6.8 Role based access |
+| AC-15 | Only authorised people can sign in to the servers and the PC | Standard 5.1, 5.4 | Design and operating effectiveness | Whole population | A.5.15 Access control; A.5.16 Identity management | 5.1 Inventory of accounts; 6.7 Centralise access control |
+| AC-16 | Administrator rights on the servers and the PC are limited as required | Standard 5.2, 5.4 | Operating effectiveness | Whole population | A.8.2 Privileged access rights | 5.4 Restrict administrator privileges; 6.8 Role based access |
 | AC-17 | SSH settings on the servers meet the Standard | Standard 5.3 | Design | Whole population | A.8.9 Configuration management; A.8.5 Secure authentication | 4.1 Secure configuration process |
 | AC-18 | Each person's access matches their job (sample) | Policy 3.1, 6.1, 6.3; Standard 3.8 | Operating effectiveness | 15 of 22, selected with random.Random(20261001).sample() | A.5.18 Access rights; A.5.3 Segregation of duties | 6.8 Role based access |
 | CM-01 | Every deployment to production has a change ticket | Standard 3.1 | Operating effectiveness | Whole population | A.8.32 Change management | 16.1 Secure application development process |
@@ -20,12 +20,12 @@ Generated from the test definitions in `audit/run_change_ops_tests.py`, which im
 | OP-03 | Restores were tested in the quarter | Standard 4.3 | Operating effectiveness | Whole population | A.8.13 Information backup | 11.5 Test data recovery |
 | OP-04 | The backup job is designed as required | Standard 4.1, 4.2, 4.4 | Design | Whole population | A.8.13 Information backup | 11.1 Data recovery process |
 | OP-05 | Only approved jobs are scheduled on the servers | Standard 4.5 | Operating effectiveness | Whole population | A.8.9 Configuration management; A.8.19 Software on operational systems | 4.1 Secure configuration process |
-| OP-06 | Server clocks are synchronised | Standard 4.6 | Operating effectiveness | Whole population | A.8.17 Clock synchronisation | 8.4 Standardise time synchronisation |
+| OP-06 | Server and PC clocks are synchronised | Standard 4.6 | Operating effectiveness | Whole population | A.8.17 Clock synchronisation | 8.4 Standardise time synchronisation |
 | OP-07 | Security updates are installed | Standard 4.7 | Design and operating effectiveness | Whole population | A.8.8 Management of technical vulnerabilities | 7.3 Automated operating system patch management |
 
-## AC-15: Only authorised people can sign in to the servers
+## AC-15: Only authorised people can sign in to the servers and the PC
 
-**Criteria:** Standard 5.1  
+**Criteria:** Standard 5.1, 5.4  
 **ISO/IEC 27001:2022:** A.5.15 Access control; A.5.16 Identity management  
 **CIS Controls v8.1:** 5.1 Inventory of accounts; 6.7 Centralise access control  
 **Test type:** Design and operating effectiveness
@@ -34,22 +34,22 @@ Generated from the test definitions in `audit/run_change_ops_tests.py`, which im
 
 **Procedure.** Confirm the app server only lets members of GG-IT sign in with domain accounts. List every local account on each server that can sign in (a login shell and a usable password or SSH key). Each must be the emergency administrator account with an exception in the register, or an account that cannot sign in.
 
-**Population.** Every local account on both Linux servers, and the domain sign in setting on the app server.
+**Population.** Every local account on both Linux servers and the PC, and the domain sign in setting on the app server.
 
 **Sample.** None: every item was tested.
 
-## AC-16: Administrator rights on the servers are limited to IT-Server-Admins
+## AC-16: Administrator rights on the servers and the PC are limited as required
 
-**Criteria:** Standard 5.2  
+**Criteria:** Standard 5.2, 5.4  
 **ISO/IEC 27001:2022:** A.8.2 Privileged access rights  
 **CIS Controls v8.1:** 5.4 Restrict administrator privileges; 6.8 Role based access  
 **Test type:** Operating effectiveness
 
 **Control objective.** Full control of a server is held only by approved IT administrators, and every use of it asks for a password.
 
-**Procedure.** For every sudo rule on each server, record who it covers and what it allows. Full rights are allowed only through IT-Server-Admins. Rights limited to the deployment tool are allowed for Change-Deployers. A rule granted to a person directly, or one that does not ask for a password, is an exception unless the exception register covers it.
+**Procedure.** For every sudo rule on each server, record who it covers and what it allows. Full rights are allowed only through IT-Server-Admins. Rights limited to the deployment tool are allowed for Change-Deployers. A rule granted to a person directly, or one that does not ask for a password, is an exception unless the exception register covers it. On the PC, any member of the local Administrators group other than Domain Admins and the disabled built in Administrator is an exception.
 
-**Population.** Every sudo rule on both Linux servers and every account it covers.
+**Population.** Every sudo rule on both Linux servers and every account it covers, and every member of the PC's local Administrators group.
 
 **Sample.** None: every item was tested.
 
@@ -263,18 +263,18 @@ Generated from the test definitions in `audit/run_change_ops_tests.py`, which im
 
 **Sample.** None: every item was tested.
 
-## OP-06: Server clocks are synchronised
+## OP-06: Server and PC clocks are synchronised
 
 **Criteria:** Standard 4.6  
 **ISO/IEC 27001:2022:** A.8.17 Clock synchronisation  
 **CIS Controls v8.1:** 8.4 Standardise time synchronisation  
 **Test type:** Operating effectiveness
 
-**Control objective.** Every server keeps the correct time, so logs can be relied on and Kerberos sign in works.
+**Control objective.** Every server and PC keeps the correct time, so logs can be relied on and Kerberos sign in works.
 
-**Procedure.** Confirm each server synchronises with a time source and was within 5 seconds of it when the evidence was collected. Consider anything seen during fieldwork that shows the clock was wrong at other times.
+**Procedure.** Confirm each machine synchronises with a time source and was within 5 seconds of it when the evidence was collected. Consider anything seen during fieldwork that shows the clock was wrong at other times.
 
-**Population.** Both Linux servers.
+**Population.** Both Linux servers and the PC.
 
 **Sample.** None: every item was tested.
 
@@ -285,10 +285,10 @@ Generated from the test definitions in `audit/run_change_ops_tests.py`, which im
 **CIS Controls v8.1:** 7.3 Automated operating system patch management  
 **Test type:** Design and operating effectiveness
 
-**Control objective.** Known security weaknesses in the servers' software are fixed promptly.
+**Control objective.** Known security weaknesses in the software on the servers and the PC are fixed promptly.
 
 **Procedure.** Confirm automatic security updates are switched on. List security updates still waiting to be installed when the evidence was collected. Any security update waiting for more than 14 days is an exception.
 
-**Population.** Both Linux servers.
+**Population.** Both Linux servers and the PC.
 
 **Sample.** None: every item was tested.
